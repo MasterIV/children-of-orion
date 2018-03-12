@@ -1,0 +1,73 @@
+<div class="row-fluid">
+	<div class="span6">
+		<div class="well">
+
+		<h4>Fusionsreaktoren</h4>
+
+		<p>Fusinsreaktoren verlieren bei Schaden lediglich an Output.
+			Sollten sie zu stark beschädigt werden erlischt ihre Reaktion.
+			Außer dass das Schiff dann keine Energie mehr hat,
+			hat die keine weiteren Konsequenzen.
+			Nach der Reparatur kann die Reaktion wieder in Gang gebracht werden.</p>
+
+		<table class="table table-striped">
+			<thead>
+			<tr>
+				<th>Stufe</th>
+				<th>min. GK</th>
+				<th>Output</th>
+				<th>Kosten</th>
+			</tr>
+			</thead>
+			<tbody>
+			{% for r in data.fusion %}
+				<tr>
+					<td>{{ r.id }}</td>
+					<td>{{ r.size }}</td>
+					<td>{{ r.output }}</td>
+					<td>{{ r.costs }}</td>
+				</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+
+		</div>
+	</div>
+	<div class="span6">
+		<div class="well">
+
+		<h4>Antimateriereaktoren</h4>
+
+		<p>Sollte ein Antimateriereaktor schaden nehmen, so wird mit einem W6 Gewürfelt.
+			Liegt die Augenzahl unter dem Gesamtschaden des Reaktors so versagt die Eindämmung.
+			Die Crew hat nur noch Sekunden um den Antimateriekammer auszustoßen.
+			Die Explosion der Kammer kann dem Schiff weiteren Schaden zufügen
+			und wenn sie Misslingt wird das Schiff unweigerlich samt der Besatzung vernichtet.
+			Selbst wenn das Schiff den Auswurf übersteht treibt es danach ohne Energie durchs all
+			und kann ohne eine neue Antimateriekammer nicht mehr in Betrieb genommen werden.</p>
+
+		<table class="table table-striped">
+			<thead>
+			<tr>
+				<th>Stufe</th>
+				<th>min. GK</th>
+				<th>Output</th>
+				<th>Kosten</th>
+			</tr>
+			</thead>
+			<tbody>
+			{% for r in data.antimatter %}
+				<tr>
+					<td>{{ r.id }}</td>
+					<td>{{ r.size }}</td>
+					<td>{{ r.output }}</td>
+					<td>{{ r.costs }}</td>
+				</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+
+		</div>
+	</div>
+</div>
+

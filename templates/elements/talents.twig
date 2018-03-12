@@ -1,0 +1,24 @@
+{%  for category, talents in data %}
+	<h3 id="talent_{{ category }}">{{ category|capitalize  }}</h3></td>
+
+	<table class="table table-striped">
+		<tr>
+			<th width="20%">Talent</th>
+			<th>Beschreibung</th>
+			<th width="20%">Voraussetzung</th>
+			<th width="5%">Rang</th>
+		</tr>
+		{% for e in talents %}
+			<tr>
+				<td><b><i>{{ e.name }}</i></b></td>
+				<td>{{ e.description }}</td>
+				<td><ul>
+						{% for k,v in e.requirements.skills %}<li>Skill {{ k }}: {{ v }}</li>{% endfor %}
+						{% for v in e.requirements.talents %}<li>Talent {{ v }}</li>{% endfor %}
+						{% if e.requirements.race %}<li>Rasse: {{ e.requirements.race }}</li>{% endif %}
+				</ul></td>
+				<td>{{ e.rank|rome }}</td>
+			</tr>
+		{% endfor %}
+	</table>
+{% endfor %}

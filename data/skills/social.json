@@ -1,0 +1,43 @@
+[
+  {
+    "id": "Eloquence",
+    "name": "Eloquence",
+    "attributes": [ "Cha", "Int"],
+    "applications": ["Persuade", "Seduce", "Sound out", "Calm down"]
+  }, {
+    "id": "Haggle",
+    "name": "Haggle",
+    "attributes": [ "Cha", "Wil"],
+    "applications": [ "Buying", "Selling", "Trading", "Hiring", "Contracts" ]
+  }, {
+    "id": "Intimidate",
+    "name": "Intimidate",
+    "attributes": [ "Str", "Cha"],
+    "applications": [ "Suppress", "Interrogate", "Blackmail" ]
+  },  {
+    "id": "Empathy",
+    "name": "Empathy",
+    "attributes": [ "Cha", "Edu"],
+    "applications": [ "Detect lies", "Assess motivation", "Rate emotional state", "Judge sympathies" ]
+  }, {
+    "id": "Self-control",
+    "name": "Self-control",
+    "attributes": [ "Wil", "Edu"],
+    "applications": [ "Overcome fear", "Resist influence", "Hide feelings", "Concentration" ]
+  }, {
+    "id": "Politics",
+    "name": "Politics",
+    "attributes": [ "Edu", "Cha"],
+    "applications": [ "Speech", "Negotiate", "Etiquette", "Contracts" ]
+  }, {
+    "id": "Streetwise",
+    "name": "Streetwise",
+    "attributes": [ "Wil", "Cha"],
+    "applications": [ "Black market", "Rumors", "Fencing", "Services", "Contacts" ]
+  }, {
+    "id": "Investigation",
+    "name": "Investigation",
+    "attributes": [ "Int", "Con"],
+    "applications": [ "Tracking", "Shadow", "Tracing", "Examine", "Research" ]
+  }
+]

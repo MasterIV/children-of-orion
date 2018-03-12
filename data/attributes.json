@@ -1,0 +1,42 @@
+[
+  {
+    "id": "Con",
+    "name": "Constitution",
+    "description": "How durable a body is even in harsh circumstances is described by the characters constitution."
+  },
+  {
+    "id": "Str",
+    "name": "Strength",
+    "description": "The strength of a person indicates his ability to apply physical force."
+  },
+  {
+    "id": "Agi",
+    "name": "Agility",
+    "description": "This attribute describes how well and accurate a character can control his body."
+  },
+  {
+    "id": "Rea",
+    "name": "Reaction",
+    "description": "Reaction describes the speed of reflexes and the ability of hand eye coordination."
+  },
+  {
+    "id": "Int",
+    "name": "Intelligence",
+    "description": "Intelligence is the ability of logical thinking and analysing complex problems."
+  },
+  {
+    "id": "Edu",
+    "name": "Education",
+    "description": "This attribute measures how much knowledge an individual has collected during its lifetime."
+  },
+  {
+    "id": "Cha",
+    "name": "Charisma",
+    "description": "Voice, facial expression and body language. How a person is perceived by others which is reflected in the charisma."
+  },
+  {
+    "id": "Wil",
+    "name": "Willpower",
+    "description": "This is the mental strength of a person and its ability to withstand psychological influences."
+  }
+]

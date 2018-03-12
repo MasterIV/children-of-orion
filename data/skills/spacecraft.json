@@ -1,0 +1,33 @@
+[
+  {
+    "id": "Pilot",
+    "name": "Pilot",
+    "attributes": [ "Rea", "Agi"],
+    "applications": [ "Fighter", "Evasive maneuver", "Attack maneuver", "Docking", "Atmosphere" ]
+  }, {
+    "id": "Sensors",
+    "name": "Sensors",
+    "attributes": [ "Edu", "Agi"],
+    "applications": ["Scan", "Lock target", "Jam", "Astrogation"]
+  }, {
+    "id": "Computer",
+    "name": "Computer",
+    "attributes": [ "Int", "Edu"],
+    "applications": [ "Data search", "Intrude", "Secure", "Administer", "Program" ]
+  }, {
+    "id": "Engineer",
+    "name": "Engineer",
+    "attributes": [ "Agi", "Int"],
+    "applications": [ "Mechanic", "Energy", "Engine", "Weapons", "Systems", "Vehicles" ]
+  }, {
+    "id": "Gunnery",
+    "name": "Gunnery",
+    "attributes": [ "Rea", "Int"],
+    "applications": ["Beam weapons", "Projectile weapons", "Rockets", "Special weapons", "Vehicles"]
+  }, {
+    "id": "Commander",
+    "name": "Commander",
+    "attributes": [ "Wil", "Cha"],
+    "applications": ["Commands", "Coordinate", "Authority", "Strategy"]
+  }
+]

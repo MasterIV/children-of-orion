@@ -1,0 +1,24 @@
+<table class="table table-striped">
+	<thead>
+	<tr>
+		<th width="22%">Name</th>
+		<th width="10%">Preis</th>
+		<th width="14%">Geschw.</th>
+		<th width="18%">Schaden</th>
+		<th width="14%">Mods</th>
+		<th width="22%">Merkmale</th>
+	</tr>
+	</thead>
+	<tbody>
+	{% for w in data %}
+		<tr>
+			<td>{{ w.name }}</td>
+			<td>{{ w.price }}</td>
+			<td>{{ w.wgs }}</td>
+			<td>{{ w.dmg }}</td>
+			<td>{{ w.slots }}</td>
+			<td>{{ w.mods|join(', ') }}</td>
+		</tr>
+	{% endfor %}
+	</tbody>
+</table>

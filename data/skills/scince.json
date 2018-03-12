@@ -1,0 +1,28 @@
+[
+  {
+    "id": "Chemistry",
+    "name": "Chemistry",
+    "attributes": [ "Int", "Edu"],
+    "applications": [ "Analyse", "Toxins", "Stimulants", "Acids", "Solids" ]
+  }, {
+    "id": "Biology",
+    "name": "Biology",
+    "attributes": [ "Edu", "Int"],
+    "applications": [ "Genetic", "Botanic", "Zoology", "Microbiology" ]
+  }, {
+    "id": "Physics",
+    "name": "Physics",
+    "attributes": [ "Int", "Edu"],
+    "applications": [ "Force fields", "Nucleonics", "Quantum physics‎", "Astrophysics" ]
+  }, {
+    "id": "Medicine",
+    "name": "Medicine",
+    "attributes": [ "Edu", "Rea"],
+    "applications": [ "First aid", "Surgery", "Diseases", "Psychology", "Reanimate" ]
+  }, {
+    "id": "Geology",
+    "name": "Geology",
+    "attributes": [ "Edu", "Int"],
+    "applications": [ "Mining", "Refining", "Rocks", "Minerals", "Cartography" ]
+  }
+]

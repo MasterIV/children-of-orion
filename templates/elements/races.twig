@@ -1,0 +1,8 @@
+{% for race in data %}
+	<h3 id="race_{{ race.id }}">{{ race.name }}</h3>
+
+	<p class="clearfix">
+		<img src="img/races/{{ race.id|lower }}.png" class="pull-left" style="margin: 0 10px 10px 0;">
+		{{ race.description }}
+	</p>
+{% endfor %}

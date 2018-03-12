@@ -1,0 +1,16 @@
+<table class="table table-striped">
+	<tr>
+		<th width="20%">Name</th>
+		<th>Beschreibung</th>
+		<th>Energiebedarf</th>
+		<th>Kosten</th>
+	</tr>
+	{% for e in data %}
+		<tr>
+			<td>{{ e.name }}</td>
+			<td>{{ e.description }}{% if e.max %}<i>Maximal {{ e.max|e }} einbaubar.</i>{% endif %}</td>
+			<td>{{ e.energy|e }}</td>
+			<td>{{ e.costs|e }}</td>
+		</tr>
+	{% endfor %}
+</table>

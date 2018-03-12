@@ -1,0 +1,21 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<link rel="stylesheet" href="css/tocbot.css">
+	<link rel="stylesheet" href="css/treant.css">
+
+	<nav class="toc toc-right js-toc relative absolute is-position-fixed well"></nav>
+	<div class="container">{{ content|raw }}</div>
+
+	<script src="js/tocbot.min.js"></script>
+	<script src="js/raphael.js"></script>
+	<script src="js/treant.js"></script>
+	<script>
+		$(function() {tocbot.init({
+			tocSelector: '.js-toc',
+			contentSelector: '.container',
+			headingSelector: 'h1, h2, h3',
+			collapseDepth: 2,
+		})});
+	</script>
+{% endblock %}

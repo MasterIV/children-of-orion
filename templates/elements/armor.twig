@@ -1,0 +1,18 @@
+<table class="table table-striped">
+	<thead>
+	<tr>
+		<th>Typ</th>
+		<th>Schutzwert</th>
+		<th>Kosten</th>
+	</tr>
+	</thead>
+	<tbody>
+	{% for r in data %}
+		<tr>
+			<td>{{ r.name }}</td>
+			<td>{{ r.armor }}</td>
+			<td>{{ r.costs|e }}</td>
+		</tr>
+	{% endfor %}
+	</tbody>
+</table>

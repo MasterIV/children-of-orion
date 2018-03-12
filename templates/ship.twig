@@ -1,0 +1,441 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<style>
+		option[disabled] {
+			color: #CCC;
+		}
+
+		select.form-control {
+			margin-bottom: 2px;
+		}
+
+		.summary td {
+			line-height: 35px;
+		}
+
+		#weapon-template, #system-template {
+			display: none;
+		}
+	</style>
+
+
+	<form class="container">
+		<h1>Schiffsgenerator</h1>
+
+		<table class="table summary">
+			<tr>
+				<th>System</th>
+				<th>Auswahl</th>
+				<th>Wert</th>
+				<th>Kosten</th>
+				<th>Energie</th>
+			</tr>
+
+
+			<tr id="hull">
+				<td>Größenklasse:</td>
+				<td>
+					<select class="form-control" name="hull" onchange="updateStats()">
+						{% for e in data.hull %}<option value="{{ e.id }}">{{ e.name }} ({{ e.costs }} SP)</option>{% endfor %}
+					</select>
+				</td>
+				<td class="value"></td>
+				<td class="costs"></td>
+				<td class="energy"></td>
+			</tr>
+
+			<tr id="power">
+				<td>Energie:</td>
+				<td>
+					<select class="form-control" name="reactor" onchange="updateStats()">
+						{% for e in data.power.fusion %}<option value="fusion-{{ e.id }}">Fusion Stufe {{ e.id }} ({{ e.costs }} SP)</option>{% endfor %}
+						{% for e in data.power.antimatter %}<option value="antimatter-{{ e.id }}">Antimaterie Stufe {{ e.id }} ({{ e.costs }} SP)</option>{% endfor %}
+					</select>
+				</td>
+				<td class="value"></td>
+				<td class="costs"></td>
+				<td class="energy"></td>
+			</tr>
+
+			<tr id="structure">
+				<td>Struktur:</td>
+				<td>
+					<select class="form-control" name="structure" onchange="updateStats()">
+						{% for e in data.structure %}<option value="{{ e.id }}">{{ e.name }} </option>{% endfor %}
+					</select>
+				</td>
+				<td class="value"></td>
+				<td class="costs"></td>
+				<td class="energy"></td>
+			</tr>
+
+			<tr id="armor">
+				<td>Panzerung:</td>
+				<td>
+					<select class="form-control" name="armor" onchange="updateStats()">
+						{% for e in data.armor %}<option value="{{ e.id }}">{{ e.name }}</option>{% endfor %}
+					</select>
+				</td>
+				<td class="value"></td>
+				<td class="costs"></td>
+				<td class="energy"></td>
+			</tr>
+
+			<tr id="shields">
+				<td>Shields:</td>
+				<td>
+					<select class="form-control" name="shields" onchange="updateStats()">
+						<option value="">Keine Schilde</option>
+						{% for e in data.shields %}<option value="{{ e.id }}">Klasee {{ e.id|rome }} ({{ e.costs }} SP )</option>{% endfor %}
+					</select>
+				</td>
+				<td class="value"></td>
+				<td class="costs"></td>
+				<td class="energy"></td>
+			</tr>
+
+			<tr id="computer">
+				<td>Computer:</td>
+				<td>
+					<select class="form-control" name="computer" onchange="updateStats()">
+						<option value="">Keine Computer</option>
+						{% for e in data.computer %}<option value="{{ e.id }}">{{ e.name }} ({{ e.costs }} SP )</option>{% endfor %}
+					</select>
+				</td>
+				<td class="value"></td>
+				<td class="costs"></td>
+				<td class="energy"></td>
+			</tr>
+
+			<tr id="drive">
+				<td>Antrieb:</td>
+				<td>
+					<select class="form-control" name="drive" onchange="updateStats()">
+						{% for e in data.drive %}<option value="{{ e.id }}">{{ e.name }}</option>{% endfor %}
+					</select>
+				</td>
+				<td class="value"></td>
+				<td class="costs"></td>
+				<td class="energy"></td>
+			</tr>
+
+			<!--
+			<tr id="ftl">
+				<td>Sprungantrieb:</td>
+				<td>
+					<select class="form-control" name="ftl" onchange="updateStats()">
+						{% for e in data.ftl %}<option value="{{ e.id }}">{{ e.name }}</option>{% endfor %}
+					</select>
+				</td>
+				<td class="value"></td>
+				<td class="costs"></td>
+				<td class="energy"></td>
+			</tr> -->
+
+			<tr id="sensors">
+				<td>Sensoren:</td>
+				<td>
+					<select class="form-control" name="sensors" onchange="updateStats()">
+						{% for e in data.sensors %}<option value="{{ e.id }}">{{ e.name }}</option>{% endfor %}
+					</select>
+				</td>
+				<td class="value"></td>
+				<td class="costs"></td>
+				<td class="energy"></td>
+			</tr>
+
+			<tr id="weapons">
+				<td>Waffen:</td>
+				<td></td>
+				<td class="value"></td>
+				<td class="costs"></td>
+				<td class="energy"></td>
+			</tr>
+
+			<tr id="systems">
+				<td>Spezialsysteme:</td>
+				<td></td>
+				<td class="value"></td>
+				<td class="costs"></td>
+				<td class="energy"></td>
+			</tr>
+
+			<tr>
+				<th></th>
+				<th></th>
+				<th>Total:</th>
+				<th id="total-costs"></th>
+				<th id="total-energy"></th>
+			</tr>
+		</table>
+
+		<h2>Waffen</h2>
+
+		<div class="input-append">
+			<select id="add-weapon">
+				{% for w in data.weapons.projectile %}<option value="projectile-{{ w.id }}">{{ w.name }}</option>{% endfor %}
+				{% for w in data.weapons.missle %}<option value="missle-{{ w.id }}">{{ w.name }}</option>{% endfor %}
+				{% for w in data.weapons.beam %}<option value="beam-{{ w.id }}">{{ w.name }}</option>{% endfor %}
+				{% for w in data.weapons.special %}<option value="special-{{ w.id }}">{{ w.name }}</option>{% endfor %}
+			</select>
+
+			<button class="btn btn-default" type="button" onclick="addWeapon()">Add</button>
+		</div>
+
+		<table class="table" id="weapon-list">
+			<tr>
+				<th>Waffe</th>
+				<th>Winkel</th>
+				<th>Qualität</th>
+				<th>Ausrichtung</th>
+				<th>Dmg (Range)</th>
+				<th>Kosten</th>
+				<th>Energie</th>
+				<td></td>
+			</tr>
+
+			<tr id="weapon-template">
+				<td class="name"></td>
+				<td><select name="arc" class="arc input-mini" onchange="updateStats()">
+						<option value="1">90°</option>
+						<option value="1.25">180°</option>
+						<option value="1.5">270°</option>
+						<option value="1.75">360°</option>
+					</select></td>
+				<td><select name="quality" class="quality input-mini" onchange="updateStats()"></select></td>
+				<td><select name="dir" class="dir">
+						<option value="1">Bug</option>
+						<option value="2">Backbord</option>
+						<option value="3">Steuerbord</option>
+						<option value="4">Heck</option>
+					</select></td>
+				<td class="damage"></td>
+				<td class="costs"></td>
+				<td class="energy"></td>
+				<td><button type="button" class="btn btn-error" onclick="$(this).parent().parent().remove(); updateStats();">x</button></td>
+			</tr>
+
+
+		</table>
+
+
+		<h2>Spezialsysteme</h2>
+
+		<div class="input-append">
+			<select id="add-system">
+				{% for w in data.systems %}<option value="{{ w.id }}">{{ w.name }}</option>{% endfor %}
+			</select>
+
+			<button class="btn btn-default" type="button" onclick="addSystem()">Add</button>
+		</div>
+
+
+		<table class="table" id="systems-list">
+			<tr>
+				<th>System</th>
+				<th>Anzahl</th>
+				<th>Kosten</th>
+				<th>Energie</th>
+				<td></td>
+			</tr>
+
+
+			<tr id="system-template">
+				<td class="name"></td>
+				<td><select name="amount" class="amount input-mini" onchange="updateStats()"></select></td>
+				<td class="costs"></td>
+				<td class="energy"></td>
+				<td><button type="button" class="btn btn-error" onclick="$(this).parent().parent().remove(); updateStats();">x</button></td>
+			</tr>
+		</table>
+	</form>
+
+
+	<script>
+		var data = {{ data|json_encode()|raw }};
+		var qualities = {{ qualities|json_encode()|raw }};
+		var mapped = {};
+		var size;
+
+		function mapArr(s, d, p) {
+			p = p || '';
+			for( var i in s ) d[p+s[i].id] = s[i];
+		}
+
+		function mapNested(s, d) {
+			for(var i in s)
+				mapArr(s[i], d, i+'-')
+		}
+
+		function expression( c ) {
+			return c.expression ? Math.max(0, Math.round(eval(c.expression.replace('size', size)))) : c;
+		}
+
+		function addWeapon() {
+			var id = $('#add-weapon').val();
+			var row = $('<tr>'+$('#weapon-template').html()+'</tr>');
+			var def = mapped.weapons[id];
+
+			row.addClass('active-weapon');
+			row.find('.name').data('weapon', id).text(def.name);
+			row.find('.damage').text(def.dmg+' ('+def.range+')');
+			var q = row.find('.quality');
+			for(var i = 0; i <= def.slots; i++)
+				q.append('<option value="'+i+'">'+i+'</option>');
+
+			$('#weapon-list').append(row);
+			updateStats();
+		}
+
+		function addSystem() {
+			var id = $('#add-system').val();
+			var row = $('<tr>'+$('#system-template').html()+'</tr>');
+			var def = mapped.systems[id];
+
+			if( $('.system-'+id).length ) return;
+
+			row.addClass('active-system system-'+id);
+			row.find('.name').data('system', id).text(def.name);
+
+			$('#systems-list').append(row);
+			updateStats();
+		}
+
+		for( var i in data ) {
+			mapped[i] = {};
+
+			if(i=='power' || i=='weapons') {
+				mapNested(data[i], mapped[i]);
+			} else {
+				mapArr( data[i], mapped[i] );
+			}
+		}
+
+		function updateStats() {
+			var costs = 0;
+			var consumed = 0;
+			var last = null;
+
+			function display(id, key) {
+				var value = $('#'+id+' select').val();
+				var def = mapped[id][value] || {};
+
+				if(def.costs) {
+					var c = expression(def.costs);
+					costs += c;
+					$('#'+id+' .costs').text(c);
+				}
+
+				if(def.energy) {
+					var e = expression(def.energy);
+					consumed += e;
+					$('#'+id+' .energy').text(e);
+				}
+
+				if(typeof key == "function") $('#'+id+' .value').text(key(def));
+				else if(key) $('#'+id+' .value').text(expression(def[key]));
+
+				return value;
+			}
+
+			size = display('hull', 'index');
+
+			$('#power option').each(function(k,v) {
+				v.disabled = mapped.power[v.value].size > size;
+				if(!v.disabled) last = v.value;
+				if(v.selected && v.disabled) $('#power select').val(last);
+			});
+
+			var reactor = display('power', 'output');
+			var energy = mapped.power[reactor].output;
+			var structure = display('structure', 'structure');
+			var armor = display('armor', 'armor');
+			var drive = display('drive', 'speed');
+			var sensors = display('sensors', function() { return ''; });
+
+			var shields = display('shields', function(s) {
+				return s.shield ? s.shield + ' (' + s.regeneration + ')' : '-';
+			});
+
+			var computer = display('computer', function(s) {
+				return s.capacity ? s.capacity + ' (' + s.skill + ')' : '-';
+			});
+
+
+			var weapon_consumtion = 0;
+			var weapon_costs = 0;
+			$('.active-weapon').each(function (k, v) {
+				var e = $(v);
+				var id = e.find('.name').data('weapon');
+				var w = mapped.weapons[id];
+
+				var arc = e.find('.arc').val();
+				var q = e.find('.quality').val();
+
+				var c = Math.round(w.costs * arc * qualities[q]);
+
+				e.find('.costs').text(c);
+				e.find('.energy').text(w.energy);
+
+				weapon_consumtion += w.energy;
+				weapon_costs += c;
+			});
+
+			$('#weapons .costs').text(weapon_costs);
+			$('#weapons .energy').text(weapon_consumtion);
+			consumed += weapon_consumtion;
+			costs += weapon_costs;
+
+			var system_consumtion = 0;
+			var system_costs = 0;
+
+
+			$('.active-system').each(function (k, v) {
+				var e = $(v);
+				var id = e.find('.name').data('system');
+				var def = mapped.systems[id];
+
+				var q = e.find('.amount');
+				var a = Number( q.length ? q.val() || 1 : 1);
+
+				if(def.max) {
+					q.html('');
+					var max = def.max ? expression(def.max) : 0;
+
+					for(var i = 0; i <= max; i++)
+						q.append('<option value="'+i+'">'+i+'</option>');
+					q.val(a<i?a:i-1);
+					a = q.val();
+				} else {
+					q.remove();
+				}
+
+				var c = Math.round(expression(def.costs) * a);
+				var p = Math.round(expression(def.energy) * a);
+
+				e.find('.costs').text(c);
+				e.find('.energy').text(p);
+
+				system_consumtion += p;
+				system_costs += c;
+			});
+
+
+			$('#systems .costs').text(system_costs);
+			$('#systems .energy').text(system_consumtion);
+			consumed += system_consumtion;
+			costs += system_costs;
+
+
+			$('#total-costs').text(costs);
+			$('#total-energy').text(consumed+'/'+energy);
+
+			if(consumed > energy) $('#total-energy').addClass('text-error');
+			else $('#total-energy').removeClass('text-error');
+		}
+
+		$(updateStats);
+	</script>
+{% endblock %}

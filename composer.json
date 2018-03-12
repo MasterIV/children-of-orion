@@ -1,0 +1,22 @@
+{
+  "name": "syrup/children-of-orion",
+  "description": "Children of Orion",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Tobias Rojahn",
+      "email": "tobias@rojahn.org"
+    }
+  ],
+
+  "autoload": {
+    "psr-4": {"Iv\\Orion\\": "src/"}
+  },
+
+  "require": {
+    "masteriv/framework": "dev-master",
+    "twig/twig": "~1.0",
+    "erusev/parsedown": "1.6.3"
+  }
+}

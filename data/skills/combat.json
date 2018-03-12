@@ -1,0 +1,33 @@
+[
+  {
+    "id": "Melee",
+    "name": "Melee",
+    "attributes": [ "Str",  "Rea" ],
+    "applications": [ "Impact weapons", "Blades", "Polearms", "Brawl", "Exotic weapons", "Improvised weapons" ]
+  }, {
+    "id": "Defense",
+    "name": "Defense",
+    "attributes": [ "Rea", "Con"],
+    "applications": [ "Parry", "Block", "Dodge", "Take cover", "Evade", "Armor" ]
+  }, {
+    "id": "Firearms",
+    "name": "Firearms",
+    "attributes": [ "Rea", "Agi"],
+    "applications": ["Archaic weapons", "Projectile weapons", "Energy pistols", "Energy rifles" ]
+  }, {
+    "id": "Heavy weapons",
+    "name": "Heavy weapons",
+    "attributes": [ "Str", "Con"],
+    "applications": [ "Rocket launcher", "Artillery", "Flamethrower", "Flak" ]
+  }, {
+    "id": "Thrown weapons",
+    "name": "Thrown weapons",
+    "attributes": [ "Agi", "Str"],
+    "applications": [ "Grenades", "Knifes", "Axes", "Discs", "Improvised weapons" ]
+  }, {
+    "id": "Toughness",
+    "name": "Toughness",
+    "attributes": [ "Con", "Wil"],
+    "applications": ["Wounds", "Toxins", "Diseases", "Temperature" ]
+  }
+]

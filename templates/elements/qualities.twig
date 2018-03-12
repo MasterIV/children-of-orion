@@ -1,0 +1,23 @@
+<table class="table">
+	<thead>
+	<tr>
+		<th>Anzahl Mods:</th>
+		{% for i, q in data %}
+			{% if i < 11 %}
+				<th>{{ i }}</th>
+			{% endif %}
+		{% endfor %}
+	</tr>
+	</thead>
+
+	<tbody>
+		<tr>
+			<td>Preis Multiplikator:</td>
+			{% for i, q in data %}
+				{% if i < 11 %}
+					<td>{{ q }}</td>
+				{% endif %}
+			{% endfor %}
+		</tr>
+	</tbody>
+</table>

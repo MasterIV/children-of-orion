@@ -1,0 +1,27 @@
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th width="22%">Name</th>
+			<th width="7%">Slots</th>
+			<th width="7%">Max</th>
+			<th width="20%">Anwendbar</th>
+			<th width="44%">Beschreibung</th>
+		</tr>
+	</thead>
+
+	<tbody>
+	{% for m in data %}
+		<tr>
+			<td>{{ m.name }}</td>
+			{% if m.slots %}
+				<td>{{ m.slots }}</td>
+				<td>{{ m.max }}</td>
+				<td>{% if m.types|length == 5 %}Alle Waffen{% else %}{{ m.types|join(',  ') }}{% endif %}</td>
+			{% else %}
+				<td colspan="3">Nicht erwerbar</td>
+			{% endif %}
+			<td>{{ m.description }}</td>
+		</tr>
+	{% endfor %}
+	</tbody>
+</table>

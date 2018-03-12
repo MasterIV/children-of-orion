@@ -1,0 +1,20 @@
+<table class="table table-striped">
+	<thead>
+	<tr>
+		<th>Typ</th>
+		<th>Energiebedarf</th>
+		<th>Geschwindigkeit</th>
+		<th>Kosten</th>
+	</tr>
+	</thead>
+	<tbody>
+	{% for r in data %}
+		<tr>
+			<td>{{ r.name }}</td>
+			<td>{{ r.energy|e }}</td>
+			<td>{{ r.speed|e }}</td>
+			<td>{{ r.costs|e }}</td>
+		</tr>
+	{% endfor %}
+	</tbody>
+</table>

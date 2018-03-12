@@ -1,0 +1,22 @@
+<table class="table table-striped">
+	<thead>
+	<tr>
+		<th>Klasse</th>
+		<th>Stäre</th>
+		<th>Regeneration</th>
+		<th>Energiebedarf</th>
+		<th>Kosten</th>
+	</tr>
+	</thead>
+	<tbody>
+	{% for r in data %}
+		<tr>
+			<td>{{ r.id|rome }}</td>
+			<td>{{ r.shield }}</td>
+			<td>{{ r.regeneration }}</td>
+			<td>{{ r.energy }}</td>
+			<td>{{ r.costs }}</td>
+		</tr>
+	{% endfor %}
+	</tbody>
+</table>

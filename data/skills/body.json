@@ -1,0 +1,39 @@
+[
+  {
+    "id": "Acrobatics",
+    "name": "Acrobatics",
+    "attributes": [ "Str", "Agi"],
+    "applications": [ "Stunt", "Balance", "Reduce falling damage", "Combat maneuver", "Performance" ],
+    "category": "body"
+  }, {
+    "id": "Athletics",
+    "name": "Athletics",
+    "attributes": [ "Con", "Str"],
+    "applications": [ "Sprint", "Climb", "Swim", "Trekking", "Feat of strength", "Jump" ]
+  }, {
+    "id": "Zero-G",
+    "name": "Zero-G",
+    "attributes": [ "Str", "Con"],
+    "applications": [ "Magnet boots", "Spacewalk", "Combat", "Interior"]
+  }, {
+    "id": "Stealth",
+    "name": "Stealth",
+    "attributes": [ "Agi", "Rea"],
+    "applications": [ "Hide", "Sneak", "Disguise", "Keep low profile", "Ambush"]
+  }, {
+    "id": "Dexterity",
+    "name": "Dexterity",
+    "attributes": [ "Adi", "Rea"],
+    "applications": [ "Pickpocket", "Pick locks", "Perform trick", "Steady hand" ]
+  }, {
+    "id": "Survival",
+    "name": "Survival",
+    "attributes": [ "Con", "Wil"],
+    "applications": [ "Build camp", "Gather food", "Orientation", "Sense danger"]
+  }, {
+    "id": "Perception",
+    "name": "Perception",
+    "attributes": [ "Int", "Rea"],
+    "applications": [ "Seeing", "Hearing", "Smelling", "Touching & Tasting"]
+  }
+]

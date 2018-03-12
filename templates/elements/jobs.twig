@@ -1,0 +1,16 @@
+{% for job in data %}
+	<h3 id="job-{{ job.id }}-headline">{{ job.name }}</h3>
+	<div id="job-{{ job.id }}" class="well"></div>
+	<script>
+	    $( function() {
+	        new Treant({
+	            chart: {
+	                container: "#job-{{ job.id }}",
+	                connectors: {type: "step"}
+	            },
+
+	            nodeStructure: {{ job.tree|raw }}
+	        });
+	    });
+	</script>
+{% endfor %}
