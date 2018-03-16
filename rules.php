@@ -42,6 +42,9 @@ chapter('Basics'); {
 	data($data['talents'], 'talents');
 }
 
+chapter('Combat'); {
+    paragraph('Overview', 'combat/overview');
+}
 
 $template = $twig->load('rules.twig');
 $template->display(['content' => $content]);
