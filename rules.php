@@ -44,6 +44,9 @@ chapter('Basics'); {
 
 chapter('Combat'); {
     paragraph('Overview', 'combat/overview');
+    paragraph('Actions', 'combat/actions');
+    paragraph('Attacking & Defending', 'combat/attack');
+    paragraph('Damage', 'combat/damage');
 }
 
 $template = $twig->load('rules.twig');

@@ -23,7 +23,7 @@
   }, {
     "id": "Dexterity",
     "name": "Dexterity",
-    "attributes": [ "Adi", "Rea"],
+    "attributes": [ "Agi", "Rea"],
     "applications": [ "Pickpocket", "Pick locks", "Perform trick", "Steady hand" ]
   }, {
     "id": "Survival",

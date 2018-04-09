@@ -12,17 +12,13 @@ If it is drawn, the defender wins.
 * Hard: 35
 * Impossible: 40
 
-### Quality levels
-
-Each three points of the result above the difficulty counts as a quality level.
+**Quality levels:** Each three points of the result above the difficulty counts as a quality level.
 These can improve the result of a check.
 
-### Botch & Triumph
-
-If the dice are showing a 3 or less the 
+**Botch:** If the dice are showing a 3 or less the 
 check was a critical failure and bad things may happen.
 
-If the dice show 19 or above it is a triumph.
+**Triumph:** If the dice show 19 or above it is a triumph.
 The result is increased by additional 6 points.
 Additional the GM might define positive side effects.
 
