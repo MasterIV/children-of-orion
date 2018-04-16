@@ -1,10 +1,10 @@
 To attack the actor makes a combat check for the weapon he uses.
 The ticks spend on the action depend on the speed of the weapon used.
 The base difficulty of an attack is 15.
-Bonus and penalties might aplly depending on the circumstances of the attach.
+Bonus and penalties might apply depending on the circumstances of the attach.
 These could be for example:
 
-**Visibiliry** 
+**Visibility** 
 * Twilight: -2
 * Darkness: -4
 * Absolute darkness: -8
@@ -24,7 +24,7 @@ These could be for example:
 * Extreme: -4
 
 These add to any wound or condition penalties.
-These influences dont change the difficulty but modify the result of the attachers check.
+These influences don't change the difficulty but modify the result of the attachers check.
 
 **Defending:** The targeted character can diced to defend in case of an successful attack.
 In order to do so he makes a check on the defense skill.
@@ -42,7 +42,7 @@ Instead the defender might make a defense check with difficulty 15.
 Each quality level resulting from his check increase the armor by one against this attack.
 
 **Quality levels:** When the attach is still successful quality levels are determined by taking
-the differens of the attackes and the defeners checks.
+the difference of the attackers and the defenders checks.
 If the target did not defend the base difficulty is taken to determine
 the quality levels. Each quality level increases the damage by one.
 
