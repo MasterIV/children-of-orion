@@ -81,12 +81,12 @@ To roll on this table the player rolls 2d10. If it is a roll for a critical inju
 | --- | --- | --- |
 |  2 | Critically injured | Suffer a critical injury. |
 |  3 | Unconcious | Suffer the unconcious condition. |
-|  4 |  |  |
+|  4 | Damaged armor | Reduce the armor by one until repaired. |
 |  5 | Exausted | Suffer the exausted condition. |
 |  6 | Exposed | The next check against the target gains a bonus of 3. |
 |  7 | Disoriented | Suffer the disoriented condition. |
 |  8 | Distracted | The next check suffers a -2 penalty. |
-|  9 |  | Suffer 1d10 mental damage. |
+|  9 | Bruise | Suffer 1d10 mental damage. |
 | 10 | Drop guard | One anemy in meele range might perform an attack of opportunity or an enemy in movement range might engage for free. |
 | 11 | Stumbeling | Loose 3 ticks |
 | 12 | Headache | Suffer 1d6 mental damage. |
@@ -99,7 +99,7 @@ To roll on this table the player rolls 2d10. If it is a roll for a critical inju
 | 19 | Badly injured | Suffer 1d10 damage ignoring armor. |
 | 20 | Bleeding | Suffer the bleeding condition. |
 | 21 | Injured | Suffer the injured condition. |
-| 22 |  |  |
+| 22 | Shock | Suffer the shock condition. |
 | 23 | Deep cut | Suffer 2d6 damage ignoring armor. |
 | 24 | Coma | Suffer the coma condition. |
 | 25 | Bleeding out | The character is about to die and has 30 ticks to recieve medical care before he does so. Difficulty of medical check to stabelize is 20. |
