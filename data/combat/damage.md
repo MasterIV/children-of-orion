@@ -71,7 +71,7 @@ Characters can suffer from the following conditions:
 | Confused | Each level of this condition apply a penalty of one on attack checks. | Spend 10 Ticks to make a self-control check with difficulty 20 + level of the condition. Recover if successful. |
 | Dazed | All actions and reactions of the character need an additional tick per level of this condition. | Spend 10 Ticks to make a thoughness check with difficulty 20 + level of the condition. Recover if successful. |
 | Injured | Suffer one damage per leve of this condition for each action or reaction performed. | Can be stopped with a medical check difficulty 20 + level of the condition. |
-| Exausted | Suffer one mental damage per leve of this condition for each action or reaction performed. | Can be stopped by resting for 20 ticks. |
+| Exausted | Suffer one mental damage per leve of this condition for each action or reaction performed. | Resolve one level of this condition by resting for 20 ticks. |
 
 ### Crit & Botch table
 
@@ -79,30 +79,29 @@ To roll on this table the player rolls 2d10. If it is a roll for a critical inju
 
 | Roll | Name | Effect |
 | --- | --- | --- |
-| 1 |  |  |
-| 2 |  |  |
-| 3 |  |  |
-| 4 |  |  |
-| 5 |  |  |
-| 6 |  |  |
-| 7 |  |  |
-| 8 |  |  |
-| 9 |  |  |
-| 10 |  |  |
-| 11 |  |  |
-| 12 |  |  |
-| 13 |  |  |
-| 14 |  |  |
-| 15 |  |  |
-| 16 |  |  |
-| 17 |  |  |
-| 18 |  |  |
-| 19 |  |  |
-| 20 |  |  |
-| 21 |  |  |
+|  2 | Critically injured | Suffer a critical injury. |
+|  3 | Unconcious | Suffer the unconcious condition. |
+|  4 |  |  |
+|  5 | Exausted | Suffer the exausted condition. |
+|  6 | Exposed | The next check against the target gains a bonus of 3. |
+|  7 | Disoriented | Suffer the disoriented condition. |
+|  8 | Distracted | The next check suffers a -2 penalty. |
+|  9 |  | Suffer 1d10 mental damage. |
+| 10 | Drop guard | One anemy in meele range might perform an attack of opportunity or an enemy in movement range might engage for free. |
+| 11 | Stumbeling | Loose 3 ticks |
+| 12 | Headache | Suffer 1d6 mental damage. |
+| 13 | Drop item | Drop the item in your hands. |
+| 14 | Unbalanced | Loose 6 ticks |
+| 15 | Falling | Character falls prone. |
+| 16 | Scratch | Suffer 1d6 damage ignoring armor. |
+| 17 | Confused | Suffer the condition confused level 2. |
+| 18 | Dazed | Suffer the dazed condition. |
+| 19 | Badly injured | Suffer 1d10 damage ignoring armor. |
+| 20 | Bleeding | Suffer the bleeding condition. |
+| 21 | Injured | Suffer the injured condition. |
 | 22 |  |  |
-| 23 |  |  |
-| 24 |  |  |
+| 23 | Deep cut | Suffer 2d6 damage ignoring armor. |
+| 24 | Coma | Suffer the coma condition. |
 | 25 | Bleeding out | The character is about to die and has 30 ticks to recieve medical care before he does so. Difficulty of medical check to stabelize is 20. |
 | 26 | Death | The character dies immideatly |
 
