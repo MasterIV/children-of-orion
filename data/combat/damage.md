@@ -59,20 +59,19 @@ not be interrupted. The difficulty is 15 plus the amount of damage inflicted.
 
 Characters can suffer from the following conditions:
 
-* **Disoriented:** the character needs 5 ticks to get orientation again. 
-As long as he is suffering this condition he can only perform reactions or try to recover from the condition.
-* **Shock:** the character needs 5 ticks and a successful toughness check with difficulty 15 to recover from this condition. 
-As long as he is suffering this condition he can only perform reactions or try to recover from the condition.
-* **Unconscious:** every 15 ticks the character might make a toughness check with difficulty 20 to recover from this condition. 
-As long as he is unconscious he can't act or react. The only possible action is to recover from this condition.
-* **Coma:** the character is completely incapacitated and can't recover without medical attention.
 
-* **Kneeing:** 
-* **Prone:** 
-
-* **Dazed:** All actions and reactions of the character need an additional tick per level of this condition.
-* **Injured or burning:** Each level of this condition causes 1d6 damage every 10 ticks. This damage ignores any armor.
-* **Confused:** Each level of this condition apply a penalty of 2 on attack checks.
+| Name | Effect | How to Recover |
+| --- | --- | --- |
+| Disoriented | The character can only react or try to recover from this condition while it is active. | Spend 5 ticksas immediate action to get orientation again. No check required. |
+| Shock | The character can only react try to recover from this condition while it is active. | Spend 5 ticks as immediate action to perform a toughness check difficulty 15. Recover if successful. |
+| Unconscious | The character can only try to recover from this condition while it is active. No reactions possible. | Spend 15 ticksas immediate action to perform a toughness check difficulty 20. Recover if successful. |
+| Coma | The character is completely incapacitated and can't act or react. | Mdical check with difficulty 25 is required to bring someone back from a coma. After each completed week the character might also try a toughness check with difficulty 25 to naturally recover. |
+| Bleeding | Each level of this condition causes 1d6 damage every 10 ticks. This damage ignores any armor. | Can be stopped with a medical check difficulty 15 + level of the condition or when the character rests for 30 ticks. |
+| Burning | Each level of this condition causes 1d6 damage every 10 ticks. This damage ignores any armor. | Character can perform an acrobatics check 15 + level of the condition to roll on the ground or be extinguished (for example by jumping into water). |
+| Confused | Each level of this condition apply a penalty of one on attack checks. | Spend 10 Ticks to make a self-control check with difficulty 20 + level of the condition. Recover if successful. |
+| Dazed | All actions and reactions of the character need an additional tick per level of this condition. | Spend 10 Ticks to make a thoughness check with difficulty 20 + level of the condition. Recover if successful. |
+| Injured | Suffer one damage per leve of this condition for each action or reaction performed. | Can be stopped with a medical check difficulty 20 + level of the condition. |
+| Exausted | Suffer one mental damage per leve of this condition for each action or reaction performed. | Can be stopped by resting for 20 ticks. |
 
 ### Crit & Botch table
 
