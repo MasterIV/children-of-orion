@@ -1,0 +1,14 @@
+[
+	{
+		"id": "command_accuracy",
+		"name": "Command: accuracy",
+		"description": "Spend 5 ticks to give a command to in ally. The other character receives a bonus of one on his check if he follows the order of the commander.",
+		"rank": "1"
+	},
+	{
+		"id": "command_hurry",
+		"name": "Command: hurry",
+		"description": "Spend 5 ticks to give a command to in ally. The other character can perform his next action one tick faster if following the order of the commander. This does not allow the player to go below the minimal action duration.",
+		"rank": "1"
+	}
+]

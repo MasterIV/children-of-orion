@@ -1,1 +1,42 @@
-[]
+[
+	{
+		"id": "defender_i",
+		"name": "Defender I",
+		"description": "Allows a player to parry or block an attack for an ally with a penalty of %d.",
+		"rank": "1",
+		"level": "3",
+		"formula": "6 - %d * 2"
+	},
+	{
+		"id": "tough_nut",
+		"name": "Tough nut",
+		"description": "The character can ignore the firs %d penalty that results from wounds or critical injuries.",
+		"rank": "2",
+		"level": "2",
+		"formula": "%d"
+	},
+	{
+		"id": "divert",
+		"name": "Divert",
+		"description": "Reduces the duration of a parry by one tick. This does nor allow to go below the minimal reaction duration of 2 ticks.",
+		"rank": "3"
+	},
+	{
+		"id": "suppression_fire",
+		"name": "Suppression fire",
+		"description": "Make a regular attack check. If successful the target suffers a penalty of 4 on attacks until the attacker acts again. The attacker might perform an attack of opportunity if the target moves or attacks while suppressed.",
+		"rank": "1"
+	},
+	{
+		"id": "sweeping_blow",
+		"name": "Sweeping blow",
+		"description": "Declare a number of targets in melee range. Make an attack with a penalty that equals the number of targets. Each target can defend individually. The target that got hit suffer half the weapon damage.",
+		"rank": "2"
+	},
+	{
+		"id": "charge",
+		"name": "Charge",
+		"description": "Combine a movement with an attack by making an attack with a penalty of 4. If the attack is successful add your half your agility to the damage.",
+		"rank": "1"
+	}
+]
