@@ -2,13 +2,66 @@
 	{
 		"id": "command_accuracy",
 		"name": "Command: accuracy",
-		"description": "Spend 5 ticks to give a command to in ally. The other character receives a bonus of one on his check if he follows the order of the commander.",
-		"rank": "1"
+		"description": "Spend 5 ticks to give a command to in ally. The other character receives an advantage on his check if he follows the order of the commander.",
+		"rank": 1,
+		"level": 0
 	},
 	{
 		"id": "command_hurry",
 		"name": "Command: hurry",
 		"description": "Spend 5 ticks to give a command to in ally. The other character can perform his next action one tick faster if following the order of the commander. This does not allow the player to go below the minimal action duration.",
-		"rank": "1"
+		"rank": 1,
+		"level": 0
+	},
+	{
+		"id": "offensive_strategy",
+		"name": "Offensive strategy",
+		"description": "Spend 10 ticks to instruct your crew to follow an offensive strategy. All offensive actions receive a bonus of two while defensive actions suffer a penalty of 2. This replaces all previous strategies. The commander can spend 10 ticks to change back to a balanced strategy.",
+		"rank": 1,
+		"level": 0
+	},
+	{
+		"id": "defensive_strategy",
+		"name": "Defensive strategy",
+		"description": "Spend 10 ticks to instruct your crew to follow an defensive strategy. All defensive actions receive a bonus of two while offensive actions suffer a penalty of 2. This replaces all previous strategies. The commander can spend 10 ticks to change back to a balanced strategy.",
+		"rank": 1,
+		"level": 0
+	},
+	{
+		"id": "sensor_feedback",
+		"name": "Sensor feedback",
+		"description": "Allows the sensor operator to perform a defence reaction using the sensors skill when the ship is being scanned. The check suffers a penalty of %d. When defended successful the scanning ship suffers %d system damage.",
+		"rank": 1,
+		"level": 3,
+		"formula": "( %d - 1 ) % 2"
+	},
+	{
+		"id": "sensor_echo",
+		"name": "Sensor echo",
+		"description": "Create some wrong sensor information that look like additional ships. Determine the number of fake ship signatures you want to simulate. Then make a sensor check difficulty 15 and a penalty of 4 times the number of echos. If the check is successful the enemy sees the faked signatures. The enemy can make sensor checks with the result of this check as difficulty to determine if a signature is true or fake.",
+		"rank": 2,
+		"level": 0
+	},
+	{
+		"id": "evasive_maneuver",
+		"name": "Evasive maneuver",
+		"description": "The pilot can spend 5 ticks to fly an evasive maneuver and get an advantage on the next defensive action.",
+		"rank": 1,
+		"level": 0
+	},
+	{
+		"id": "offensive_maneuver",
+		"name": "Offensive maneuver",
+		"description": "The pilot can spend 8 ticks to fly an offensive maneuver and get an advantage the next attack action.",
+		"rank": 2,
+		"level": 0
+	},
+	{
+		"id": "combat_pilot",
+		"name": "Combat pilot",
+		"description": "Increase the base difficulty for attack checks against the pilots ship by %d.",
+		"rank": 1,
+		"level": 3,
+		"formula": "%d * 2"
 	}
 ]

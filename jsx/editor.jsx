@@ -13,8 +13,6 @@ export default class Editor extends React.Component {
 		// we will store deleted items in this fake category
 		this.state.talents.deleted = [];
 
-		console.log(props);
-
 		this.changeCategory = this.changeCategory.bind(this);
 		this.updateTalent = this.updateTalent.bind(this);
 		this.addTalent = this.addTalent.bind(this);

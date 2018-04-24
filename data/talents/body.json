@@ -1,1 +1,80 @@
-[]
+[
+	{
+		"id": "exceptional_sight",
+		"name": "Exceptional sight",
+		"description": "Get an advantage on perception check that involve sight.",
+		"rank": 3,
+		"level": 0
+	},
+	{
+		"id": "exceptional_hearing",
+		"name": "Exceptional hearing",
+		"description": "Get an advantage on perception check that involve hearing.",
+		"rank": 3,
+		"level": 0
+	},
+	{
+		"id": "exceptional_smell",
+		"name": "Exceptional smell",
+		"description": "Get an advantage on perception check that involve smelling.",
+		"rank": 2,
+		"level": 0
+	},
+	{
+		"id": "exceptional_taste",
+		"name": "Exceptional taste",
+		"description": "Get an advantage on perception check that involve tasting.",
+		"rank": 1,
+		"level": 0
+	},
+	{
+		"id": "exceptional_feeling",
+		"name": "Exceptional feeling",
+		"description": "Get an advantage on perception check that involve feeling.",
+		"rank": 1,
+		"level": 0
+	},
+	{
+		"id": "danger_instinct",
+		"name": "Danger instinct",
+		"description": "Get an advantage on the detection of ambushes. Might also allow perception checks if usually not possible. The character sometimes just has a bad feeling.",
+		"rank": 2,
+		"level": 0
+	},
+	{
+		"id": "frugal",
+		"name": "Frugal",
+		"description": "The character can exist longer without rations and suffers penalties one day later than others.",
+		"rank": 1,
+		"level": 0
+	},
+	{
+		"id": "gatherer",
+		"name": "Gatherer",
+		"description": "The character double the amount of food for each quality level on a check to gather food.",
+		"rank": 1,
+		"level": 0
+	},
+	{
+		"id": "hunter",
+		"name": "Hunter",
+		"description": "The character double the amount of food for each quality level on a check to hunt food.",
+		"rank": 1,
+		"level": 0
+	},
+	{
+		"id": "silent_steps",
+		"name": "Silent steps",
+		"description": "Checks to detect the character by hearing suffer a disadvantage.",
+		"rank": 2,
+		"level": 0
+	},
+	{
+		"id": "ambush",
+		"name": "Ambush",
+		"description": "Attacking while the enemy is not aware of the character increases the damage by %d.",
+		"rank": 1,
+		"level": 3,
+		"formula": "%d * 3"
+	}
+]

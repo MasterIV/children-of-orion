@@ -22,6 +22,13 @@ check was a critical failure and bad things may happen.
 The result is increased by additional 6 points.
 Additional the GM might define positive side effects.
 
+**Advantages & disadvantages:** Instead of a direct bonus or penalty the GM might
+decide to gran an advantage or disadvantage. Each advantage or disadvantage adds
+another die to the check. In case of the advantages the two highest results count,
+in case of the disadvantage the two lowest dice count.
+Advantages and disadvantages cancel each other before the dice roll.
+So 2 advantages and 1 disadvantage would result into just one advantage.
+
 ### Progressive checks
 
 In some cases a task might require more than one check.

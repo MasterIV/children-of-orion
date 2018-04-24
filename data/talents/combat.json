@@ -1,42 +1,192 @@
 [
 	{
-		"id": "defender_i",
-		"name": "Defender I",
+		"id": "defender",
+		"name": "Defender",
 		"description": "Allows a player to parry or block an attack for an ally with a penalty of %d.",
-		"rank": "1",
-		"level": "3",
+		"rank": 1,
+		"level": 3,
 		"formula": "6 - %d * 2"
 	},
 	{
 		"id": "tough_nut",
 		"name": "Tough nut",
 		"description": "The character can ignore the firs %d penalty that results from wounds or critical injuries.",
-		"rank": "2",
-		"level": "2",
+		"rank": 2,
+		"level": 2,
 		"formula": "%d"
 	},
 	{
 		"id": "divert",
 		"name": "Divert",
 		"description": "Reduces the duration of a parry by one tick. This does nor allow to go below the minimal reaction duration of 2 ticks.",
-		"rank": "3"
+		"rank": 3,
+		"level": 0
 	},
 	{
 		"id": "suppression_fire",
 		"name": "Suppression fire",
 		"description": "Make a regular attack check. If successful the target suffers a penalty of 4 on attacks until the attacker acts again. The attacker might perform an attack of opportunity if the target moves or attacks while suppressed.",
-		"rank": "1"
+		"rank": 1,
+		"level": 0
 	},
 	{
 		"id": "sweeping_blow",
 		"name": "Sweeping blow",
 		"description": "Declare a number of targets in melee range. Make an attack with a penalty that equals the number of targets. Each target can defend individually. The target that got hit suffer half the weapon damage.",
-		"rank": "2"
+		"rank": 2,
+		"level": 0
 	},
 	{
 		"id": "charge",
 		"name": "Charge",
 		"description": "Combine a movement with an attack by making an attack with a penalty of 4. If the attack is successful add your half your agility to the damage.",
-		"rank": "1"
+		"rank": 1,
+		"level": 0
+	},
+	{
+		"id": "overthrow",
+		"name": "Overthrow",
+		"description": "Make an attack with a penalty of 2. If successful the target suffers half the damage but falls prone.",
+		"rank": 2,
+		"level": 0
+	},
+	{
+		"id": "disarm",
+		"name": "Disarm",
+		"description": "Make an attack with a penalty of 4. If successful the target does not get damaged but drops his weapon. Use the dexterity skill to defend against this attack.",
+		"rank": 2,
+		"level": 0
+	},
+	{
+		"id": "forceful_blow",
+		"name": "Forceful blow",
+		"description": "Make an attack with a penalty of 2 and 2 ticks increased duration. Increase the damage of the attack by 3.",
+		"rank": 2,
+		"level": 0
+	},
+	{
+		"id": "vital_hit",
+		"name": "Vital hit",
+		"description": "Attack with a penalty of 4 which allows you to spend effects on the damage to inflict an additional critical injury.",
+		"rank": 2,
+		"level": 0
+	},
+	{
+		"id": "target_weak spot",
+		"name": "Target weak spot",
+		"description": "Attack with a penalty of 2 to give your attack the pierce quality.",
+		"rank": 1,
+		"level": 0
+	},
+	{
+		"id": "shatter_cover",
+		"name": "Shatter cover",
+		"description": "Make a regular attack with a heavy weapon on a cover to destroy the cover. Depending on the type of cover the GM might require a certain number of quality levels. If the cover is destroyed the character behind suffers half the weapons damage.",
+		"rank": 1,
+		"level": 0
+	},
+	{
+		"id": "overload_weapon",
+		"name": "Overload weapon",
+		"description": "Doubles the damage of an energy weapon but also doubles the duration for usage.",
+		"rank": 2,
+		"level": 0
+	},
+	{
+		"id": "traversing_fire",
+		"name": "Traversing fire",
+		"description": "Use an automatic rifle to shoot a wide burst. Any additionally used round increases the attack duration by one but the target also suffers a defence penalty of one.",
+		"rank": 1,
+		"level": 0
+	},
+	{
+		"id": "feint",
+		"name": "Feint",
+		"description": "Increase the difficulty of a melee attack by 2 to deal a defence penalty of 4. The attack also needs 2 additional ticks.",
+		"rank": 1,
+		"level": 0
+	},
+	{
+		"id": "detonate",
+		"name": "Detonate",
+		"description": "Overload the core of an energy weapon to work as explosive.",
+		"rank": 1,
+		"level": 0
+	},
+	{
+		"id": "ironhide",
+		"name": "Ironhide",
+		"description": "The attacker needs %d additional effects to inflict a critical hit.",
+		"rank": 2,
+		"level": 2,
+		"formula": "%d"
+	},
+	{
+		"id": "sturdy_hand",
+		"name": "Sturdy hand",
+		"description": "Reduce the penalty for shooting into close combat with an ally by %d.",
+		"rank": 1,
+		"level": 2,
+		"formula": "%d"
+	},
+	{
+		"id": "eagle_eye",
+		"name": "Eagle eye",
+		"description": "Reduce the penalty for long and extreme range attacks by %d.",
+		"rank": 1,
+		"level": 2,
+		"formula": "%d"
+	},
+	{
+		"id": "quickload",
+		"name": "Quickload",
+		"description": "Reloading a projectile or energy weapon is 2 ticks faster and counts as immediate action.",
+		"rank": 2,
+		"level": 0
+	},
+	{
+		"id": "quickdraw",
+		"name": "Quickdraw",
+		"description": "Draw a weapon 2 ticks faster and as immediate action.",
+		"rank": 1,
+		"level": 0
+	},
+	{
+		"id": "cover_expert",
+		"name": "Cover expert",
+		"description": "Increase the penalty for attackers by %d when taking cover.",
+		"rank": 1,
+		"level": 2,
+		"formula": "%d"
+	},
+	{
+		"id": "prepare_for impact",
+		"name": "Prepare for impact",
+		"description": "Use the defence to increase the armor by two instead of avoiding the attack.",
+		"rank": 1,
+		"level": 0
+	},
+	{
+		"id": "evade",
+		"name": "Evade",
+		"description": "Make an athletics check to reduce incoming area damage by one + quality levels.",
+		"rank": 1,
+		"level": 0
+	},
+	{
+		"id": "dual_wield",
+		"name": "Dual wield",
+		"description": "After a successful attack with the main hand the character might perform an attack with the offhand for half the duration that suffers a penalty of %d. The slower weapon always counts as main hand.",
+		"rank": 1,
+		"level": 3,
+		"formula": "6 - ( %d * 2)"
+	},
+	{
+		"id": "combat_reflexes",
+		"name": "Combat reflexes",
+		"description": "Increase the base difficulty for attack checks against the character by %d.",
+		"rank": 1,
+		"level": 3,
+		"formula": "%d * 2"
 	}
 ]

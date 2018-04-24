@@ -1,1 +1,28 @@
-[]
+[
+	{
+		"id": "adaptable",
+		"name": "Adaptable",
+		"description": "Do not suffer a disadvantage when interacting with other cultures.",
+		"rank": 1,
+		"level": 0
+	},
+	{
+		"id": "seduce",
+		"name": "Seduce",
+		"description": "Get an advantage when interacting with the other gender of a compatible species.",
+		"rank": 2,
+		"level": 0,
+		"requirements": [
+			{
+				"type": "attributes",
+				"value": "Cha",
+				"min": "6"
+			},
+			{
+				"type": "skills",
+				"value": "Eloquence",
+				"min": "4"
+			}
+		]
+	}
+]

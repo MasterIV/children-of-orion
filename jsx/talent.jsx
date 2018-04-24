@@ -15,14 +15,16 @@ export default class Talent extends React.Component {
 			id: data.name.toLowerCase().replace(/[\W\s]+/, '_'),
 			name: data.name,
 			description: data.description,
-			rank: data.rank,
-			level: data.level,
+			rank: data.rank | 0,
+			level: data.level | 0,
 			formula: data.formula,
 			requirements: data.requirements
 		});
 	}
 
 	render() {
+		var requirements = this.props.requirements ? this.props.requirements : [];
+
 		return <div className="well talent form-inline">
 			<div className="pull-right">
 				<button className="btn btn-danger" onClick={() => this.props.onDelete(this.props.index)}>X</button>
@@ -42,11 +44,11 @@ export default class Talent extends React.Component {
 				<input id={'level_'+this.props.index}
 				       className="input-mini"
 				       type="number" min="0"
-				       value={this.props.level}
+				       value={this.props.level|0}
 				       onChange={e => this.updateFiled('level', e.target.value)}/>
 			</div>
 
-			{this.props.level && <div>
+			{this.props.level > 1 && <div>
 				<label for={'formula_'+this.props.index}>Formula:</label>
 				<input type="text" value={this.props.formula}
 				       id={'formula_'+this.props.index}
@@ -56,8 +58,10 @@ export default class Talent extends React.Component {
 
 			<div>
 				<textarea onChange={e => this.updateFiled('description', e.target.value)}
-				          className="description" value={this.props.description} /></div>
-			<Requirements requirements={this.props.requirements}
+				          className="description" value={this.props.description} />
+			</div>
+
+			<Requirements requirements={requirements} key={'req_'+this.props.name}
 			              onChange={d => this.updateFiled('requirements', d)}/>
 		</div>;
 	}
