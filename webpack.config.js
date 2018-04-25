@@ -3,6 +3,7 @@ const path = require('path');
 module.exports = {
 	entry: './jsx/index.jsx',
 	watch: true,
+	mode: 'development',
 	module: { rules: [
 		{
 			test: /\.jsx$/,

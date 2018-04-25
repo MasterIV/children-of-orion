@@ -1,1 +1,14 @@
-[]
+[
+	{
+		"id": "hund",
+		"name": "hund",
+		"rank": 1,
+		"level": 0
+	},
+	{
+		"id": "katze_maus",
+		"name": "katze: maus",
+		"rank": 1,
+		"level": 0
+	}
+]

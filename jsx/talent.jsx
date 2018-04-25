@@ -9,10 +9,10 @@ export default class Talent extends React.Component {
 	}
 
 	updateFiled(k, v) {
-		var data = this.props;
+		var data = { ...this.props };
 		data[k] = v;
-		this.props.onChange(this.props.index, {
-			id: data.name.toLowerCase().replace(/[\W\s]+/, '_'),
+		this.props.onChange({
+			id: data.id,
 			name: data.name,
 			description: data.description,
 			rank: data.rank | 0,
@@ -33,14 +33,14 @@ export default class Talent extends React.Component {
 				<input type="text" value={this.props.name}
 				       onChange={e => this.updateFiled('name', e.target.value)}/>
 
-				<label for={'rank_'+this.props.index}>Rank:</label>
+				<label htmlFor={'rank_'+this.props.index}>Rank:</label>
 				<input id={'rank_'+this.props.index}
 				       className="input-mini"
 				       type="number" min="1" max="3"
 				       value={this.props.rank}
 				       onChange={e => this.updateFiled('rank', e.target.value)}/>
 
-				<label for={'level_'+this.props.index}>Level:</label>
+				<label htmlFor={'level_'+this.props.index}>Level:</label>
 				<input id={'level_'+this.props.index}
 				       className="input-mini"
 				       type="number" min="0"
@@ -49,7 +49,7 @@ export default class Talent extends React.Component {
 			</div>
 
 			{this.props.level > 1 && <div>
-				<label for={'formula_'+this.props.index}>Formula:</label>
+				<label htmlFor={'formula_'+this.props.index}>Formula:</label>
 				<input type="text" value={this.props.formula}
 				       id={'formula_'+this.props.index}
 				       onChange={e => this.updateFiled('formula', e.target.value)}

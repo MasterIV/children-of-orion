@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Collection from './collection.jsx';
 
 class Requirement extends React.Component {
 	constructor(props) {

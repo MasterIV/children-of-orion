@@ -7,6 +7,7 @@ if(!empty($_POST['category'])) {
 		throw new Exception('Unknown category: '.$_POST['category']);
 
 	foreach ($_POST['data'] as &$row) {
+	    $row['id'] = preg_replace('/([\W\s]+)/i', '_', strtolower($row['name']));
 		$row['level'] = intval($row['level']);
 		$row['rank'] = intval($row['rank']);
 	}
@@ -17,5 +18,5 @@ if(!empty($_POST['category'])) {
 	);
 } else {
 	$template = $twig->load('editor.twig');
-	$template->display(['data' => json_encode($data)]);
+	$template->display(['data' => json_encode($data, JSON_PRETTY_PRINT)]);
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import Talent from './talent.jsx';
+import Collection from './collection.jsx';
 
 export default class Editor extends React.Component {
 	constructor(props) {
@@ -12,10 +13,11 @@ export default class Editor extends React.Component {
 
 		// we will store deleted items in this fake category
 		this.state.talents.deleted = [];
+		this.collection = React.createRef();
+		this.defaults = {name: 'new talent', rank: 1};
 
 		this.changeCategory = this.changeCategory.bind(this);
-		this.updateTalent = this.updateTalent.bind(this);
-		this.addTalent = this.addTalent.bind(this);
+		this.updateTalents = this.updateTalents.bind(this);
 		this.removeTalent = this.removeTalent.bind(this);
 		this.save = this.save.bind(this);
 	}
@@ -24,25 +26,18 @@ export default class Editor extends React.Component {
 		this.setState({category: e.target.value});
 	}
 
-	updateTalent(i, data) {
-		this.setState(function(state) {
-			state.talents[this.state.category][i] = data;
-			return {talents: state.talents};
-		});
+	updateTalents(data) {
+        this.setState(function(state) {
+        	console.log(data);
+            state.talents[this.state.category] = data;
+            return {talents: state.talents};
+        });
 	}
 
-	addTalent() {
-		this.setState(function(state) {
-			state.talents[this.state.category].push({name: 'new talent', rank: 1});
-			return {talents: state.talents};
-		});
-	}
-
-	removeTalent(i) {
+	removeTalent(t) {
 		if(this.state.category !== 'deleted')
 			this.setState(function(state) {
-				state.talents.deleted.push(state.talents[this.state.category][i]);
-				state.talents[this.state.category].splice(i, 1);
+				state.talents.deleted.push(t);
 				return {talents: state.talents};
 			});
 	}
@@ -55,14 +50,10 @@ export default class Editor extends React.Component {
 	}
 
 	render() {
-		var talents = this.state.talents[this.state.category].map((talent, i) => {
-			return <Talent {...talent} index={i} onChange={this.updateTalent} onDelete={this.removeTalent} />;
-		});
-
 		if(this.state.category !== 'deleted')
 			var skills = this.props.skills[this.state.category].map(s => s.name).join(', ');
 
-		var controls = <div id="controls">
+		const controls = <div id="controls">
 			<select onChange={this.changeCategory} value={this.state.category}>
 				<option>combat</option>
 				<option>science</option>
@@ -72,13 +63,22 @@ export default class Editor extends React.Component {
 				<option>deleted</option>
 			</select>
 			<button className="btn btn-primary" onClick={this.save}>Save</button>
-			<button className="btn btn-success" onClick={this.addTalent}>Add</button>
+			<button className="btn btn-success" onClick={() => this.collection.current.add()}>Add</button>
 		</div>;
 
 		return <div>
 			<h1>Talent Editor</h1>
 			{this.state.category !== 'deleted' && <div className="well">Skills: {skills}</div>}
-			{controls}<div>{talents}</div>{controls}
+			{controls}
+			<Collection id={'talents_'+this.state.category}
+						key={'talents_'+this.state.category}
+						ref={this.collection}
+						onChange={this.updateTalents}
+						onDelete={this.removeTalent}
+						defaults={this.defaults}
+						component={Talent}
+						items={this.state.talents[this.state.category]}/>
+			{controls}
 		</div>;
 	}
 }
