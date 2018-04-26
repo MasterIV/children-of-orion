@@ -9,9 +9,7 @@ class Requirement extends React.Component {
 	}
 
 	updateFiled(f, v) {
-		var r = this.props;
-		r[f] = v;
-
+		let r = {...this.props, [f]: v};
 		this.props.onChange({
 			type: r.type,
 			value: r.value,
@@ -20,12 +18,12 @@ class Requirement extends React.Component {
 	}
 
 	render() {
-		var options = [];
+		let options = [];
 
 		if(this.props.type === 'attributes')
 			data.attributes.forEach(a => options.push(<option key={a.id} value={a.id}>{a.name}</option>));
 		else
-			for(var k in data[this.props.type])
+			for(let k in data[this.props.type])
 				data[this.props.type][k].forEach(a => options.push(<option value={a.id} key={a.id}>{k}: {a.name}</option>));
 
 		return <div className="requirement">
@@ -51,39 +49,24 @@ export default class Requirements extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.requirements = this.props.requirements ? [...this.props.requirements] : [];
-
-		this.updateRequirement = this.updateRequirement.bind(this);
-		this.deleteRequirement = this.deleteRequirement.bind(this);
-		this.addRequirement = this.addRequirement.bind(this);
-	}
-
-	updateRequirement(i, data) {
-		this.requirements[i] = data;
-		this.props.onChange(this.requirements);
-	}
-
-	deleteRequirement(i) {
-		this.requirements.splice(i, 1);
-		this.props.onChange(this.requirements);
-	}
-
-	addRequirement() {
-		this.requirements.push({
-			type: 'attributes',
-			value: 'Con',
-			min: 1
-		});
-
-		this.props.onChange(this.requirements);
+        this.collection = React.createRef();
+		this.defaults = {
+            type: 'attributes',
+            value: 'Con',
+            min: 1
+        };
 	}
 
 	render() {
-		var requirements = this.requirements.map((r, i) => <Requirement {...r} onChange={v => this.updateRequirement(i, v)} onDelete={() => this.deleteRequirement(i)} />);
-
 		return <div className="clearfix">
-			<div className="pull-right"><button className="btn badge-success" onClick={this.addRequirement}>+</button></div>
-			{requirements}
+			<div className="pull-right"><button className="btn btn-success" onClick={() => this.collection.current.add()}>+</button></div>
+
+			<Collection id={this.props.id}
+						ref={this.collection}
+						onChange={this.props.onChange}
+						defaults={this.defaults}
+						component={Requirement}
+						items={this.props.requirements}/>
 		</div>;
 	}
 }

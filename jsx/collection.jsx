@@ -6,7 +6,6 @@ export default class Collection extends React.Component {
         super(props);
 
         this.items = this.props.items ? [...this.props.items] : [];
-        console.log(props);
 
         this.update = this.update.bind(this);
         this.remove = this.remove.bind(this);
@@ -27,8 +26,8 @@ export default class Collection extends React.Component {
         this.props.onChange(this.items);
     }
 
-    add() {
-        this.items.push({ ...this.props.defaults, id: Date.now() });
+    add(item = this.props.defaults) {
+        this.items.push({ id: Date.now(), ...item });
         this.props.onChange(this.items);
     }
 

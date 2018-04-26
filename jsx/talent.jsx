@@ -9,8 +9,7 @@ export default class Talent extends React.Component {
 	}
 
 	updateFiled(k, v) {
-		var data = { ...this.props };
-		data[k] = v;
+		var data = { ...this.props, [k]: v };
 		this.props.onChange({
 			id: data.id,
 			name: data.name,
@@ -61,7 +60,9 @@ export default class Talent extends React.Component {
 				          className="description" value={this.props.description} />
 			</div>
 
-			<Requirements requirements={requirements} key={'req_'+this.props.name}
+			<Requirements requirements={requirements}
+						  id={'req_'+this.props.id}
+						  key={'req_'+this.props.id}
 			              onChange={d => this.updateFiled('requirements', d)}/>
 		</div>;
 	}
