@@ -76,5 +76,12 @@
 		"rank": 1,
 		"level": 3,
 		"formula": "%d * 3"
+	},
+	{
+		"id": "lip_reading",
+		"name": "Lip reading",
+		"description": "Allows to use the perception skill for the application lip reading.",
+		"rank": 2,
+		"level": 0
 	}
 ]

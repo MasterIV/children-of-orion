@@ -1,14 +1,17 @@
 [
 	{
-		"id": "hund",
-		"name": "hund",
+		"id": "surgeon",
+		"name": "Surgeon",
+		"description": "Heals additional %d wounds on a successful medical check to treat wounds.",
 		"rank": 1,
-		"level": 0
+		"level": 3,
+		"formula": "%d"
 	},
 	{
-		"id": "katze_maus",
-		"name": "katze: maus",
-		"rank": 1,
+		"id": "army_doctor",
+		"name": "Army doctor",
+		"description": "Halves the penalty for not having proper equipment on medicine checks.",
+		"rank": 2,
 		"level": 0
 	}
 ]
