@@ -1,0 +1,81 @@
+[
+
+  {
+    "id": "konventional",
+    "name": "Konventionelle Rakete",
+    "slots": 3,
+    "wgs": 7,
+    "dmg": 2,
+    "costs": 1,
+    "energy": 1,
+    "mods": [],
+    "range": 3
+  },
+  {
+    "id": "nuclear",
+    "name": "Atomrakete",
+    "slots": 3,
+    "wgs": 7,
+    "dmg": 2,
+    "costs": 1,
+    "energy": 1,
+    "mods": [],
+    "range": 3
+  },
+  {
+    "id": "fusionr",
+    "name": "Fusionsrakete",
+    "slots": 3,
+    "wgs": 7,
+    "dmg": 2,
+    "costs": 1,
+    "energy": 1,
+    "mods": [],
+    "range": 3
+  },
+  {
+    "id": "neutrino",
+    "name": "Neutronenrakete",
+    "slots": 3,
+    "wgs": 7,
+    "dmg": 2,
+    "costs": 1,
+    "energy": 1,
+    "mods": [],
+    "range": 3
+  },
+  {
+    "id": "photon",
+    "name": "Photonentorpedo",
+    "slots": 3,
+    "wgs": 7,
+    "dmg": 2,
+    "costs": 1,
+    "energy": 1,
+    "mods": [],
+    "range": 3
+  },
+  {
+    "id": "plasma",
+    "name": "Plasmatorpedo",
+    "slots": 3,
+    "wgs": 7,
+    "dmg": 2,
+    "costs": 1,
+    "energy": 1,
+    "mods": [],
+    "range": 3
+  },
+  {
+    "id": "antimatter",
+    "name": "Antimaterietorpedo",
+    "slots": 3,
+    "wgs": 7,
+    "dmg": 2,
+    "costs": 1,
+    "energy": 1,
+    "mods": [],
+    "range": 3
+  }
+
+]

@@ -1,0 +1,111 @@
+[
+  {
+    "id": "transporter",
+    "name": "Transporter",
+    "description": "Erlaubt das beamen von Crewmitgliedern. Transport kann nicht durch Schilde durchgeführt werden.",
+    "energy": 5,
+    "costs": 4
+  },
+  {
+    "id": "arcfield",
+    "name": "Hochspannungsfeld",
+    "description": "%0% Schance Raketen vor dem Aufprall zu zerstören.",
+    "energy": 14,
+    "costs": 6
+  },
+  {
+    "id": "reflektorfeld",
+    "name": "Reflektorfeld",
+    "description": "Die hälfte des erlittenen Schadens wird auf den Angreifer zurückgeworfen. Nicht kompatibel mit Schildsystemen.",
+    "energy": 20,
+    "costs": 25
+  },
+  {
+    "id": "dämpfungsfeld",
+    "name": "Dämfungsfeld",
+    "description": "Erlittener Schaden von Stahlenwaffen wird halbiert. Nicht kompatibel mit Schildsystemen.",
+    "energy": 30,
+    "costs": 30
+  },
+  {
+    "id": "projektildeflektor",
+    "name": "Projektildeflektor",
+    "description": "Schaden von Peojektilwaffen wird halbiert.",
+    "energy": 20,
+    "costs": 15
+  },
+  {
+    "id": "hyper-x-kondensatoren",
+    "name": "Hyper-X Kondensatoren",
+    "description": "Ermöglicht doppeltes abfeuern von Strahlenwaffen unter nutzung der doppelten WGS.",
+    "energy": 5,
+    "costs": 8
+  },
+  {
+    "id": "hanger",
+    "name": "Hanger",
+    "description": "Ein kleines Hangar, welches einen Jäger oder ein Shuttle fassen kann.",
+    "max": {"expression": "(size-2)*(size-2)"},
+    "energy": 2,
+    "costs": 5
+  },
+  {
+    "id": "quartiere",
+    "name": "Quartiere",
+    "description": "Vier Quartiere die Platz für je zwei Personen bieten und die zugehörige Lebenserhaltung. Etwas komfortabler ist es allerdings wenn die Quartiere nicht doppelt belegt sind.",
+    "max": {"expression": "size*size-1"},
+    "energy": 1,
+    "costs": 1
+  },
+  {
+    "id": "frachtraum",
+    "name": "Frachtraum",
+    "description": "Bietet stauraum für Fracht. Jeder Frachtraum fasst 24 m³ an Volumen.",
+    "max": {"expression": "size*size-1"},
+    "energy": 0,
+    "costs": 1
+  },
+  {
+    "id": "dronenkontrolle",
+    "name": "Dronenkontrolle",
+    "description": "Erlaubt das Lagern und Betreiben von Drohnen bis zu 10 Dronenplätzen. Dabei verbrauchen die meisten Drohnen mehrere Plätze.",
+    "max": {"expression": "(size-1)*(size-1)"},
+    "energy": 5,
+    "costs": 5
+  },
+  {
+    "id": "deckungsvorrichtung",
+    "name": "Deckungsvorrichtung",
+    "description": "Verringert Emissionen und macht das Schiff so schwerer zu Entdecken für feindliche Sensoren, sofern sich dieses ruhig verhält. Sollte das Schiff auf sich aufmerksam gemacht haben, so ist es leicht zu verfolgen. Proben zum erstmaligen Aufspüren des Schiffes sind um 5 erschwert und das Schiff kann nur bei einer aktiven Suche gefunden werden.",
+    "energy": {"expression": "size+1"},
+    "costs": {"expression": "size+5"}
+  },
+  {
+    "id": "tarnvorrichtung",
+    "name": "Tarnvorrichtung",
+    "description": "Veringert Emissionen und umgibt das Schiff mit einem Kraftfeld, welches es selbst für das Auge unsichtbar macht. Proben zum Aufspüren des Schiffes sind um 10 erschwert und das Schiff kann nur bei einer aktiven Suche gefunden werden. Trotzdem ist das Schiff noch physisch pesent und kann angegriffen werden. Es benötigt 15 Ticks in denen das Schiff keinen Schaden erleiden darf um das Tarnfeld wieder aufzubauen. Schaden lässt das Feld kollabieren.",
+    "energy": {"expression": "size*3+2"},
+    "costs": {"expression": "size*3+5"}
+  },
+  {
+    "id": "phasendeckung",
+    "name": "Phasendeckung",
+    "description": "Verschiebt das Schiff komplett in eine andere Phase. Es kann nur mit einem Malus von 15 aufgespürt werden und kann weder angreifen noch angegriffen werden. Es benötigt 5 Ticks in die normale Phase zurück zu kehren und 15 um wieder zu verschwinden. Erlittener Schaden unterbricht den Prozess der Phasenverschiebung.",
+    "energy": {"expression": "size*size+6"},
+    "costs": {"expression": "size*5+10"}
+  },
+  {
+    "id": "jumpdrive",
+    "name": "FTL-Antrieb",
+    "description": "Erlaubt das Reisen mit Überlicht. Benötigt 40 Ticks um die Kondensatoren zu laden.",
+    "energy": {"expression": "size*2+2"},
+    "costs": {"expression": "size+4"}
+  },
+  {
+    "id": "bussardramjet",
+    "name": "Bussardkollektor",
+    "description": "Vorichtung zum Sammeln von Deuterium mittels eines elektromagnetischen Feldes im Weltall. Kann genutzt werden um Gasriesen als Treibstoffquelle zu verwenden.",
+    "energy": 2,
+    "costs": 6
+  }
+]

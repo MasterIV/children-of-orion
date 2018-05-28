@@ -1,0 +1,51 @@
+[
+  {
+    "id": "repair",
+    "name": "Reperaturdrone",
+    "description": "",
+    "space": 4,
+    "costs": ""
+  },
+  {
+    "id": "probe",
+    "name": "Sensordrone",
+    "description": "",
+    "space": 2,
+    "costs": ""
+  },
+  {
+    "id": "defense",
+    "name": "Abwehrdrone",
+    "description": "",
+    "space": 4,
+    "costs": ""
+  },
+  {
+    "id": "combat",
+    "name": "Kampfdrone",
+    "description": "",
+    "space": 6,
+    "costs": ""
+  },
+  {
+    "id": "mine",
+    "name": "Weltraummine",
+    "description": "",
+    "space": 1,
+    "costs": ""
+  },
+  {
+    "id": "tracer",
+    "name": "Tracer",
+    "description": "",
+    "space": 2,
+    "costs": ""
+  },
+  {
+    "id": "transporterplatform",
+    "name": "Transporterplatform",
+    "description": "",
+    "space": 2,
+    "costs": ""
+  }
+]

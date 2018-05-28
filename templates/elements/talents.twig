@@ -4,9 +4,9 @@
 	<table class="table table-striped">
 		<tr>
 			<th width="20%">Talent</th>
-			<th>Beschreibung</th>
-			<th width="20%">Voraussetzung</th>
-			<th width="5%">Rang</th>
+			<th>Description</th>
+			<th width="20%">Requirements</th>
+			<th width="5%">Rank</th>
 		</tr>
 		{% for e in talents %}
 			<tr>
@@ -15,7 +15,7 @@
 				<td><ul>
 						{% for k,v in e.requirements.skills %}<li>Skill {{ k }}: {{ v }}</li>{% endfor %}
 						{% for v in e.requirements.talents %}<li>Talent {{ v }}</li>{% endfor %}
-						{% if e.requirements.race %}<li>Rasse: {{ e.requirements.race }}</li>{% endif %}
+						{% if e.requirements.race %}<li>Race: {{ e.requirements.race }}</li>{% endif %}
 				</ul></td>
 				<td>{{ e.rank|rome }}</td>
 			</tr>

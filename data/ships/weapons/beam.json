@@ -1,0 +1,112 @@
+[
+  {
+    "id": "laser",
+    "name": "Laser",
+    "slots": 3,
+    "wgs": 8,
+    "dmg": 3,
+    "costs": 2,
+    "energy": 2,
+    "mods": [],
+    "range": 15
+  },
+  {
+    "id": "particle",
+    "name": "Particle beam",
+    "slots": 4,
+    "wgs": 9,
+    "dmg": 3,
+    "costs": 3,
+    "energy": 4,
+    "mods": ["Shield piercing"],
+    "range": 20
+  },
+  {
+    "id": "fusion",
+    "name": "Fusion beam",
+    "slots": 4,
+    "wgs": 10,
+    "dmg": 4,
+    "costs": 3,
+    "energy": 5,
+    "mods": [],
+    "range": 25
+  },
+  {
+    "id": "graviton",
+    "name": "Gravitonenstrahl",
+    "slots": 5,
+    "wgs": 11,
+    "dmg": 5,
+    "costs": 5,
+    "energy": 7,
+    "mods": [],
+    "range": 25
+  },
+  {
+    "id": "ion",
+    "name": "Ionenkanone",
+    "slots": 4,
+    "wgs": 10,
+    "dmg": 4,
+    "costs": 6,
+    "energy": 9,
+    "mods": ["EMP"],
+    "range": 20
+  },
+  {
+    "id": "plasma",
+    "name": "Plasmakanone",
+    "slots": 4,
+    "wgs": 14,
+    "dmg": 8,
+    "costs": 5,
+    "energy": 10,
+    "mods": ["Zerfall"],
+    "range": 15
+  },
+  {
+    "id": "phasor",
+    "name": "Phasor",
+    "slots": 7,
+    "wgs": 10,
+    "dmg": 6,
+    "costs": 6,
+    "energy": 9,
+    "mods": [],
+    "range": 25
+  },
+  {
+    "id": "neutron",
+    "name": "Neutronenblaster",
+    "slots": 5,
+    "wgs": 10,
+    "dmg": 5,
+    "costs": 6,
+    "energy": 10,
+    "mods": ["Tödlich"],
+    "range": 25
+  },
+  {
+    "id": "disruptor",
+    "name": "Disruptor",
+    "slots": 7,
+    "wgs": 10,
+    "dmg": 8,
+    "costs": 7,
+    "energy": 12,
+    "mods": [],
+    "range": 30
+  },
+  {
+    "id": "stellar",
+    "name": "Sternenkonverter",
+    "slots": 2,
+    "wgs": 22,
+    "dmg": 25,
+    "costs": 16,
+    "energy": 40,
+    "mods": [],
+    "range": 50
+  }
+]

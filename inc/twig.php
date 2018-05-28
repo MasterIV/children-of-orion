@@ -5,9 +5,9 @@ $twig = new Twig_Environment($loader, []);
 
 $twig->addFilter(new Twig_SimpleFilter('e', function ($s) {
 	return is_array($s) ? str_replace([
-			'size', 'GK*GK', '*', '+', '-'
+			 'size*size', '*', '+', '-'
 	], [
-			'GK', 'GK²', ' * ', ' + ', ' - '
+			 'size²', ' * ', ' + ', ' - '
 	], $s['expression']) : $s;
 }));
 

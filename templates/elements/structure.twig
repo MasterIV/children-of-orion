@@ -1,16 +1,18 @@
 <table class="table table-striped">
 	<thead>
 	<tr>
-		<th>Typ</th>
-		<th>Energiebedarf</th>
-		<th>Strukturpunkte</th>
-		<th>Kosten</th>
+		<th>Type</th>
+		<th width="40%">Description</th>
+		<th>Energy demand</th>
+		<th>Structure points</th>
+		<th>Costs</th>
 	</tr>
 	</thead>
 	<tbody>
 	{% for r in data %}
 		<tr>
 			<td>{{ r.name }}</td>
+			<td>{{ r.description }}</td>
 			<td>{{ r.energy|e }}</td>
 			<td>{{ r.structure|e }}</td>
 			<td>{{ r.costs|e }}</td>

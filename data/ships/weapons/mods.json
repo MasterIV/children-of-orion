@@ -1,0 +1,107 @@
+[
+
+  {
+    "id": "Panzerbrechend",
+    "name": "Panzerbrechend",
+    "description": "Erlaubt die Nutzung des Effekts Durchdringung.",
+    "types": ["projectile", "beam"],
+    "slots": 1,
+    "max": 1
+  },
+  {
+    "id": "Tödlich",
+    "name": "Tödlich",
+    "description": "Die crew nimmt gleichzeitig Schaden in Höhe verlorener Strukturpunkte abzüglich der Größenklasse. Rüstung hat keinen Effekt, jediglich Strahlenschutz kann den Schaden reduzieren.",
+    "types": ["missle", "special", "projectile", "beam"],
+    "slots": 0,
+    "max": 0
+  },
+  {
+    "id": "Schildbrechend",
+    "name": "Schildbrechend",
+    "description": "Schilde werden von dieser Waffe ignoriert.",
+    "types": ["beam"],
+    "slots": 3,
+    "max": 1
+  },
+  {
+    "id": "Punktverteidigung",
+    "name": "Punktverteidigung",
+    "description": "Die Waffe hat nur noch ein viertel ihrer Reichweite, erhält dafür aber einen bonus beim feuern auf Raketen oder Jäger von 4.",
+    "types": ["projectile", "beam"],
+    "slots": 1,
+    "max": 1
+  },
+  {
+    "id": "Schwerlafette",
+    "name": "Schwerlafette",
+    "description": "Erlaubt die Nutzung des Effekts Tödlich.",
+    "types": ["projectile", "beam"],
+    "slots": 2,
+    "max": 1
+  },
+  {
+    "id": "Gefährlich",
+    "name": "Gefährlich",
+    "description": "Erhöht den schaden um 1.",
+    "types": ["missle", "special", "projectile", "beam"],
+    "slots": 1,
+    "max": 1
+  },
+  {
+    "id": "Emp",
+    "name": "Emp",
+    "description": "Erlaubt die Nutzung des Effekts Lähmend, der alle Crewmitglieder an board betrifft.",
+    "types": ["missle"],
+    "slots": 1,
+    "max": 1
+  },
+  {
+    "id": "",
+    "name": "",
+    "description": "",
+    "types": ["missle", "special", "projectile", "beam"],
+    "slots": 1,
+    "max": 1
+  },
+  {
+    "id": "",
+    "name": "",
+    "description": "",
+    "types": ["missle", "special", "projectile", "beam"],
+    "slots": 1,
+    "max": 1
+  },
+  {
+    "id": "",
+    "name": "",
+    "description": "",
+    "types": ["missle", "special", "projectile", "beam"],
+    "slots": 1,
+    "max": 1
+  },
+  {
+    "id": "",
+    "name": "",
+    "description": "",
+    "types": ["missle", "special", "projectile", "beam"],
+    "slots": 1,
+    "max": 1
+  },
+  {
+    "id": "",
+    "name": "",
+    "description": "",
+    "types": ["missle", "special", "projectile", "beam"],
+    "slots": 1,
+    "max": 1
+  },
+  {
+    "id": "",
+    "name": "",
+    "description": "",
+    "types": ["missle", "special", "projectile", "beam"],
+    "slots": 1,
+    "max": 1
+  }
+]

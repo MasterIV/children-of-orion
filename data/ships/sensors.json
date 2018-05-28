@@ -1,0 +1,51 @@
+[
+  {
+    "id":  "basic",
+    "name": "Einfache Sensoren",
+    "description": "Einfache Sensoren erlauben es lediglich Wärmesignaturen und geografische Beschaffenheit der Umgebung zu ermitteln. Auch gängige Strahlungsquellen können wahrgenommen werden.",
+    "energy":   1,
+    "costs":   1
+  },
+  {
+    "id":  "advanced",
+    "name": "Erweiterte Sensoren",
+    "description": "Diese Sensoren sind etwas präzieser und erlauben ein breiteres Spektrum von Untersuchungen. Beispielsweise kann mit ihnen nach Lebendszeichen gescannt werden oder es kann relatif einfach festgestellt werden, wenn ein anderes Schiff seine Waffen läd.",
+    "energy":   3,
+    "costs":   4
+  },
+  {
+    "id":  "geologic",
+    "name": "Geologische Sensoren",
+    "description": "Entwickelt für den Einsatz in der Erzförderung sind diese Sensoren besonders gut geeignet um Gesteinsschichten und Mineralien zu untersuchen. Bei geologischen Untersuchungen gewähren diese Sensoren einen Bonus von 3 und verhalten sich ansonsten wie erweiterte Sensoren.",
+    "energy":   4,
+    "costs":   6
+  },
+  {
+    "id":  "scout",
+    "name": "Aufklärungssensoren",
+    "description": "",
+    "energy":   5,
+    "costs":   8
+  },
+  {
+    "id":  "astrometric",
+    "name": "Astrometrische Senosren",
+    "description": "Diese Sensoren sind besonders auf die Untersuchung astronomischer Phänomene ausgerichtet...",
+    "energy":   7,
+    "costs":   10
+  },
+  {
+    "id":  "military",
+    "name": "Militerische Sensoren",
+    "description": "",
+    "energy":   10,
+    "costs":   15
+  },
+  {
+    "id":  "multiphase",
+    "name": "Multiphasen Sensorphalanx",
+    "description": "Dise Sensoren sind besunder präzise und neben dem noramen Spektrum auch dafür geeignet Signaturen und Strahlungen aus anderen Dimensionen, Phasen und dem Subraum wahrzunehmen. Bonus von 2 auf alle Sensor-Proben und von 4 auf ...",
+    "energy":   12,
+    "costs":   20
+  }
+]

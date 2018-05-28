@@ -1,0 +1,42 @@
+[
+  {
+    "id": "none",
+    "name": "Unmodified structure",
+    "description": "No measures have been taken to improve the structural integrity of the ship. the ship is vulnerable and can't take much damage.",
+    "energy": 0,
+    "structure": { "expression" : "2*size*size" },
+    "costs": 0
+  },
+  {
+    "id": "basic",
+    "name": "Basic structure",
+    "description": "Improved alloys and supporting installation increase the durability of the ship.",
+    "energy": 0,
+    "structure": { "expression" : "4+3*size*size" },
+    "costs": {"expression" : "size" }
+  },
+  {
+    "id": "supported",
+    "name": "Supported structure",
+    "description": "Additional to the modern material, the ships structural integrity is also supported using force fields.",
+    "energy": {"expression" : "size" },
+    "structure": { "expression" : "6+3.5*size*size" },
+    "costs": {"expression" : "size*2" }
+  },
+  {
+    "id": "enhanced",
+    "name": "Enhanced structure",
+    "description": "More efficient force fields and advanced materials make this structure quite durable.",
+    "energy": {"expression" : "size*2" },
+    "structure": { "expression" : "8+4*size*size" },
+    "costs": {"expression" : "size*4" }
+  },
+  {
+    "id": "reinforced",
+    "name": "Reinforced structure",
+    "description": "The massive use of energy extends the durability of used materials beyond their natural maximum.",
+    "energy": {"expression" : "size*4" },
+    "structure": { "expression" : "20+6*size*size" },
+    "costs": {"expression" : "size*10" }
+  }
+]

@@ -49,6 +49,23 @@ chapter('Combat'); {
     paragraph('Damage', 'combat/damage');
 }
 
+chapter('Space'); {
+	paragraph('Overview', 'space/overview');
+	paragraph('Combat', 'space/combat');
+
+
+	paragraph('Construction', 'space/ships'); {
+		data($data['ships']['hull'], 'hull', 'Ship sizes', 'space/hull');
+		data($data['ships']['power'], 'reactor', 'Reactor', 'space/reactor');
+		data($data['ships']['structure'], 'structure', 'Structure', 'space/structure');
+		data($data['ships']['armor'], 'armor', 'Armor', 'space/armor');
+		data($data['ships']['shields'], 'shields', 'Shields', 'space/shields');
+		data($data['ships']['drive'], 'drive', 'Drive', 'space/drive');
+		data($data['ships']['computer'], 'computer', 'Computer', 'space/computer');
+		data($data['ships']['sensors'], 'system', 'Sensors', 'space/sensors');
+	}
+}
+
 $template = $twig->load('rules.twig');
 $template->display(['content' => $content]);
 

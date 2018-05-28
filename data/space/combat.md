@@ -62,10 +62,8 @@ converted to 5 structure damage.
 
 When a ships structure points go to or below 0 it becomes inoperable.
 It will not directly explode (that only happens with a critical reactor malfunction)
-but might suffer hull breaks and its energy grid will completely collapse
-what results in outage of all systems.
+but might suffer hull breaches and its energy grid will completely collapse
+what results in outage of all systems (including life support).
 
-### Botch table
-
-Since it depends on the rope of a character botching it is kind of hard to prepare a table for this.
+**Botches:** Since it depends on the role of a character botching it is kind of hard to prepare a table for this.
 So for now the GM needs to decide in the case of a botch.

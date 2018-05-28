@@ -1,0 +1,30 @@
+{
+  "fusion": [
+    { "id":  1, "size": 1, "output":   8, "costs": 1 },
+    { "id":  2, "size": 2, "output":  18, "costs": 2 },
+    { "id":  3, "size": 2, "output":  29, "costs": 4 },
+    { "id":  4, "size": 3, "output":  45, "costs": 6 },
+    { "id":  5, "size": 3, "output":  60, "costs": 9 },
+    { "id":  6, "size": 4, "output":  80, "costs": 12 },
+    { "id":  7, "size": 4, "output": 100, "costs": 16 },
+    { "id":  8, "size": 4, "output": 125, "costs": 22 },
+    { "id":  9, "size": 5, "output": 160, "costs": 30 },
+    { "id": 10, "size": 5, "output": 200, "costs": 40 },
+    { "id": 11, "size": 6, "output": 250, "costs": 60 },
+    { "id": 12, "size": 7, "output": 400, "costs": 100 }
+  ],
+  "antimatter": [
+    { "id":  1, "size": 1, "output":  10, "costs": 2 },
+    { "id":  2, "size": 2, "output":  20, "costs": 3 },
+    { "id":  3, "size": 2, "output":  32, "costs": 5 },
+    { "id":  4, "size": 3, "output":  51, "costs": 8 },
+    { "id":  5, "size": 3, "output":  68, "costs": 11 },
+    { "id":  6, "size": 4, "output":  90, "costs": 15 },
+    { "id":  7, "size": 4, "output": 116, "costs": 19 },
+    { "id":  8, "size": 4, "output": 140, "costs": 26 },
+    { "id":  9, "size": 5, "output": 180, "costs": 36 },
+    { "id": 10, "size": 5, "output": 225, "costs": 48 },
+    { "id": 11, "size": 6, "output": 280, "costs": 70 },
+    { "id": 12, "size": 7, "output": 450, "costs": 120 }
+  ]
+}

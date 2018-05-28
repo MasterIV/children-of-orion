@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Fighter",
+    "costs": 1,
+    "index": 1
+  },
+  {
+    "id": 2,
+    "name": "Corvette",
+    "costs": 2,
+    "index": 2
+  },
+  {
+    "id": 3,
+    "name": "Frigate",
+    "costs": 4,
+    "index": 3
+  },
+  {
+    "id": 4,
+    "name": "Destroyer",
+    "costs": 8,
+    "index": 4
+  },
+  {
+    "id": 5,
+    "name": "Cruiser",
+    "costs": 16,
+    "index": 5
+  },
+  {
+    "id": 6,
+    "name": "Battleship",
+    "costs": 32,
+    "index": 6
+  },
+  {
+    "id": 7,
+    "name": "Titan",
+    "costs": 64,
+    "index": 7
+  },
+  {
+    "id": 8,
+    "name": "Dreadnought",
+    "costs": 128,
+    "index": 8
+  },
+  {
+    "id": 9,
+    "name": "Superstructure",
+    "costs": 300,
+    "index": 9
+  }
+]

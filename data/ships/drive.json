@@ -1,0 +1,23 @@
+[
+  {
+    "id": "fusion",
+    "name": "Fusion drive",
+    "energy": {"expression": "size*2"},
+    "speed": 4,
+    "costs": {"expression": "size"}
+  },
+  {
+    "id": "neutron",
+    "name": "Neutron drive",
+    "energy": {"expression": "size*3"},
+    "speed": 6,
+    "costs": {"expression": "size*2"}
+  },
+  {
+    "id": "ion",
+    "name": "Ion drive",
+    "energy": {"expression": "size*4"},
+    "speed": 8,
+    "costs": {"expression": "size*3"}
+  }
+]
