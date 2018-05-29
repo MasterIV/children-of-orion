@@ -1,0 +1,39 @@
+{
+  "base": [
+    {
+      "id": "clothing",
+      "name": "Reinforced clothing",
+      "protection": 1,
+      "penalty": 0,
+      "costs": 200
+    },
+    {
+      "id": "light",
+      "name": "Light armor",
+      "protection": 2,
+      "penalty": 1,
+      "costs": 250
+    }, {
+      "id": "medium",
+      "name": "Medium Armor",
+      "protection": 3,
+      "penalty": 2,
+      "costs": 320
+    }, {
+      "id": "heavy",
+      "name": "Heavy Armor",
+      "protection": 4,
+      "penalty": 3,
+      "costs": 400
+    }, {
+      "id": "powered",
+      "name": "Powered Armor",
+      "protection": 5,
+      "penalty": 2,
+      "costs": 800
+    }
+  ],
+  "mods": [
+
+  ]
+}

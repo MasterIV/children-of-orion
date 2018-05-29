@@ -1,0 +1,29 @@
+{
+  "base": [
+    {
+      "id": "missile",
+      "price": 3,
+      "damage": 5,
+      "range": "long",
+      "speed": 12,
+      "energy": 2
+    }, {
+      "id": "ballistic",
+      "price": 2,
+      "damage": 3,
+      "range": "medium",
+      "speed": 8,
+      "energy": 1
+    }, {
+      "id": "beam",
+      "price": 5,
+      "damage": 6,
+      "range": "long",
+      "speed": 10,
+      "energy": 4
+    }
+  ],
+  "mods": [
+
+  ]
+}

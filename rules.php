@@ -9,7 +9,7 @@ function section($l, $title, $file = null) {
 
 	if($file) {
 		$md = file_get_contents(ROOT.'/data/'.$file.'.md');
-		$GLOBALS['content'] .= $GLOBALS['parsedown']->text($md);
+		$GLOBALS['content'] .= '<div class="content-text">' . $GLOBALS['parsedown']->text($md) . '</div>';
 	}
 
 }
@@ -22,8 +22,8 @@ function paragraph($title, $file = null) {
 	section(2, $title, $file);
 }
 
-function data($data, $template, $title = null, $file = null) {
-	if($title) section(3, $title, $file);
+function data($data, $template, $title = null, $file = null, $heading = 3) {
+	if($title) section($heading, $title, $file);
 	$tpl = $GLOBALS['twig']->load('elements/'.$template.'.twig');
 	$GLOBALS['content'] .= $tpl->render(['data' => $data]);
 }
@@ -49,10 +49,15 @@ chapter('Combat'); {
     paragraph('Damage', 'combat/damage');
 }
 
+chapter('Gear'); {
+	data($data['gear']['weapons'], 'weapons', 'Weapons', 'gear/weapons', 2);
+	data($data['gear']['armor'], 'armor', 'Armor', 'gear/armor', 2);
+}
+
+
 chapter('Space'); {
 	paragraph('Overview', 'space/overview');
 	paragraph('Combat', 'space/combat');
-
 
 	paragraph('Construction', 'space/ships'); {
 		data($data['ships']['hull'], 'hull', 'Ship sizes', 'space/hull');
@@ -60,10 +65,15 @@ chapter('Space'); {
 		data($data['ships']['structure'], 'structure', 'Structure', 'space/structure');
 		data($data['ships']['armor'], 'armor', 'Armor', 'space/armor');
 		data($data['ships']['shields'], 'shields', 'Shields', 'space/shields');
-		data($data['ships']['drive'], 'drive', 'Drive', 'space/drive');
 		data($data['ships']['computer'], 'computer', 'Computer', 'space/computer');
 		data($data['ships']['sensors'], 'system', 'Sensors', 'space/sensors');
+
+		// systems
+		// weapons
 	}
+
+	paragraph('Travelling', 'space/travelling');
+
 }
 
 $template = $twig->load('rules.twig');
