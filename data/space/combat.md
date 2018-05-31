@@ -30,6 +30,7 @@ The actions are the following:
 | Aim | 2-6 | The actor receives a bonus of one per two ticks of aiming on his next attack. maximum bonus: 3 |
 | Patch critical damage | 15 | Make a engineering check difficulty 15 + 5 times (unpatched) critical damage on the system you try to repair. If successful that damage counts as patched until the system receives another damage and the penalties don't apply any more. |
 | Stabilize system | 10 | Make a computers check difficulty 15 to repair one + quality level system damage |
+| Perform scan | 10 | Use the scanners to gain information. Difficulty depends on the type of information tried to obtain. |
 | Switch station | 3+ | If the switching requires a physical movement it takes longer than just switching between applications |
 | Redistribute energy | 8 | A successful engineering difficulty 15 check allows you to redistribute 1 + quality level energy points |
 
@@ -55,7 +56,7 @@ system got hit:
 | 7 | Sensors | 3 | Penalty of 2sensor checks |
 | 8-10 | Secondary system | 1 | Outage of the system until repaired |
 
-In case of a secondary system, determine one randomly. \
+In case of a secondary system, determine one randomly. 
 When a system reaches is maximum damage it is completely disabled until
 patched or repaired. Damage that exceeds the maximum is 
 converted to 5 structure damage.
