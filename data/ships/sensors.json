@@ -1,50 +1,50 @@
 [
   {
     "id":  "basic",
-    "name": "Einfache Sensoren",
-    "description": "Einfache Sensoren erlauben es lediglich Wärmesignaturen und geografische Beschaffenheit der Umgebung zu ermitteln. Auch gängige Strahlungsquellen können wahrgenommen werden.",
+    "name": "Basic sensors",
+    "description": "These simple sensors only allow to detect head or radiation sources and analyze the basic geography of an environment.",
     "energy":   1,
     "costs":   1
   },
   {
     "id":  "advanced",
-    "name": "Erweiterte Sensoren",
+    "name": "Advanced sensors",
     "description": "Diese Sensoren sind etwas präzieser und erlauben ein breiteres Spektrum von Untersuchungen. Beispielsweise kann mit ihnen nach Lebendszeichen gescannt werden oder es kann relatif einfach festgestellt werden, wenn ein anderes Schiff seine Waffen läd.",
     "energy":   3,
     "costs":   4
   },
   {
     "id":  "geologic",
-    "name": "Geologische Sensoren",
+    "name": "Geologic sensors",
     "description": "Entwickelt für den Einsatz in der Erzförderung sind diese Sensoren besonders gut geeignet um Gesteinsschichten und Mineralien zu untersuchen. Bei geologischen Untersuchungen gewähren diese Sensoren einen Bonus von 3 und verhalten sich ansonsten wie erweiterte Sensoren.",
     "energy":   4,
     "costs":   6
   },
   {
     "id":  "scout",
-    "name": "Aufklärungssensoren",
+    "name": "Scouting sensors",
     "description": "",
     "energy":   5,
     "costs":   8
   },
   {
-    "id":  "astrometric",
-    "name": "Astrometrische Senosren",
-    "description": "Diese Sensoren sind besonders auf die Untersuchung astronomischer Phänomene ausgerichtet...",
+    "id":  "astrometry",
+    "name": "Astrometry sensors",
+    "description": "This sensors are specialized on analyzing astronomical phenomenons...",
     "energy":   7,
     "costs":   10
   },
   {
     "id":  "military",
-    "name": "Militerische Sensoren",
+    "name": "Military sensors",
     "description": "",
     "energy":   10,
     "costs":   15
   },
   {
     "id":  "multiphase",
-    "name": "Multiphasen Sensorphalanx",
-    "description": "Dise Sensoren sind besunder präzise und neben dem noramen Spektrum auch dafür geeignet Signaturen und Strahlungen aus anderen Dimensionen, Phasen und dem Subraum wahrzunehmen. Bonus von 2 auf alle Sensor-Proben und von 4 auf ...",
+    "name": "Multiphase sensor phalanx",
+    "description": "These sensors are especially precise and can even detect signatures or radiation from other dimensions, phases and subspace. Bonus of 2 on all sensor checks and 4 on ...",
     "energy":   12,
     "costs":   20
   }

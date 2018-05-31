@@ -1,14 +1,14 @@
 <table class="table table-striped">
 	<tr>
 		<th width="20%">Name</th>
-		<th>Beschreibung</th>
-		<th>Energiebedarf</th>
-		<th>Kosten</th>
+		<th>Description</th>
+		<th width="15%">Energy demand</th>
+		<th width="12%">Costs</th>
 	</tr>
 	{% for e in data %}
 		<tr>
 			<td>{{ e.name }}</td>
-			<td>{{ e.description }}{% if e.max %}<i>Maximal {{ e.max|e }} einbaubar.</i>{% endif %}</td>
+			<td>{{ e.description }}{% if e.max %}<br><i>Can be installed up to {{ e.max|e }} times.</i>{% endif %}</td>
 			<td>{{ e.energy|e }}</td>
 			<td>{{ e.costs|e }}</td>
 		</tr>

@@ -30,7 +30,7 @@
   {
     "id": "projectile-deflector",
     "name": "Projectile deflector",
-    "description": "Half of incoming ballistic damage is absorbed. Not compatible with shields and other defensive force fields.",
+    "description": "Half of incoming ballistic damage is absorbed. Not compatible with other defensive force fields.",
     "energy": 20,
     "costs": 15
   },
@@ -67,30 +67,30 @@
   },
   {
     "id": "drone-control",
-    "name": "Drone controll",
-    "description": "Erlaubt das Lagern und Betreiben von Drohnen bis zu 10 Dronenplätzen. Dabei verbrauchen die meisten Drohnen mehrere Plätze.",
+    "name": "Drone control",
+    "description": "Allows to store and operate drones. Provides 10 drone slots. Most drones require multiple slots.",
     "max": {"expression": "(size-1)*(size-1)"},
     "energy": 5,
     "costs": 5
   },
   {
-    "id": "deckungsvorrichtung",
-    "name": "Deckungsvorrichtung",
-    "description": "Verringert Emissionen und macht das Schiff so schwerer zu Entdecken für feindliche Sensoren, sofern sich dieses ruhig verhält. Sollte das Schiff auf sich aufmerksam gemacht haben, so ist es leicht zu verfolgen. Proben zum erstmaligen Aufspüren des Schiffes sind um 5 erschwert und das Schiff kann nur bei einer aktiven Suche gefunden werden.",
+    "id": "concealment-system",
+    "name": "Concealment system",
+    "description": "Reduces the ships emission and makes it hard to detect for enemy sensors. As long as remaining silent it is hard to detect but once spotted it can be normally tracked. The ship can only actively be detected with a check that suffers a penalty of 5.",
     "energy": {"expression": "size+1"},
     "costs": {"expression": "size+5"}
   },
   {
     "id": "cloaking",
     "name": "Cloaking",
-    "description": "Veringert Emissionen und umgibt das Schiff mit einem Kraftfeld, welches es selbst für das Auge unsichtbar macht. Proben zum Aufspüren des Schiffes sind um 10 erschwert und das Schiff kann nur bei einer aktiven Suche gefunden werden. Trotzdem ist das Schiff noch physisch pesent und kann angegriffen werden. Es benötigt 15 Ticks in denen das Schiff keinen Schaden erleiden darf um das Tarnfeld wieder aufzubauen. Schaden lässt das Feld kollabieren.",
+    "description": "Reduces emissions and surrounds the ship with a force field that makes it invisible to the eye. The ship can only be detected through an active check with a penalty of 10. Ths ship is still physically present and can be affected by attacks or hazards. 15 ticks without any incoming damage are required for the cloaking field to regenerate. Damage and firing weapons let the field collapse.",
     "energy": {"expression": "size*3+2"},
     "costs": {"expression": "size*3+5"}
   },
   {
     "id": "phase-cloak",
     "name": "Phase cloak",
-    "description": "Verschiebt das Schiff komplett in eine andere Phase. Es kann nur mit einem Malus von 15 aufgespürt werden und kann weder angreifen noch angegriffen werden. Es benötigt 5 Ticks in die normale Phase zurück zu kehren und 15 um wieder zu verschwinden. Erlittener Schaden unterbricht den Prozess der Phasenverschiebung.",
+    "description": "Shifts the whole vessel into another phase. It can only actively be detected with a penalty of 15 but can't attack or be attacked. It needs 5 ticks to return to normal phase and 20 to shift to another phase. Incoming damage interrupts the cloaking process.",
     "energy": {"expression": "size*size+6"},
     "costs": {"expression": "size*5+10"}
   },
@@ -107,5 +107,13 @@
     "description": "Installation to collect deuterium in space using force fields. Can be used to gain fuel from a gas giant.",
     "energy": 2,
     "costs": 6
+  },
+  {
+    "id": "tractor-beam",
+    "name": "Tractor beam",
+    "description": "A beam of energy that can be used to move objects such as space ships or hold them stationary. Every beam can only target a single object and it takes 8 ticks to establish and 3 ticks to release the beam. The target may not exceed the vessels size. The pilot of a ship can try to break free by spending 15 ticks and making a check with difficulty 25 plus plus twice the difference in size of the ships.",
+    "max": {"expression": "size"},
+    "energy": {"expression": "size+4"},
+    "costs": 5
   }
 ]

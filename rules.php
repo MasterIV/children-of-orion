@@ -67,6 +67,7 @@ chapter('Space'); {
 		data($data['ships']['shields'], 'shields', 'Shields', 'space/shields');
 		data($data['ships']['computer'], 'computer', 'Computer', 'space/computer');
 		data($data['ships']['sensors'], 'system', 'Sensors', 'space/sensors');
+		data($data['ships']['systems'], 'system', 'Systems', 'space/systems');
 
 		// systems
 		// weapons
