@@ -2,24 +2,20 @@
 
 require 'inc/common.php';
 
-if(!empty($_POST['category'])) {
-	if(!isset($data['talents'][$_POST['category']]))
-		throw new Exception('Unknown category: '.$_POST['category']);
-
+if(!empty($_POST['data'])) {
 	foreach ($_POST['data'] as &$row) {
 	    $row['id'] = preg_replace('/([\W\s]+)/i', '_', strtolower($row['name']));
-		$row['level'] = intval($row['level']);
-		$row['rank'] = intval($row['rank']);
+		$row['slots'] = intval($row['slots']);
 	}
 
 	file_put_contents(
-			'data/talents/'.$_POST['category'].'.json',
+			'data/gear/mods.json',
 			str_replace('    ', "\t", json_encode($_POST['data'], JSON_PRETTY_PRINT))
 	);
 } else {
 	$template = $twig->load('editor.twig');
 	$template->display([
-	    'method' => 'loadTalentEditor',
+	    'method' => 'loadModEditor',
 	    'data' => json_encode($data, JSON_PRETTY_PRINT)]
     );
 }

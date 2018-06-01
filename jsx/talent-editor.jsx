@@ -2,7 +2,7 @@ import React from 'react';
 import Talent from './talent.jsx';
 import Collection from './collection.jsx';
 
-export default class Editor extends React.Component {
+export default class TalentEditor extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -43,7 +43,7 @@ export default class Editor extends React.Component {
 	}
 
 	save() {
-		$.post('editor.php',{
+		$.post('editor-talents.php',{
 			'category': this.state.category,
 			'data': this.state.talents[this.state.category]
 		});

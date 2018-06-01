@@ -1,11 +1,20 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
-import Editor from './editor.jsx';
+import TalentEditor from './talent-editor.jsx';
+import ModEditor from './mod-editor.jsx';
 
-window.loadEditor = function(data) {
+window.loadTalentEditor = function(data) {
 	ReactDOM.render(
-			<Editor {...data} />,
+			<TalentEditor {...data} />,
 			document.getElementById('content')
 	);
 };
+
+window.loadModEditor = function(data) {
+    ReactDOM.render(
+		<ModEditor {...data} />,
+        document.getElementById('content')
+    );
+};
+
 

@@ -5,7 +5,7 @@
 	<script src="js/main.js" type="text/javascript"></script>
 	<script>
 		var data = {{ data|raw }};
-		$(function() { loadEditor( data ); });
+		$(function() { {{ method }}( data ); });
 	</script>
 	<style type="text/css">
 		#controls > * {margin-right: 5px; margin-bottom: 10px }
@@ -13,5 +13,6 @@
 		 .requirement {margin-bottom: 5px}
 		.talent > div > *, .requirement > * {margin-right: 5px}
 		.talent .description {width: 90%}
+		.talent label input[type=checkbox] { margin-bottom: 5px; }
 	</style>
 {% endblock %}

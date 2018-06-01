@@ -1,0 +1,15 @@
+[
+	{
+		"id": "two_handed",
+		"name": "Two-handed",
+		"description": "Increase the weapons damage by 3 and its speed by 5.",
+		"slots": 1,
+		"tags": [
+			"melee",
+			"archaic",
+			"ballistic",
+			"beam",
+			"heavy"
+		]
+	}
+]

@@ -1,16 +1,68 @@
-{
-  "base": [
-    {
-      "id": "",
-      "name": "",
-      "description": "",
-      "range": "",
-      "damage": "",
-      "speed": "",
-      "costs": ""
-    }
-  ],
-  "mods": [
-
-  ]
-}
+[
+  {
+    "id": "melee",
+    "name": "Melee weapon",
+    "description": "",
+    "range": [0],
+    "damage": "2+STR/2",
+    "speed": 8,
+    "reload": 0,
+    "mag": 1,
+    "costs": 50
+  },
+  {
+    "id": "thrown",
+    "name": "Thrown weapon",
+    "description": "",
+    "range": [2,5,10,20],
+    "damage": "1+STR/2",
+    "speed": 8,
+    "reload": 10,
+    "mag": 1,
+    "costs": 20
+  },
+  {
+    "id": "archaic",
+    "name": "Archaic ranged weapon",
+    "description": "",
+    "range": [3,10,20,50],
+    "damage": 3,
+    "speed": 5,
+    "reload": 12,
+    "mag": 1,
+    "costs": 40
+  },
+  {
+    "id": "ballistic",
+    "name": "Projectile weapon",
+    "description": "",
+    "range": [2,12,25,80],
+    "damage": 5,
+    "speed": 7,
+    "reload": 10,
+    "mag": 15,
+    "costs": 100
+  },
+  {
+    "id": "beam",
+    "name": "Energy weapon",
+    "description": "",
+    "range": [2,15,25,120],
+    "damage": 7,
+    "speed": 9,
+    "reload": 15,
+    "mag": 20,
+    "costs": 200
+  },
+  {
+    "id": "heavy",
+    "name": "Heavy weapon",
+    "description": "",
+    "range": [4,12,30,75],
+    "damage": 10,
+    "speed": 15,
+    "reload": 20,
+    "mag": 10,
+    "costs": 150
+  }
+]
