@@ -2,6 +2,9 @@
 
 require 'inc/common.php';
 
+if( $_SERVER['HTTP_HOST'] !== 'localhost' )
+	throw new Exception('This tool is only available locally');
+
 if (!empty($_POST['data'])) {
 	foreach ($_POST['data'] as &$row) {
 		$row['id'] = preg_replace('/([\W\s]+)/i', '_', strtolower($row['name']));

@@ -15,7 +15,7 @@
 			line-height: 35px;
 		}
 
-		#weapon-template, #system-template {
+		#weapon-template, #system-template, #mod-template {
 			display: none;
 		}
 	</style>
@@ -27,15 +27,15 @@
 		<table class="table summary">
 			<tr>
 				<th>System</th>
-				<th>Auswahl</th>
-				<th>Wert</th>
-				<th>Kosten</th>
-				<th>Energie</th>
+				<th>Selection</th>
+				<th>Value</th>
+				<th>Costs</th>
+				<th>Energy</th>
 			</tr>
 
 
 			<tr id="hull">
-				<td>Größenklasse:</td>
+				<td>Hull:</td>
 				<td>
 					<select class="form-control" name="hull" onchange="updateStats()">
 						{% for e in data.hull %}<option value="{{ e.id }}">{{ e.name }} ({{ e.costs }} SP)</option>{% endfor %}
@@ -47,7 +47,7 @@
 			</tr>
 
 			<tr id="power">
-				<td>Energie:</td>
+				<td>Energy:</td>
 				<td>
 					<select class="form-control" name="reactor" onchange="updateStats()">
 						{% for e in data.power.fusion %}<option value="fusion-{{ e.id }}">Fusion Stufe {{ e.id }} ({{ e.costs }} SP)</option>{% endfor %}
@@ -60,7 +60,7 @@
 			</tr>
 
 			<tr id="structure">
-				<td>Struktur:</td>
+				<td>Structure:</td>
 				<td>
 					<select class="form-control" name="structure" onchange="updateStats()">
 						{% for e in data.structure %}<option value="{{ e.id }}">{{ e.name }} </option>{% endfor %}
@@ -72,7 +72,7 @@
 			</tr>
 
 			<tr id="armor">
-				<td>Panzerung:</td>
+				<td>Armor:</td>
 				<td>
 					<select class="form-control" name="armor" onchange="updateStats()">
 						{% for e in data.armor %}<option value="{{ e.id }}">{{ e.name }}</option>{% endfor %}
@@ -87,7 +87,7 @@
 				<td>Shields:</td>
 				<td>
 					<select class="form-control" name="shields" onchange="updateStats()">
-						<option value="">Keine Schilde</option>
+						<option value="">No shields</option>
 						{% for e in data.shields %}<option value="{{ e.id }}">Klasee {{ e.id|rome }} ({{ e.costs }} SP )</option>{% endfor %}
 					</select>
 				</td>
@@ -100,7 +100,7 @@
 				<td>Computer:</td>
 				<td>
 					<select class="form-control" name="computer" onchange="updateStats()">
-						<option value="">Keine Computer</option>
+						<option value="">No computer</option>
 						{% for e in data.computer %}<option value="{{ e.id }}">{{ e.name }} ({{ e.costs }} SP )</option>{% endfor %}
 					</select>
 				</td>
@@ -109,6 +109,7 @@
 				<td class="energy"></td>
 			</tr>
 
+			<!--
 			<tr id="drive">
 				<td>Antrieb:</td>
 				<td>
@@ -121,7 +122,6 @@
 				<td class="energy"></td>
 			</tr>
 
-			<!--
 			<tr id="ftl">
 				<td>Sprungantrieb:</td>
 				<td>
@@ -135,7 +135,7 @@
 			</tr> -->
 
 			<tr id="sensors">
-				<td>Sensoren:</td>
+				<td>Sensors:</td>
 				<td>
 					<select class="form-control" name="sensors" onchange="updateStats()">
 						{% for e in data.sensors %}<option value="{{ e.id }}">{{ e.name }}</option>{% endfor %}
@@ -147,7 +147,7 @@
 			</tr>
 
 			<tr id="weapons">
-				<td>Waffen:</td>
+				<td>Weapons:</td>
 				<td></td>
 				<td class="value"></td>
 				<td class="costs"></td>
@@ -155,7 +155,7 @@
 			</tr>
 
 			<tr id="systems">
-				<td>Spezialsysteme:</td>
+				<td>Special:</td>
 				<td></td>
 				<td class="value"></td>
 				<td class="costs"></td>
@@ -175,10 +175,7 @@
 
 		<div class="input-append">
 			<select id="add-weapon">
-				{% for w in data.weapons.projectile %}<option value="projectile-{{ w.id }}">{{ w.name }}</option>{% endfor %}
-				{% for w in data.weapons.missle %}<option value="missle-{{ w.id }}">{{ w.name }}</option>{% endfor %}
-				{% for w in data.weapons.beam %}<option value="beam-{{ w.id }}">{{ w.name }}</option>{% endfor %}
-				{% for w in data.weapons.special %}<option value="special-{{ w.id }}">{{ w.name }}</option>{% endfor %}
+				{% for w in data.weapons %}<option value="{{ w.id }}">{{ w.name }}</option>{% endfor %}
 			</select>
 
 			<button class="btn btn-default" type="button" onclick="addWeapon()">Add</button>
@@ -186,42 +183,41 @@
 
 		<table class="table" id="weapon-list">
 			<tr>
-				<th>Waffe</th>
-				<th>Winkel</th>
-				<th>Qualität</th>
-				<th>Ausrichtung</th>
-				<th>Dmg (Range)</th>
-				<th>Kosten</th>
-				<th>Energie</th>
+				<th>Weapon</th>
+				<th>Quality</th>
+				<th>Costs</th>
+				<th>Energy</th>
 				<td></td>
 			</tr>
 
 			<tr id="weapon-template">
 				<td class="name"></td>
-				<td><select name="arc" class="arc input-mini" onchange="updateStats()">
-						<option value="1">90°</option>
-						<option value="1.25">180°</option>
-						<option value="1.5">270°</option>
-						<option value="1.75">360°</option>
-					</select></td>
-				<td><select name="quality" class="quality input-mini" onchange="updateStats()"></select></td>
-				<td><select name="dir" class="dir">
-						<option value="1">Bug</option>
-						<option value="2">Backbord</option>
-						<option value="3">Steuerbord</option>
-						<option value="4">Heck</option>
-					</select></td>
-				<td class="damage"></td>
+				<td name="quality"></td>
 				<td class="costs"></td>
 				<td class="energy"></td>
-				<td><button type="button" class="btn btn-error" onclick="$(this).parent().parent().remove(); updateStats();">x</button></td>
+				<td>
+					<button type="button" class="btn btn-primary" onclick="addMod($(this).parent().parent()); updateStats();">+</button>
+					<button type="button" class="btn btn-danger" onclick="$(this).parent().parent().remove(); updateStats();">x</button>
+				</td>
+			</tr>
+
+			<tr id="mod-template">
+				<td class="name"><select name="mod" onchange="updateStats()">
+						{% for m in data.mods %}<option value="{{ m.id }}">{{ m.name }}</option>{% endfor %}
+				</select></td>
+				<td name="quality"></td>
+				<td class="costs"></td>
+				<td class="energy"></td>
+				<td>
+					<button type="button" class="btn btn-danger" onclick="$(this).parent().parent().remove(); updateStats();">x</button>
+				</td>
 			</tr>
 
 
 		</table>
 
 
-		<h2>Spezialsysteme</h2>
+		<h2>Systems</h2>
 
 		<div class="input-append">
 			<select id="add-system">
@@ -235,9 +231,9 @@
 		<table class="table" id="systems-list">
 			<tr>
 				<th>System</th>
-				<th>Anzahl</th>
-				<th>Kosten</th>
-				<th>Energie</th>
+				<th>Amount</th>
+				<th>Costs</th>
+				<th>Energy</th>
 				<td></td>
 			</tr>
 
@@ -247,7 +243,7 @@
 				<td><select name="amount" class="amount input-mini" onchange="updateStats()"></select></td>
 				<td class="costs"></td>
 				<td class="energy"></td>
-				<td><button type="button" class="btn btn-error" onclick="$(this).parent().parent().remove(); updateStats();">x</button></td>
+				<td><button type="button" class="btn btn-danger" onclick="$(this).parent().parent().remove(); updateStats();">x</button></td>
 			</tr>
 		</table>
 	</form>
@@ -273,17 +269,19 @@
 			return c.expression ? Math.max(0, Math.round(eval(c.expression.replace('size', size)))) : c;
 		}
 
+		function addMod(weapon) {
+			var row = $('<tr class="mod">'+$('#mod-template').html()+'</tr>');
+
+			weapon.after(row);
+		}
+
 		function addWeapon() {
 			var id = $('#add-weapon').val();
-			var row = $('<tr>'+$('#weapon-template').html()+'</tr>');
+			var row = $('<tr class="weapon">'+$('#weapon-template').html()+'</tr>');
 			var def = mapped.weapons[id];
 
 			row.addClass('active-weapon');
 			row.find('.name').data('weapon', id).text(def.name);
-			row.find('.damage').text(def.dmg+' ('+def.range+')');
-			var q = row.find('.quality');
-			for(var i = 0; i <= def.slots; i++)
-				q.append('<option value="'+i+'">'+i+'</option>');
 
 			$('#weapon-list').append(row);
 			updateStats();
@@ -306,7 +304,7 @@
 		for( var i in data ) {
 			mapped[i] = {};
 
-			if(i=='power' || i=='weapons') {
+			if(i=='power') {
 				mapNested(data[i], mapped[i]);
 			} else {
 				mapArr( data[i], mapped[i] );
@@ -352,7 +350,6 @@
 			var energy = mapped.power[reactor].output;
 			var structure = display('structure', 'structure');
 			var armor = display('armor', 'armor');
-			var drive = display('drive', 'speed');
 			var sensors = display('sensors', function() { return ''; });
 
 			var shields = display('shields', function(s) {
@@ -366,16 +363,26 @@
 
 			var weapon_consumtion = 0;
 			var weapon_costs = 0;
-			$('.active-weapon').each(function (k, v) {
+			$('.active-weapon .weapon').each(function (k, v) {
 				var e = $(v);
 				var id = e.find('.name').data('weapon');
 				var w = mapped.weapons[id];
+				var q = 0;
 
-				var arc = e.find('.arc').val();
-				var q = e.find('.quality').val();
+				var mod = e.next();
+				while(mod && mod.hasClass('mod')) {
+					var i = mod.find('select').val();
+					var m = mapped.mods[i];
 
-				var c = Math.round(w.costs * arc * qualities[q]);
+					q += m.slots;
+					e.find('.quality').text(m.slots);
 
+					mod = mod.next();
+				}
+
+				var c = Math.round(w.costs * qualities[q]);
+
+				e.find('.quality').text(q);
 				e.find('.costs').text(c);
 				e.find('.energy').text(w.energy);
 

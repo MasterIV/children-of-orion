@@ -10,35 +10,35 @@
     "id": "titanium",
     "name": "Titanium armor",
     "description": "",
-    "armor": 2,
+    "armor": 1,
     "costs": {"expression" : "size*2" }
   },
   {
     "id": "zortium",
     "name": "Zortium armor",
     "description": "",
-    "armor": 4,
+    "armor": 2,
     "costs": {"expression" : "size*3" }
   },
   {
     "id": "neutronium",
     "name": "Neutronium armor",
     "description": "",
-    "armor": 6,
+    "armor": 3,
     "costs": {"expression" : "size*4" }
   },
   {
     "id": "adamantium",
     "name": "Adamantium armor",
     "description": "",
-    "armor": 8,
+    "armor": 4,
     "costs": {"expression" : "size*5" }
   },
   {
     "id": "xentorium",
     "name": "Xentorium armor",
     "description": "",
-    "armor": 10,
+    "armor": 5,
     "costs": {"expression" : "size*6" }
   }
 ]

@@ -2,6 +2,7 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import TalentEditor from './talent-editor.jsx';
 import ModEditor from './mod-editor.jsx';
+import Ship from './ship.jsx';
 
 window.loadTalentEditor = function(data) {
 	ReactDOM.render(
@@ -17,4 +18,11 @@ window.loadModEditor = function(data) {
     );
 };
 
+window.loadShipEditor = function(data) {
+	var ship = {};
+	ReactDOM.render(
+			<Ship data={data.ships} ship={ship} />,
+			document.getElementById('content')
+	);
+};
 

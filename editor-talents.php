@@ -2,6 +2,9 @@
 
 require 'inc/common.php';
 
+if( $_SERVER['HTTP_HOST'] !== 'localhost' )
+	throw new Exception('This tool is only available locally');
+
 if(!empty($_POST['category'])) {
 	if(!isset($data['talents'][$_POST['category']]))
 		throw new Exception('Unknown category: '.$_POST['category']);
