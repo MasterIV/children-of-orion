@@ -1,11 +1,26 @@
+<div class="columns ">
+	{% for m in data %}
+		<p class="well">
+			<b>{{ m.name }} (Quality: {{ m.slots }}, Max: {{ m.max }}):</b> {{ m.description }}
+			<i style="color: #999;">Applicable on:
+			{% if m.tags|length == 6 %}
+				All weapons
+			{% else %}
+				{{ m.tags|join(', ') }}
+			{% endif %}</i>
+		</p>
+	{% endfor %}
+</div>
+
+{#
 <table class="table table-striped">
 	<thead>
 		<tr>
 			<th width="22%">Name</th>
-			<th width="7%">Slots</th>
+			<th width="7%">Quality</th>
 			<th width="7%">Max</th>
-			<th width="20%">Anwendbar</th>
-			<th width="44%">Beschreibung</th>
+			<th width="20%">Applicable</th>
+			<th width="44%">Description</th>
 		</tr>
 	</thead>
 
@@ -16,7 +31,13 @@
 			{% if m.slots %}
 				<td>{{ m.slots }}</td>
 				<td>{{ m.max }}</td>
-				<td>{% if m.types|length == 5 %}Alle Waffen{% else %}{{ m.types|join(',  ') }}{% endif %}</td>
+				<td><ul>
+						{% if m.tags|length == 6 %}
+							<span class="badge">All weapons</span>
+						{% else %}{% for t in m.tags %}
+							<span class="badge">{{ t }}</span>
+						{% endfor %}{% endif %}
+					</ul></td>
 			{% else %}
 				<td colspan="3">Nicht erwerbar</td>
 			{% endif %}
@@ -25,3 +46,4 @@
 	{% endfor %}
 	</tbody>
 </table>
+#}

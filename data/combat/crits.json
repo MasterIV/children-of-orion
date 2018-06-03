@@ -1,0 +1,127 @@
+[
+  {
+    "roll": 2,
+    "name": "Critically injured",
+    "description": "Suffer a critical injury."
+  },
+  {
+    "roll": 3,
+    "name": "Unconscious",
+    "description": "Suffer the unconscious condition."
+  },
+  {
+    "roll": 4,
+    "name": "Damaged armor",
+    "description": "Reduce the armor by one until repaired."
+  },
+  {
+    "roll": 5,
+    "name": "Exhausted",
+    "description": "Suffer the exhausted condition."
+  },
+  {
+    "roll": 6,
+    "name": "Exposed",
+    "description": "The next check against the target gains a bonus of 3."
+  },
+  {
+    "roll": 7,
+    "name": "Disoriented",
+    "description": "Suffer the disoriented condition."
+  },
+  {
+    "roll": 8,
+    "name": "Distracted",
+    "description": "The next check suffers a -2 penalty."
+  },
+  {
+    "roll": 9,
+    "name": "Bruise",
+    "description": "Suffer 1d10 mental damage."
+  },
+  {
+    "roll": 10,
+    "name": "Drop guard",
+    "description": "One enemy in melee range might perform an attack of opportunity or an enemy in movement range might engage for free."
+  },
+  {
+    "roll": 11,
+    "name": "Stumbling",
+    "description": "Loose 3 ticks"
+  },
+  {
+    "roll": 12,
+    "name": "Headache",
+    "description": "Suffer 1d6 mental damage."
+  },
+  {
+    "roll": 13,
+    "name": "Drop item",
+    "description": "Drop the item in your hands."
+  },
+  {
+    "roll": 14,
+    "name": "Unbalanced",
+    "description": "Loose 6 ticks"
+  },
+  {
+    "roll": 15,
+    "name": "Falling",
+    "description": "Character falls prone."
+  },
+  {
+    "roll": 16,
+    "name": "Scratch",
+    "description": "Suffer 1d6 damage ignoring armor."
+  },
+  {
+    "roll": 17,
+    "name": "Confused",
+    "description": "Suffer the condition confused level 2."
+  },
+  {
+    "roll": 18,
+    "name": "Dazed",
+    "description": "Suffer the dazed condition."
+  },
+  {
+    "roll": 19,
+    "name": "Badly injured",
+    "description": "Suffer 1d10 damage ignoring armor."
+  },
+  {
+    "roll": 20,
+    "name": "Bleeding",
+    "description": "Suffer the bleeding condition."
+  },
+  {
+    "roll": 21,
+    "name": "Injured",
+    "description": "Suffer the injured condition."
+  },
+  {
+    "roll": 22,
+    "name": "Shock",
+    "description": "Suffer the shock condition."
+  },
+  {
+    "roll": 23,
+    "name": "Deep cut",
+    "description": "Suffer 2d6 damage ignoring armor."
+  },
+  {
+    "roll": 24,
+    "name": "Coma",
+    "description": "Suffer the coma condition."
+  },
+  {
+    "roll": 25,
+    "name": "Bleeding out",
+    "description": "The character is about to die and has 30 ticks to receive medical care before he does so. Difficulty of medical check to stabilize is 20."
+  },
+  {
+    "roll": 26,
+    "name": "Death",
+    "description": "The character dies immediately."
+  }
+]

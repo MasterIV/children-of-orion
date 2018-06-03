@@ -8,4 +8,32 @@
 	.toc {
 		display: none;
 	}
+
+	.container {
+		width: auto;
+	}
+
+  .well {
+	  page-break-inside: avoid;
+  }
+
+	@page {
+		size: auto;
+		margin: 10mm 15mm;
+	}
+
+	.badge {
+		background: #EEE;
+	}
+
+  h1:not(:first-of-type){
+	  page-break-before: always;
+  }
+}
+
+
+.columns {
+	column-count: 2;
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
 }

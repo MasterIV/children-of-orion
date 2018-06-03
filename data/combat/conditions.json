@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Disoriented",
+    "description": "The character can only react or try to recover from this condition while it is active.",
+    "recover": "Spend 5 ticks as immediate action to get orientation again. No check required."
+  },
+  {
+    "name": "Shock",
+    "description": "The character can only react try to recover from this condition while it is active.",
+    "recover": "Spend 5 ticks as immediate action to perform a toughness check difficulty 15. Recover if successful."
+  },
+  {
+    "name": "Unconscious",
+    "description": "The character can only try to recover from this condition while it is active. No reactions possible.",
+    "recover": "Spend 15 ticks as immediate action to perform a toughness check difficulty 20. Recover if successful."
+  },
+  {
+    "name": "Coma",
+    "description": "The character is completely incapacitated and can't act or react.",
+    "recover": "Medicine check with difficulty 25 is required to bring someone back from a coma. After each completed week the character might also try a toughness check with difficulty 25 to naturally recover."
+  },
+  {
+    "name": "Bleeding",
+    "description": "Each level of this condition causes 1d6 damage every 10 ticks. This damage ignores any armor.",
+    "recover": "Can be stopped with a medical check difficulty 15 + level of the condition or when the character rests for 30 ticks."
+  },
+  {
+    "name": "Burning",
+    "description": "Each level of this condition causes 1d6 damage every 10 ticks. This damage ignores any armor.",
+    "recover": "Character can perform an acrobatics check 15 + level of the condition to roll on the ground or be extinguished (for example by jumping into water)."
+  },
+  {
+    "name": "Confused",
+    "description": "Each level of this condition apply a penalty of one on attack checks.",
+    "recover": "Spend 10 Ticks to make a self-control check with difficulty 20 + level of the condition. Recover if successful."
+  },
+  {
+    "name": "Dazed",
+    "description": "All actions and reactions of the character need an additional tick per level of this condition.",
+    "recover": "Spend 10 Ticks to make a toughness check with difficulty 20 + level of the condition. Recover if successful."
+  },
+  {
+    "name": "Injured",
+    "description": "Suffer one damage per level of this condition for each action or reaction performed.",
+    "recover": "Can be stopped with a medical check difficulty 20 + level of the condition."
+  },
+  {
+    "name": "Exhausted",
+    "description": "Suffer one mental damage per leve of this condition for each action or reaction performed.",
+    "recover": "Resolve one level of this condition by resting for 20 ticks."
+  }
+]

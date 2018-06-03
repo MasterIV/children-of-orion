@@ -12,7 +12,12 @@ $twig->addFilter(new Twig_SimpleFilter('e', function ($s) {
 }));
 
 
-
 $twig->addFilter(new Twig_SimpleFilter('rome', function ($s) {
 	return ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'][$s-1];
+}));
+
+$twig->addFilter(new Twig_SimpleFilter('qualities', function ($base) {
+	return implode(' / ', array_map(function($factor) use ($base) {
+		return $base * $factor;
+	}, array_slice ( $GLOBALS['data']['gear']['qualities'], 0 , 7 )));
 }));

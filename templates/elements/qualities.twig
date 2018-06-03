@@ -1,7 +1,7 @@
 <table class="table">
 	<thead>
 	<tr>
-		<th>Anzahl Mods:</th>
+		<th>Installed mod pints:</th>
 		{% for i, q in data %}
 			{% if i < 11 %}
 				<th>{{ i }}</th>
@@ -12,7 +12,7 @@
 
 	<tbody>
 		<tr>
-			<td>Preis Multiplikator:</td>
+			<td>Cost multiplier:</td>
 			{% for i, q in data %}
 				{% if i < 11 %}
 					<td>{{ q }}</td>

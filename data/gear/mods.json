@@ -4,8 +4,268 @@
 		"name": "Two-handed",
 		"description": "Increase the weapons damage by 3 and its speed by 5.",
 		"slots": 1,
+		"max": 1,
 		"tags": [
 			"melee",
+			"archaic",
+			"ballistic",
+			"beam",
+			"heavy"
+		]
+	},
+	{
+		"id": "deadly",
+		"name": "Deadly",
+		"description": "Allows to use the damage effect with the same name.",
+		"slots": 2,
+		"max": 1,
+		"tags": [
+			"melee",
+			"thrown",
+			"archaic",
+			"ballistic",
+			"beam",
+			"heavy"
+		]
+	},
+	{
+		"id": "piercing",
+		"name": "Piercing",
+		"description": "Allows to use the damage effect with the same name.",
+		"slots": 1,
+		"max": 1,
+		"tags": [
+			"melee",
+			"thrown",
+			"archaic",
+			"ballistic",
+			"beam",
+			"heavy"
+		]
+	},
+	{
+		"id": "stunning",
+		"name": "Stunning",
+		"description": "Allows to use the damage effect with the same name.",
+		"slots": 2,
+		"max": 1,
+		"tags": [
+			"melee",
+			"thrown",
+			"archaic",
+			"ballistic",
+			"beam",
+			"heavy"
+		]
+	},
+	{
+		"id": "irritating",
+		"name": "Irritating",
+		"description": "Allows to use the damage effect with the same name.",
+		"slots": 2,
+		"max": 1,
+		"tags": [
+			"melee",
+			"thrown",
+			"archaic",
+			"ballistic",
+			"beam",
+			"heavy"
+		]
+	},
+	{
+		"id": "interrupting",
+		"name": "Interrupting",
+		"description": "Allows to use the damage effect with the same name.",
+		"slots": 1,
+		"max": 1,
+		"tags": [
+			"melee",
+			"thrown",
+			"archaic",
+			"ballistic",
+			"beam",
+			"heavy"
+		]
+	},
+	{
+		"id": "fast",
+		"name": "Fast",
+		"description": "Reduces the weapons speed by one. Can't be combined with massive.",
+		"slots": 2,
+		"max": 1,
+		"tags": [
+			"melee",
+			"thrown",
+			"archaic",
+			"ballistic",
+			"beam",
+			"heavy"
+		]
+	},
+	{
+		"id": "automatic",
+		"name": "Automatic",
+		"description": "Allows to use burst abilities. Can only be applied on weapons with a magazine capacity of at least 10.",
+		"slots": 1,
+		"max": 1,
+		"tags": [
+			"ballistic",
+			"beam"
+		]
+	},
+	{
+		"id": "non_lethal",
+		"name": "Non lethal",
+		"description": "The weapon does mental instead of physical damage.",
+		"slots": 1,
+		"max": 1,
+		"tags": [
+			"melee",
+			"archaic",
+			"ballistic",
+			"beam"
+		]
+	},
+	{
+		"id": "defensive",
+		"name": "Defensive",
+		"description": "Add a bonus of one to parry checks with this weapon.",
+		"slots": 1,
+		"max": 2,
+		"tags": [
+			"melee"
+		]
+	},
+	{
+		"id": "large_magazine",
+		"name": "Large magazine",
+		"description": "Doubles magazine size. Can only be applied on weapons with magazine.",
+		"slots": 1,
+		"max": 1,
+		"tags": [
+			"ballistic",
+			"beam",
+			"heavy"
+		]
+	},
+	{
+		"id": "modular",
+		"name": "Modular",
+		"description": "The weapon can be disassembled. This grants an advantage on stealth checks to conceal the weapon.",
+		"slots": 1,
+		"max": 1,
+		"tags": [
+			"melee",
+			"archaic",
+			"ballistic",
+			"beam"
+		]
+	},
+	{
+		"id": "hardned",
+		"name": "Hardned",
+		"description": "The weapon is more durable and can be used to parry melee attacks.",
+		"slots": 1,
+		"max": 1,
+		"tags": [
+			"archaic",
+			"ballistic",
+			"beam"
+		]
+	},
+	{
+		"id": "precise",
+		"name": "Precise",
+		"description": "The weapon grants a bonus of 1 to attack checks.",
+		"slots": 1,
+		"max": 2,
+		"tags": [
+			"melee",
+			"thrown",
+			"archaic",
+			"ballistic",
+			"beam",
+			"heavy"
+		]
+	},
+	{
+		"id": "elegant",
+		"name": "Elegant",
+		"description": "Reduces the penalty from the usage of special abilities by 2.",
+		"slots": 1,
+		"max": 2,
+		"tags": [
+			"melee",
+			"thrown",
+			"archaic",
+			"ballistic",
+			"beam",
+			"heavy"
+		]
+	},
+	{
+		"id": "massive",
+		"name": "Massive",
+		"description": "Increases speed and damage of the weapon by 2.",
+		"slots": 2,
+		"max": 1,
+		"tags": [
+			"melee"
+		]
+	},
+	{
+		"id": "heavy_caliber",
+		"name": "Heavy caliber",
+		"description": "Increases damage of the weapon by 1 while reducing the magazine capacity by half.",
+		"slots": 1,
+		"max": 2,
+		"tags": [
+			"ballistic"
+		]
+	},
+	{
+		"id": "monofilament_",
+		"name": "Monofilament ",
+		"description": "Reduces enemy armor by half. Can't be combined with piercing.",
+		"slots": 2,
+		"max": 1,
+		"tags": [
+			"melee"
+		]
+	},
+	{
+		"id": "energy_weapon",
+		"name": "Energy weapon",
+		"description": "The blade of the weapon consists of pure energy that is contained by force fields. It needs 2 additional ticks to switch the weapon on or off within another action. The weapon be kept active for 60 ticks. Spend an additional slot to double this time. The damage of the weapon is increased by 1 and it gains the piercing quality.",
+		"slots": 3,
+		"max": 1,
+		"tags": [
+			"melee"
+		]
+	},
+	{
+		"id": "dangerous",
+		"name": "Dangerous",
+		"description": "Increase the weapons damage by 1.",
+		"slots": 1,
+		"max": 1,
+		"tags": [
+			"melee",
+			"thrown",
+			"archaic",
+			"ballistic",
+			"beam",
+			"heavy"
+		]
+	},
+	{
+		"id": "extended_range",
+		"name": "Extended range",
+		"description": "Doubles the range of the weapon.",
+		"slots": 1,
+		"max": 1,
+		"tags": [
 			"archaic",
 			"ballistic",
 			"beam",

@@ -1,0 +1,39 @@
+<table class="table table-striped">
+	<thead>
+	<tr>
+		<th width="20%">Name</th>
+		<th width="31%">Price</th>
+		<th width="14%">Speed / Reload</th>
+		<th width="9%">Damage</th>
+		<th width="7%">Mag.</th>
+		<th width="19%">Range</th>
+	</tr>
+	</thead>
+	<tbody>
+	{% for w in data %}
+		<tr>
+			<td>{{ w.name }}</td>
+			<td>{{ w.costs|qualities }}</td>
+			<td>
+				{% if w.range %}
+					{{ w.speed }} / {{ w.reload }}
+				{% else %}
+					{{ w.speed }}
+				{% endif %}</td>
+			<td>{{ w.damage }}</td>
+			<td>
+				{% if w.range %}
+					{{ w.mag }}
+				{% else %}
+					-
+				{% endif %}</td>
+			<td>
+				{% if w.range %}
+					{{ w.range[0] }} / {{ w.range[1] }} / {{ w.range[2] }} / {{ w.range[3] }}
+				{% else %}
+					Melee
+				{% endif %}</td>
+		</tr>
+	{% endfor %}
+	</tbody>
+</table>

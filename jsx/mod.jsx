@@ -20,6 +20,7 @@ export default class Mod extends React.Component {
             name: data.name,
             description: data.description,
             slots: data.slots | 0,
+            max: data.max | 0,
             tags: data.tags
         });
     }
@@ -50,12 +51,19 @@ export default class Mod extends React.Component {
                 <input type="text" value={this.props.name}
                        onChange={e => this.updateFiled('name', e.target.value)}/>
 
-                <label htmlFor={'rank_'+this.props.index}>Slots:</label>
+                <label htmlFor={'rank_'+this.props.index}>Quality:</label>
                 <input id={'rank_'+this.props.index}
                        className="input-mini"
-                       type="number" min="1" max="3"
+                       type="number"
                        value={this.props.slots}
                        onChange={e => this.updateFiled('slots', e.target.value)}/>
+
+                <label htmlFor={'max_'+this.props.index}>Max:</label>
+                <input id={'max_'+this.props.index}
+                       className="input-mini"
+                       type="number"
+                       value={this.props.max}
+                       onChange={e => this.updateFiled('max', e.target.value)}/>
             </div>
 
             <div>

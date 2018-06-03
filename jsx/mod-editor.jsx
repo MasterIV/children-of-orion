@@ -12,7 +12,7 @@ export default class TalentEditor extends React.Component {
         };
 
         this.collection = React.createRef();
-        this.defaults = {name: 'new mod', slots: 1, tags: []};
+        this.defaults = {name: 'new mod', slots: 1, max: 1, tags: []};
 
         this.removeMod = this.removeMod.bind(this);
         this.save = this.save.bind(this);

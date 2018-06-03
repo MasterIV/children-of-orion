@@ -1,0 +1,20 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th width="20%">Type</th>
+    <th>Protection</th>
+    <th>Penalty</th>
+    <th>Price</th>
+  </tr>
+  </thead>
+  <tbody>
+  {% for r in data %}
+    <tr>
+      <td>{{ r.name }}</td>
+      <td>{{ r.protection }}</td>
+      <td>{{ r.penalty }}</td>
+      <td>{{ r.costs|qualities }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>

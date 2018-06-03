@@ -2,10 +2,11 @@
 
 require 'inc/common.php';
 
-if(!empty($_POST['data'])) {
+if (!empty($_POST['data'])) {
 	foreach ($_POST['data'] as &$row) {
-	    $row['id'] = preg_replace('/([\W\s]+)/i', '_', strtolower($row['name']));
+		$row['id'] = preg_replace('/([\W\s]+)/i', '_', strtolower($row['name']));
 		$row['slots'] = intval($row['slots']);
+		$row['max'] = intval($row['max']);
 	}
 
 	file_put_contents(
@@ -15,7 +16,7 @@ if(!empty($_POST['data'])) {
 } else {
 	$template = $twig->load('editor.twig');
 	$template->display([
-	    'method' => 'loadModEditor',
-	    'data' => json_encode($data, JSON_PRETTY_PRINT)]
-    );
+					'method' => 'loadModEditor',
+					'data' => json_encode($data, JSON_PRETTY_PRINT)]
+	);
 }

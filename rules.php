@@ -4,6 +4,16 @@ require 'inc/common.php';
 
 $content = '';
 
+$weapons = [];
+foreach($data['gear']['weapons'] as $w)
+	$weapons[$w['id']] = $w['name'];
+
+foreach ($data['gear']['mods'] as &$mod) {
+	$mod['tags'] = array_map(function($tag) use ($weapons) {
+		return isset($weapons[$tag]) ? $weapons[$tag] : 'Armor';
+	}, $mod['tags']);
+}
+
 function section($l, $title, $file = null) {
 	$GLOBALS['content'] .= "<h$l id=\"$title-".uniqid()."\">$title</h$l>";
 
@@ -50,8 +60,11 @@ chapter('Combat'); {
 }
 
 chapter('Gear'); {
+	paragraph('Overview', 'gear/overview');
+	data($data['gear']['qualities'], 'qualities', 'Qualities', 'gear/qualities', 2);
 	data($data['gear']['weapons'], 'weapons', 'Weapons', 'gear/weapons', 2);
-	data($data['gear']['armor'], 'armor', 'Armor', 'gear/armor', 2);
+	data($data['gear']['armor'], 'wearable', 'Armor', 'gear/armor', 2);
+	data($data['gear']['mods'], 'mods', 'Modifications', 'gear/mods', 2);
 }
 
 
