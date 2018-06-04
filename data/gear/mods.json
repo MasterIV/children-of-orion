@@ -8,8 +8,8 @@
 		"tags": [
 			"melee",
 			"archaic",
-			"ballistic",
-			"beam",
+			"projectile",
+			"energy",
 			"heavy"
 		]
 	},
@@ -23,8 +23,8 @@
 			"melee",
 			"thrown",
 			"archaic",
-			"ballistic",
-			"beam",
+			"projectile",
+			"energy",
 			"heavy"
 		]
 	},
@@ -38,8 +38,8 @@
 			"melee",
 			"thrown",
 			"archaic",
-			"ballistic",
-			"beam",
+			"projectile",
+			"energy",
 			"heavy"
 		]
 	},
@@ -53,8 +53,8 @@
 			"melee",
 			"thrown",
 			"archaic",
-			"ballistic",
-			"beam",
+			"projectile",
+			"energy",
 			"heavy"
 		]
 	},
@@ -68,8 +68,8 @@
 			"melee",
 			"thrown",
 			"archaic",
-			"ballistic",
-			"beam",
+			"projectile",
+			"energy",
 			"heavy"
 		]
 	},
@@ -83,8 +83,8 @@
 			"melee",
 			"thrown",
 			"archaic",
-			"ballistic",
-			"beam",
+			"projectile",
+			"energy",
 			"heavy"
 		]
 	},
@@ -98,8 +98,8 @@
 			"melee",
 			"thrown",
 			"archaic",
-			"ballistic",
-			"beam",
+			"projectile",
+			"energy",
 			"heavy"
 		]
 	},
@@ -110,8 +110,8 @@
 		"slots": 1,
 		"max": 1,
 		"tags": [
-			"ballistic",
-			"beam"
+			"projectile",
+			"energy"
 		]
 	},
 	{
@@ -123,8 +123,8 @@
 		"tags": [
 			"melee",
 			"archaic",
-			"ballistic",
-			"beam"
+			"projectile",
+			"energy"
 		]
 	},
 	{
@@ -144,8 +144,8 @@
 		"slots": 1,
 		"max": 1,
 		"tags": [
-			"ballistic",
-			"beam",
+			"projectile",
+			"energy",
 			"heavy"
 		]
 	},
@@ -158,8 +158,8 @@
 		"tags": [
 			"melee",
 			"archaic",
-			"ballistic",
-			"beam"
+			"projectile",
+			"energy"
 		]
 	},
 	{
@@ -170,8 +170,8 @@
 		"max": 1,
 		"tags": [
 			"archaic",
-			"ballistic",
-			"beam"
+			"projectile",
+			"energy"
 		]
 	},
 	{
@@ -184,8 +184,8 @@
 			"melee",
 			"thrown",
 			"archaic",
-			"ballistic",
-			"beam",
+			"projectile",
+			"energy",
 			"heavy"
 		]
 	},
@@ -199,8 +199,8 @@
 			"melee",
 			"thrown",
 			"archaic",
-			"ballistic",
-			"beam",
+			"projectile",
+			"energy",
 			"heavy"
 		]
 	},
@@ -221,7 +221,7 @@
 		"slots": 1,
 		"max": 2,
 		"tags": [
-			"ballistic"
+			"projectile"
 		]
 	},
 	{
@@ -254,8 +254,8 @@
 			"melee",
 			"thrown",
 			"archaic",
-			"ballistic",
-			"beam",
+			"projectile",
+			"energy",
 			"heavy"
 		]
 	},
@@ -267,8 +267,160 @@
 		"max": 1,
 		"tags": [
 			"archaic",
-			"ballistic",
-			"beam",
+			"projectile",
+			"energy",
+			"heavy"
+		]
+	},
+	{
+		"id": "telescopic_sight",
+		"name": "Telescopic sight",
+		"description": "Reduce the range penalty on extreme range by half.",
+		"slots": 1,
+		"max": 1,
+		"tags": [
+			"projectile",
+			"energy"
+		]
+	},
+	{
+		"id": "reflex_scope",
+		"name": "Reflex scope",
+		"description": "Reduces close range by 1 and also reduce the penalty by 1.",
+		"slots": 1,
+		"max": 1,
+		"tags": [
+			"projectile",
+			"energy"
+		]
+	},
+	{
+		"id": "quick_loader",
+		"name": "Quick loader",
+		"description": "Reduces reload time by 4 ticks.",
+		"slots": 1,
+		"max": 2,
+		"tags": [
+			"thrown",
+			"archaic",
+			"projectile",
+			"energy",
+			"heavy"
+		]
+	},
+	{
+		"id": "painful",
+		"name": "Painful",
+		"description": "All toughness checks that are cause by an attack of this weapon suffer a penalty of 4.",
+		"slots": 1,
+		"max": 1,
+		"tags": [
+			"melee",
+			"thrown",
+			"archaic",
+			"projectile",
+			"energy",
+			"heavy"
+		]
+	},
+	{
+		"id": "welding_mode",
+		"name": "Welding mode",
+		"description": "The weapon can be configured to function as welder.",
+		"slots": 1,
+		"max": 1,
+		"tags": [
+			"energy"
+		]
+	},
+	{
+		"id": "spread",
+		"name": "Spread",
+		"description": "Halves weapon range. Checks to dodge this weapon have a disadvantage. Hits other engaged targets for half the damage.",
+		"slots": 2,
+		"max": 1,
+		"tags": [
+			"projectile",
+			"energy",
+			"heavy"
+		]
+	},
+	{
+		"id": "silent",
+		"name": "Silent",
+		"description": "Weapon is silenced and harder to detect when fired.",
+		"slots": 1,
+		"max": 1,
+		"tags": [
+			"projectile"
+		]
+	},
+	{
+		"id": "explosive",
+		"name": "Explosive",
+		"description": "Increase damage by 2. Hits other engaged targets for half the damage. Thrown weapons get a base damage of 6 and do not take the strength into account any more.",
+		"slots": 3,
+		"max": 1,
+		"tags": [
+			"thrown",
+			"archaic",
+			"heavy"
+		]
+	},
+	{
+		"id": "unwieldy",
+		"name": "Unwieldy",
+		"description": "Checks with this weapon suffer a penalty of 2.",
+		"slots": -1,
+		"max": 1,
+		"tags": [
+			"melee",
+			"thrown",
+			"archaic",
+			"projectile",
+			"energy",
+			"heavy"
+		]
+	},
+	{
+		"id": "improvised",
+		"name": "Improvised",
+		"description": "Damage reduced by 1.",
+		"slots": -1,
+		"max": 2,
+		"tags": [
+			"melee",
+			"thrown",
+			"archaic",
+			"projectile",
+			"energy",
+			"heavy"
+		]
+	},
+	{
+		"id": "weak",
+		"name": "Weak",
+		"description": "Enemy armor counts as 2 points higher. Only when wearing armor.",
+		"slots": -1,
+		"max": 1,
+		"tags": [
+			"melee",
+			"thrown",
+			"archaic",
+			"projectile",
+			"energy",
+			"heavy"
+		]
+	},
+	{
+		"id": "instable",
+		"name": "Instable",
+		"description": "After each attack roll 2d10. The weapon will be blocked due to malfunction for 10 ticks if the result of the roll is below 9. The weapon is completely damaged and can't be used until repaired if the result is below 4.",
+		"slots": -2,
+		"max": 1,
+		"tags": [
+			"projectile",
+			"energy",
 			"heavy"
 		]
 	}

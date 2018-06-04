@@ -1,6 +1,6 @@
 import React from 'react';
 
-const tags = ['melee', 'thrown', 'archaic', 'ballistic', 'beam', 'heavy', 'armor'];
+const tags = ['melee', 'thrown', 'archaic', 'projectile', 'energy', 'heavy', 'armor', 'beam', 'missile', 'ballistic'];
 
 export default class Mod extends React.Component {
     constructor(props) {

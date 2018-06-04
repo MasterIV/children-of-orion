@@ -1,4 +1,5 @@
 import React from 'react';
+import Systems from './systems.jsx';
 
 
 function mapArr(s, d, p) {
@@ -16,6 +17,9 @@ export default class Ship extends React.Component {
 		this.data = {...props.data};
 		this.data.shields.unshift({id: 'none', name: 'No Shields', costs: 0, shield: 0});
 		this.data.computer.unshift({id: 'none', name: 'No Computer', costs: 0});
+
+		this.systems = React.createRef();
+		this.weapons = React.createRef();
 
 		this.categories = [
 				{id: 'hull', title: 'Hull', value: 'id', disabled: o => false},
@@ -47,7 +51,11 @@ export default class Ship extends React.Component {
 			if(!this.defaults[i] && i != 'mods') this.defaults[i] = this.data[i][0].id;
 		}
 
-		this.state = { ...this.defaults, ...props.ship };
+		this.state = {
+			...this.defaults,
+			...props.ship
+		};
+
 		this.updateFiled = this.updateFiled.bind(this);
 		this.parse = this.parse.bind(this);
 	}
@@ -93,13 +101,16 @@ export default class Ship extends React.Component {
 			</tr>;
 		});
 
-		let systems = this.state.systems.map(system => <tr id="system-template">
-			<td class="name"></td>
-			<td><select name="amount" class="amount input-mini" onchange="updateStats()"></select></td>
-			<td class="costs"></td>
-			<td class="energy"></td>
-			<td><button type="button" class="btn btn-danger" onclick="$(this).parent().parent().remove(); updateStats();">x</button></td>
-		</tr>);
+		var sys_energy = 0;
+		var sys_costs = 0;
+
+		Systems.calc(this.data.systems, this.state.systems, this.parse, s => {
+			sys_costs += s.costs;
+			sys_energy += s.energy;
+		});
+
+		costs += sys_costs;
+		energy += sys_energy;
 
 		return <div>
 			<h1>Schiffsgenerator</h1>
@@ -117,6 +128,14 @@ export default class Ship extends React.Component {
 
 				<tbody>
 					{basics}
+
+					<tr>
+						<td colSpan="3">Systems:</td>
+						<td>{sys_costs}</td>
+						<td>{sys_energy}</td>
+					</tr>
+
+
 					<tr>
 						<th colSpan="3">Total:</th>
 						<th>{costs}</th>
@@ -126,19 +145,11 @@ export default class Ship extends React.Component {
 
 			</table>
 
-			<table className="table">
-				<thead>
-					<tr>
-						<th>System</th>
-						<th>Amount</th>
-						<th>Costs</th>
-						<th>Energy</th>
-						<td> </td>
-					</tr>
-				</thead>
-
-				<tbody>{systems}</tbody>
-			</table>
+			<Systems parse={this.parse}
+			         ref={this.systems}
+			         data={this.data.systems}
+			         systems={this.state.systems}
+			         onChange={v => this.updateFiled('systems', v)} />
 		</div>;
 	}
 }

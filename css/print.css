@@ -15,6 +15,7 @@
 
   .well {
 	  page-break-inside: avoid;
+	  break-inside: avoid-column;
   }
 
 	@page {
@@ -36,4 +37,10 @@
 	column-count: 2;
 	-webkit-column-count: 2;
 	-moz-column-count: 2;
+}
+
+.well {
+	break-inside: avoid-column;
+	-webkit-column-break-inside: avoid;
+	display:table;
 }

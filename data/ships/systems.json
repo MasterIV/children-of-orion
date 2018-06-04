@@ -45,7 +45,7 @@
     "id": "hanger",
     "name": "Hanger",
     "description": "A small hanger tha can contain a fighter or a shuttle.",
-    "max": {"expression": "(size-2)*(size-2)"},
+    "max": {"expression": "size*size-3*size-3"},
     "energy": 2,
     "costs": 5
   },

@@ -82,8 +82,8 @@ chapter('Space'); {
 		data($data['ships']['sensors'], 'system', 'Sensors', 'space/sensors');
 		data($data['ships']['systems'], 'system', 'Systems', 'space/systems');
 
-		// systems
 		// weapons
+		data($data['ships']['weapons'], 'ranged', 'Weapons', 'space/weapons');
 	}
 
 	paragraph('Travelling', 'space/travelling');

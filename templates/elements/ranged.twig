@@ -1,27 +1,23 @@
 <table class="table table-striped">
 	<thead>
 		<tr>
-			<th width="22%">Name</th>
-			<th width="10%">Base price</th>
-			<th width="9%">Geschw. / Laden</th>
-			<th width="7%">Schaden</th>
-			<th width="7%">Mag.</th>
-			<th width="7%">Mods</th>
-			<th width="16%">Reichw.</th>
-			<th width="22%">Merkmale</th>
+			<th>Name</th>
+			<th>Price</th>
+			<th>Speed</th>
+			<th>Damage</th>
+			<th>Energy</th>
+			<th>Range</th>
 		</tr>
 	</thead>
 	<tbody>
 	{% for w in data %}
 		<tr>
 			<td>{{ w.name }}</td>
-			<td>{{ w.price }}</td>
-			<td>{{ w.wgs }} / {{ w.reload }}</td>
-			<td>{{ w.dmg }}</td>
-			<td>{{ w.mag }}</td>
-			<td>{{ w.slots }}</td>
-			<td>{{ w.range[0] }} / {{ w.range[1] }} / {{ w.range[2] }} / {{ w.range[3] }}</td>
-			<td>{{ w.mods|join(', ') }}</td>
+			<td>{{ w.costs|qualities }}</td>
+			<td>{{ w.speed }}</td>
+			<td>{{ w.damage }}</td>
+			<td>{{ w.energy }}</td>
+			<td>{{ w.range }}</td>
 		</tr>
 	{% endfor %}
 	</tbody>

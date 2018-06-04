@@ -33,7 +33,7 @@
     "costs": 100
   },
   {
-    "id": "ballistic",
+    "id": "projectile",
     "name": "Projectile weapon",
     "description": "These weapons accelerate a solid physical projectile towards their target. Usually powered by gunpowder.",
     "range": [2,12,25,80],
@@ -44,7 +44,7 @@
     "costs": 150
   },
   {
-    "id": "beam",
+    "id": "energy",
     "name": "Energy weapon",
     "description": "The most advanced weaponry. Deadly but also pricey.",
     "range": [2,15,25,120],

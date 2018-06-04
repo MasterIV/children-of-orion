@@ -15,5 +15,13 @@
 		.talent .description {width: 90%}
 		.talent label input[type=checkbox] { margin-bottom: 5px; }
 		option[disabled] {color: #AAA}
+		.summary td { line-height: 35px; }
+		.visible-print { visibility: hidden; }
+
+		@media print {
+			.container { width: auto; }
+			.hidden-print { display: none; }
+			.visible-print { visibility: visible; }
+		}
 	</style>
 {% endblock %}

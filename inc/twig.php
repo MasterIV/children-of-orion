@@ -18,6 +18,6 @@ $twig->addFilter(new Twig_SimpleFilter('rome', function ($s) {
 
 $twig->addFilter(new Twig_SimpleFilter('qualities', function ($base) {
 	return implode(' / ', array_map(function($factor) use ($base) {
-		return $base * $factor;
+		return round($base * $factor);
 	}, array_slice ( $GLOBALS['data']['gear']['qualities'], 0 , 7 )));
 }));
