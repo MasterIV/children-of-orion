@@ -1,5 +1,7 @@
 import React from 'react';
 import Systems from './systems.jsx';
+import Collection from "./collection.jsx";
+import Item from "./item.jsx";
 
 
 function mapArr(s, d, p) {
@@ -53,15 +55,25 @@ export default class Ship extends React.Component {
 
 		this.state = {
 			...this.defaults,
-			...props.ship
+			...props.ship,
+			selected: this.data.weapons[0].id
 		};
 
 		this.updateFiled = this.updateFiled.bind(this);
+		this.addWeapon = this.addWeapon.bind(this);
 		this.parse = this.parse.bind(this);
 	}
 
 	updateFiled(k, v) {
 		this.setState({[k]: v});
+	}
+
+	addWeapon() {
+        this.weapons.current.add({
+			id: Date.now(),
+			type: this.state.selected,
+			mods: {}
+		});
 	}
 
 	parse( c ) {
@@ -142,8 +154,26 @@ export default class Ship extends React.Component {
 						<th>{energy} / {this.mapped.power[this.state.power].output}</th>
 					</tr>
 				</tbody>
-
 			</table>
+
+			<h2>Weapons</h2>
+
+			<div className="input-append hidden-print">
+				<select onChange={e => this.setState({selected: e.target.value})}>
+                    {this.data.weapons.map(s => <option value={s.id} key={s.id}>{s.name}</option>)}
+				</select>
+
+				<button className="btn btn-default" type="button" onClick={this.addWeapon}>Add
+				</button>
+			</div>
+
+			<Collection component={Item}
+						items={this.state.weapons}
+						onChange={v => this.updateFiled('weapons', v)}
+						ref={this.weapons}
+						itemDefinitions={this.mapped.weapons}
+						modDefinitions={this.mapped.mods}
+						id="weapons" />
 
 			<Systems parse={this.parse}
 			         ref={this.systems}

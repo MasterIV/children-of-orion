@@ -6,8 +6,9 @@ export default class TalentEditor extends React.Component {
     constructor(props) {
         super(props);
 
+        this.type = window.location.href.indexOf('ship') < 0 ? 'gear' : 'ships';
         this.state = {
-            mods: props.gear.mods,
+            mods: props[this.type].mods,
             deleted: []
         };
 
@@ -27,7 +28,8 @@ export default class TalentEditor extends React.Component {
     }
 
     save() {
-        $.post('editor-mods.php',{
+        $.post('editor-mods.php', {
+            'type': this.type,
             'data': this.state.mods
         });
     }

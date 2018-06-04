@@ -6,6 +6,7 @@ if( $_SERVER['HTTP_HOST'] !== 'localhost' )
 	throw new Exception('This tool is only available locally');
 
 if (!empty($_POST['data'])) {
+    $type = $_POST['type'] == 'ships' ? 'ships' : 'gear';
 	foreach ($_POST['data'] as &$row) {
 		$row['id'] = preg_replace('/([\W\s]+)/i', '_', strtolower($row['name']));
 		$row['slots'] = intval($row['slots']);
@@ -13,7 +14,7 @@ if (!empty($_POST['data'])) {
 	}
 
 	file_put_contents(
-			'data/gear/mods.json',
+			'data/' . $type . '/mods.json',
 			str_replace('    ', "\t", json_encode($_POST['data'], JSON_PRETTY_PRINT))
 	);
 } else {

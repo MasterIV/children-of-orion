@@ -34,7 +34,7 @@ export default class Collection extends React.Component {
     item(data, index) {
         const Item = this.props.component;
         const id = data.id || data.name || index;
-        return <Item {...data} key={this.props.id+'_'+id}
+        return <Item {...this.props} {...data} key={this.props.id+'_'+id}
                      index={index}
                      onChange={value => this.update(index, value)}
                      onDelete={() => this.remove(index)}/>;
