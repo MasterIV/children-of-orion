@@ -69,9 +69,14 @@ export default class Ship extends React.Component {
 	}
 
 	addWeapon() {
-        this.weapons.current.add({
+		var item = this.mapped.weapons[this.state.selected];
+
+		this.weapons.current.add({
 			id: Date.now(),
 			type: this.state.selected,
+			quality: 0,
+			costs: item.costs,
+			energy: item.energy,
 			mods: {}
 		});
 	}
@@ -115,14 +120,23 @@ export default class Ship extends React.Component {
 
 		var sys_energy = 0;
 		var sys_costs = 0;
+		var wpn_energy = 0;
+		var wpn_costs = 0;
 
 		Systems.calc(this.data.systems, this.state.systems, this.parse, s => {
 			sys_costs += s.costs;
 			sys_energy += s.energy;
 		});
 
-		costs += sys_costs;
-		energy += sys_energy;
+		this.state.weapons.forEach(w => {
+			wpn_costs += w.costs;
+			wpn_energy += w.energy;
+		});
+
+		costs += sys_costs + wpn_costs;
+		energy += sys_energy + wpn_energy;
+
+
 
 		return <div>
 			<h1>Schiffsgenerator</h1>
@@ -142,11 +156,16 @@ export default class Ship extends React.Component {
 					{basics}
 
 					<tr>
+						<td colSpan="3">Weapons:</td>
+						<td>{wpn_costs}</td>
+						<td>{wpn_energy}</td>
+					</tr>
+
+					<tr>
 						<td colSpan="3">Systems:</td>
 						<td>{sys_costs}</td>
 						<td>{sys_energy}</td>
 					</tr>
-
 
 					<tr>
 						<th colSpan="3">Total:</th>
@@ -168,12 +187,13 @@ export default class Ship extends React.Component {
 			</div>
 
 			<Collection component={Item}
-						items={this.state.weapons}
-						onChange={v => this.updateFiled('weapons', v)}
-						ref={this.weapons}
-						itemDefinitions={this.mapped.weapons}
-						modDefinitions={this.mapped.mods}
-						id="weapons" />
+			            items={this.state.weapons}
+			            onChange={v => this.updateFiled('weapons', v)}
+			            ref={this.weapons}
+			            itemDefinitions={this.mapped.weapons}
+			            modDefinitions={this.mapped.mods}
+			            qualities={this.props.qualities}
+			            id="weapons"/>
 
 			<Systems parse={this.parse}
 			         ref={this.systems}

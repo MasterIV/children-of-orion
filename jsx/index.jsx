@@ -21,7 +21,7 @@ window.loadModEditor = function(data) {
 window.loadShipEditor = function(data) {
 	var ship = {};
 	ReactDOM.render(
-			<Ship data={data.ships} ship={ship} />,
+			<Ship data={data.ships} ship={ship} qualities={data.gear.qualities} />,
 			document.getElementById('content')
 	);
 };

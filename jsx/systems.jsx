@@ -1,9 +1,5 @@
 import React from 'react';
-
-function range(min, max) {
-	console.log(min, max);
-	return [...Array(max - min).keys()].map(k => k + min);
-}
+import range from './range.jsx';
 
 export default class Systems extends React.Component {
 	static calc(all, selected, parse, callback) {

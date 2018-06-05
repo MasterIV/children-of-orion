@@ -1,59 +1,107 @@
 [
-
-  {
-    "id": "Panzerbrechend",
-    "name": "Panzerbrechend",
-    "description": "Erlaubt die Nutzung des Effekts Durchdringung.",
-    "types": ["projectile", "beam"],
-    "slots": 1,
-    "max": 1
-  },
-  {
-    "id": "Tödlich",
-    "name": "Tödlich",
-    "description": "Die crew nimmt gleichzeitig Schaden in Höhe verlorener Strukturpunkte abzüglich der Größenklasse. Rüstung hat keinen Effekt, jediglich Strahlenschutz kann den Schaden reduzieren.",
-    "types": ["missle", "special", "projectile", "beam"],
-    "slots": 0,
-    "max": 0
-  },
-  {
-    "id": "Schildbrechend",
-    "name": "Schildbrechend",
-    "description": "Schilde werden von dieser Waffe ignoriert.",
-    "types": ["beam"],
-    "slots": 3,
-    "max": 1
-  },
-  {
-    "id": "Punktverteidigung",
-    "name": "Punktverteidigung",
-    "description": "Die Waffe hat nur noch ein viertel ihrer Reichweite, erhält dafür aber einen bonus beim feuern auf Raketen oder Jäger von 4.",
-    "types": ["projectile", "beam"],
-    "slots": 1,
-    "max": 1
-  },
-  {
-    "id": "Schwerlafette",
-    "name": "Schwerlafette",
-    "description": "Erlaubt die Nutzung des Effekts Tödlich.",
-    "types": ["projectile", "beam"],
-    "slots": 2,
-    "max": 1
-  },
-  {
-    "id": "Gefährlich",
-    "name": "Gefährlich",
-    "description": "Erhöht den schaden um 1.",
-    "types": ["missle", "special", "projectile", "beam"],
-    "slots": 1,
-    "max": 1
-  },
-  {
-    "id": "Emp",
-    "name": "Emp",
-    "description": "Erlaubt die Nutzung des Effekts Lähmend, der alle Crewmitglieder an board betrifft.",
-    "types": ["missle"],
-    "slots": 1,
-    "max": 1
-  }
+	{
+		"id": "piercing",
+		"name": "Piercing",
+		"description": "Allows to use the damage effect with the same name.",
+		"slots": 1,
+		"max": 1,
+		"tags": [
+			"beam",
+			"ballistic"
+		]
+	},
+	{
+		"id": "lethal",
+		"name": "Lethal",
+		"description": "The crew suffers the structural damage minus ship size. Personal armor does not help, only protection against radiation is effective.",
+		"slots": 3,
+		"max": 1,
+		"tags": [
+			"beam",
+			"missile"
+		]
+	},
+	{
+		"id": "shield_piercing",
+		"name": "Shield piercing",
+		"description": "Ignore enemy shields.",
+		"slots": 3,
+		"max": 1,
+		"tags": [
+			"beam"
+		]
+	},
+	{
+		"id": "point_defense",
+		"name": "Point defense",
+		"description": "Reduces weapon range to short but grants an advantage when trying to shoot down incoming rockets or fighters.",
+		"slots": 1,
+		"max": 1,
+		"tags": [
+			"beam",
+			"ballistic"
+		]
+	},
+	{
+		"id": "deadly",
+		"name": "Deadly",
+		"description": "Allows to use the damage effect with the same name.",
+		"slots": 2,
+		"max": 1,
+		"tags": [
+			"beam",
+			"missile",
+			"ballistic"
+		]
+	},
+	{
+		"id": "dangerous",
+		"name": "Dangerous",
+		"description": "Increase damage by one.",
+		"slots": 2,
+		"max": 2,
+		"tags": [
+			"beam",
+			"missile",
+			"ballistic"
+		]
+	},
+	{
+		"id": "massive",
+		"name": "Massive",
+		"description": "Increases speed, energy consumption and damage of the weapon by 2.",
+		"slots": 1,
+		"energy": 2,
+		"max": 1,
+		"tags": [
+			"beam",
+			"missile",
+			"ballistic"
+		]
+	},
+	{
+		"id": "fast",
+		"name": "Fast",
+		"description": "Reduces the weapons speed by one. Can't be combined with massive.",
+		"slots": 2,
+		"max": 1,
+		"tags": [
+			"beam",
+			"missile",
+			"ballistic"
+		]
+	},
+	{
+		"id": "efficient",
+		"name": "Efficient",
+		"description": "Reduce energy consumption by 1.",
+		"slots": 2,
+		"max": 1,
+		"energy": -1,
+		"tags": [
+			"beam",
+			"missile",
+			"ballistic"
+		]
+	}
 ]
