@@ -1,0 +1,21 @@
+{
+  "id": "skarrah",
+  "name": "Skarrah",
+  "home": "Sssla",
+  "description" : "The Sakkra are an aggressive, competitive race that fight to survive on crowded planets with little room for formal laws. They are a physically imposing race that are determined to prove themselves as worthy adversaries against any opposition in the galaxy. The strong are the only ones who survive on Sssla, the Sakkra home world, where there are regular fights to the death in the streets. The only way to stand out in the massive Sakkra population is to show great strength and to defeat any challengers to your claims.\nThe Sakkra believe that the Mother-God and Father-God bore the first generation of Sakkra many millions of years ago. These first children formed the oldest tribes which Sakkra still claim as ancestors, yet the Mother and Father were so controlling that the first tribes united under a Hierarch to battle them for control. It is said that the battle lasted three days and when it was over, the gods were dead the Sakkra had united victoriously under their first Hierarch. They are a race which fondly remembers the brutal destruction of their own creators, whoever they were long ago.\nThe government of the Sakkra is a feudal system composed of various tribes, headed by a Hierarch which represents them on the intergalactic stage. The government and the Sakkra people as a whole are called the Brood. It is an established fact that all Sakkra Hierarchs die on their throne. No one walks away peacefully and regime changes are an especially bloody time in Sakkra civilization.",
+
+  "attributes": {
+    "Rea": 1,
+    "Con": 1,
+    "Agi": 2,
+    "Edu": -2,
+    "Cha": -1
+  },
+
+  "talents": [
+    {
+      "name": "Infrared vision",
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "psilon",
+  "name": "Psilon",
+  "home": "Mentar",
+  "description" : "The Psilon are an intellectual race which value knowledge above all else. The Psilon priority on research and education has been so internalized that it is at the core of their physical evolution they gradually changed over time into the physically weak beings that they are today. \nThey dedicate their entire lives to research and focus their energy on their work, often blinding themselves to the world around them. They are incapable of showing emotion on a biological level. They have excellent manners and speak in relaxed tones. However, they do not understand the intricacies of nonverbal communication and most social cues, so the Psilons are a somewhat awkward race. Excellent engineering in Psilon society renders many menial jobs obsolete and delegated to robotic systems.\n  Psilons operate a dictatorship style government called the Quanta, which is ruled over by the Controller. The Controller's main duty is to manage intergalactic relations and oversee the allocation of government funds to various research facilities. Psilons typically generate revenue by selling access to their trademarks and patents. Top researchers often consult with the Controller on domestic issues. As an exceptionally peaceful and non-confrontation race, the Psilon do not have internal conflict and do not challenge the authority of the Controller. They hide behind their technology in war and will wait to strike until they are positive that they have the technological upper hand.",
+
+  "attributes": {
+    "Str": -2,
+    "Int": 1,
+    "Edu": 2
+  },
+
+  "talents": [
+    {
+      "name": "Hidden knowledge",
+      "description": "The player gets additional knowledge for checks involving education with the purpose to obtain information."
+    },
+    {
+      "name": "Brilliant",
+      "description": "Gain an advantage on all science checks."
+    }
+  ]
+}

@@ -7,8 +7,17 @@ $content = '';
 $weapons = [];
 foreach($data['gear']['weapons'] as $w)
 	$weapons[$w['id']] = $w['name'];
+foreach($data['ships']['weapons'] as $w)
+	$weapons[$w['id']] = $w['name'];
+
 
 foreach ($data['gear']['mods'] as &$mod) {
+	$mod['tags'] = array_map(function($tag) use ($weapons) {
+		return isset($weapons[$tag]) ? $weapons[$tag] : 'Armor';
+	}, $mod['tags']);
+}
+
+foreach ($data['ships']['mods'] as &$mod) {
 	$mod['tags'] = array_map(function($tag) use ($weapons) {
 		return isset($weapons[$tag]) ? $weapons[$tag] : 'Armor';
 	}, $mod['tags']);
@@ -50,6 +59,10 @@ chapter('Basics'); {
 
 	paragraph('Talents', 'basics/talents');
 	data($data['talents'], 'talents');
+
+
+	paragraph('Races', 'basics/races');
+	data($data, 'races');
 }
 
 chapter('Combat'); {
@@ -84,6 +97,7 @@ chapter('Space'); {
 
 		// weapons
 		data($data['ships']['weapons'], 'ranged', 'Weapons', 'space/weapons');
+		data($data['ships']['mods'], 'mods', 'Modifications', 'space/mods', 2);
 	}
 
 	paragraph('Travelling', 'space/travelling');

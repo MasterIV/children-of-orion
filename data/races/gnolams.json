@@ -1,0 +1,25 @@
+{
+  "id": "gnolams",
+  "name": "Gnolams",
+  "home": "Gnol",
+  "description" : "To underestimate the shrewd Gnolam race would be a naïve mistake. While not the brutal warriors or charming diplomats of the universe, the Gnolam are especially gifted when it comes to matters of trade and commerce. Their skills are suited for the shadowy brokers who rule with tendrils of wealth and connection spanning the stars. The Gnolams may humbly pin their success on good luck, but any sharp diplomat knows the Gnolam are clever traders who aggressively pursue favorable economic policies.\nThey are paranoid and cautious about protecting what is theirs, unafraid to use unstable technologies or hire questionable mercenaries to defend their interests. While they revel in wealth and beauty, they are always looking for the next gain. Even as they walk through chambers of gold and dazzling gems, they dream of wealth unseen and treasures untold. Their fantastic wealth has made them the envy of the universe, making them the targets of many raids, yet they continue to persevere. The Gnolam look to the stars and see rolling numbers and yet-unfilled vaults calling their name. ",
+
+  "attributes": {
+    "Str": -1,
+    "Con": -1,
+    "Rea": 1,
+    "Cha": 1,
+    "Edu": 1
+  },
+
+  "talents": [
+    {
+      "name": "Fantastic traders",
+      "description": "Get and advantage on all haggling and politics checks."
+    },
+    {
+      "name": "Social network",
+      "description": "..."
+    }
+  ]
+}

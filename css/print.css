@@ -39,7 +39,7 @@
 	-moz-column-count: 2;
 }
 
-.well {
+.columns > .well {
 	break-inside: avoid-column;
 	-webkit-column-break-inside: avoid;
 	display:table;

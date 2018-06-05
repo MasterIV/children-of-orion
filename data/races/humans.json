@@ -1,0 +1,21 @@
+{
+  "id": "humans",
+  "name": "Humans",
+  "home": "Sol",
+  "description" : "",
+
+  "attributes": {
+    "Cha": 1
+  },
+
+  "talents": [
+    {
+      "name": "Jack of all trades",
+      "description": "All skills where the character does not have any points in gain an advantage when making a check."
+    },
+    {
+      "name": "Charismatic",
+      "description": "..."
+    }
+  ]
+}

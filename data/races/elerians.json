@@ -1,0 +1,21 @@
+{
+  "id": "elerians",
+  "name": "Elerians",
+  "home": "Draconis",
+  "description" : "The Elerians are a feudal matriarchy of honorable and xenophobic warriors who demand total respect from the inferior races of the galaxy. Enchanting and ethereal, the Elerians do not consider other races to be their peers. Obsessed with purity of Elerian culture, they maintain a cold distance from the rest of the universe. Beneath their beautiful exteriors and distant ways, they hide the hot blooded ways of a feudal warrior race with no sympathies for other societies. A small group of male telepathic philosophers can see into the minds and hearts of others on a limited basis. Most other Elerians just have empathic abilities.\nThe Elerians devote themselves to strict codes of honor, integrity, and purity. Those who do not respect the firm boundaries of the Elerians will face a mighty retribution. The filth and refuse of the universe has washed up on the pristine shores of Draconis, causing the usually withdrawn race to take to the stars in order to push intruders from their sacred space. The only mercy available to the savages of the wild stars are a cleansing fire, saved from their own impure ways by a clean death.",
+
+  "attributes": {
+    "Wil": 2,
+    "Str": -1
+  },
+
+  "talents": [
+    {
+      "name": "Aquatic",
+      "description": "Allows this species to breath under water and suffer no penalties from acting in or under water."
+    }, {
+      "name": "Empathic",
+      "description": "Latent telepathic abilities allow to sens the emotions of others."
+    }
+  ]
+}

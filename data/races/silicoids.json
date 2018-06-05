@@ -1,0 +1,29 @@
+{
+  "id": "silicoids",
+  "name": "Silicoids",
+  "home": "Cryslon",
+  "description" : "The Silicoid are a mysterious and inorganic race. Other races find the Silicoids to be repulsive and creepy, shunning contact or conversation with the Silicoids unless it cannot be avoided. The Silicoid people, referred to as the Crag, are led by a Keystone which acts as a dictator in their society. Silicoids run their society on an elder-respect basis, with the oldest of the Silicoids serving the Keystone.\nThe Silicoid home world of Cryslon is dominated by unique mountain ranges. Cryslon is especially valuable to the Silicoid, as the Silicoid can only be grown at the Sacred Basin of their home world. Their population growth is precarious, often hovering near zero growth due to the long process it takes for Silicoids to grow. When Silicoids die, they are brought back to the Sacred Basin where they fall into the mineral rich waters and erode back into the materials which grow new Silicoids. The only clues that the Silicoid have of their origins are the same, dim genetic memories which they collect from their common birth place.\nA crystalline being of unknown time or origin shattered and fell into the mineral rich basin of ancient Cryslon. From this accident, the rock structures grown in this specific region gain the spark of life and bring their inorganic bodies into a state of awareness and consciousness. ",
+
+  "attributes": {
+    "Con": 2,
+    "Wil": 2,
+    "Cha": -1,
+    "Int": -1,
+    "Edu": -1
+  },
+
+  "talents": [
+    {
+      "name": "Repulsive",
+      "description": "Suffer a disadvantage on all social checks except Intimidate."
+    },
+    {
+      "name": "Lithovore",
+      "description": "This species eats minerals."
+    },
+    {
+      "name": "Resistant",
+      "description": "Most environmental hazards like toxins, vacuum or radiation are harmless to this species."
+    }
+  ]
+}

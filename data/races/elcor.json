@@ -1,0 +1,28 @@
+{
+  "id": "elcor",
+  "name": "Elcor",
+  "home": "Dekuuna",
+  "description" : "Elcor evolved on a high-gravity world, making them slow, but incredibly strong. Their large, heavy bodies are incapable of moving quickly, but they possess a rather imposing stature and immense strength, as well as thick, tough skin. They move using all four limbs to support and balance their massive bodies. Given their method of communication, they likely have highly-attuned olfactory senses.\nElcor speech is heard by most species as a flat, ponderous monotone. Among themselves, scent, extremely slight body movements, and subvocalized infrasound convey shades of meaning that make a human smile seem as subtle as a fireworks display. Since their subtlety can lead to misunderstandings with other species, the elcor prefix all their dialog with non-elcor with an emotive statement to clarify their tone.\nPrehistoric elcor traveled across Dekuuna in large tribal groups. These groups were likely led by the oldest and most experienced elcor. This may have later developed into the elcor culture of Elders, whose wisdom could keep the tribe safe provided they followed the correct guidance.",
+
+  "attributes": {
+    "Str": 2,
+    "Agi": -1,
+    "Rea": -1,
+    "Con": 1
+  },
+
+  "talents": [
+    {
+      "name": "Thick skin",
+      "description": "Grants natural armor of 1."
+    },
+    {
+      "name": "Solid stand",
+      "description": "This creature is so massive that it can't fall prone due to an attack, botch or critical hit."
+    },
+    {
+      "name": "Highly-attuned senses",
+      "description": "Gain an advantage on empathy checks on other species while other species suffer a disadvantage making empathy checks on the character."
+    }
+  ]
+}

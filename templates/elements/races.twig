@@ -1,8 +1,32 @@
-{% for race in data %}
+{% for race in data.races %}
 	<h3 id="race_{{ race.id }}">{{ race.name }}</h3>
+	<div class="well">
 
-	<p class="clearfix">
-		<img src="img/races/{{ race.id|lower }}.png" class="pull-left" style="margin: 0 10px 10px 0;">
-		{{ race.description }}
-	</p>
+		<div class="clearfix" align="justify">
+			<img src="img/races/{{ race.id|lower }}.png" class="pull-left" style="margin: 0 20px 20px 0;">
+			{{ race.description|nl2br  }}
+		</div>
+
+		<div>
+			<strong>Attributes:</strong>
+			<table class="table">
+				<tr>{% for a in data.attributes %}<th>{{ a.id }}</th>{% endfor %}</tr>
+				<tr>{% for a in data.attributes %}<td>{{ race.attributes[a.id]|number_format }}</td>{% endfor %}</tr>
+			</table>
+		</div>
+
+
+		<div>
+			<strong>Origin:</strong> {{ race.home }}
+		</div>
+
+		<div>
+			<strong>Special Talents:</strong>
+			<ul>
+				{% for t in race.talents %}
+					<li><strong>{{ t.name }}:</strong> {{ t.description }}</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
 {% endfor %}
