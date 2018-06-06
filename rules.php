@@ -73,11 +73,11 @@ chapter('Combat'); {
 }
 
 chapter('Gear'); {
-	paragraph('Overview', 'gear/overview');
-	data($data['gear']['qualities'], 'qualities', 'Qualities', 'gear/qualities', 2);
-	data($data['gear']['weapons'], 'weapons', 'Weapons', 'gear/weapons', 2);
-	data($data['gear']['armor'], 'wearable', 'Armor', 'gear/armor', 2);
-	data($data['gear']['mods'], 'mods', 'Modifications', 'gear/mods', 2);
+	paragraph('Overview', 'bazaar/overview');
+	data($data['gear']['qualities'], 'qualities', 'Qualities', 'bazaar/qualities', 2);
+	data($data['gear']['weapons'], 'weapons', 'Weapons', 'bazaar/weapons', 2);
+	data($data['gear']['armor'], 'wearable', 'Armor', 'bazaar/armor', 2);
+	data($data['gear']['mods'], 'mods', 'Modifications', 'bazaar/mods', 2);
 }
 
 

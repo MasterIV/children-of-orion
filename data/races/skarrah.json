@@ -15,7 +15,11 @@
   "talents": [
     {
       "name": "Infrared vision",
-      "description": ""
+      "description": "The character can see even in darkness."
+    },
+    {
+      "name": "Regeneration",
+      "description": "Twice the natural regeneration. Sometimes even able to regrow lost limbs."
     }
   ]
 }

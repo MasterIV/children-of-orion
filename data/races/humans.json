@@ -2,8 +2,7 @@
   "id": "humans",
   "name": "Humans",
   "home": "Sol",
-  "description" : "",
-
+  "description" : "The Human race has a bloody history. Centuries of constant conflict have left them stubborn and seemingly aggressive to some species, however they have also learned the values of perseverance and duty. After ages of internal conflict and faced with dwindling natural resources on their home planet of earth, humanity finally came together to form a consolidated government, replacing the many nations once dotting its political landscape. The Humans have a democracy where all citizens vote on major issues.\nHumanity exists now as a noble species who put trade and diplomacy before military might but that's not to say they will not stand up for themselves. There's an old Human expression they like to use when speaking to the other powers of the galaxy, \"Speak softly and carry a big stick.\" This philosophy is at the very heart of mankind's interaction with the wider galaxy. Led by a President, the Human Republic has been known to be a stabilizing force and have almost never refused to aid a civilization in need. They're also known for their military might, which they use mostly for defensive purposes. ",
   "attributes": {
     "Cha": 1
   },
@@ -15,7 +14,7 @@
     },
     {
       "name": "Charismatic",
-      "description": "..."
+      "description": "This species is well respected and other species usually have a positive attitude towards the."
     }
   ]
 }
