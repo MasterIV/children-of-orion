@@ -1,7 +1,7 @@
 <table class="table table-striped">
 	<thead>
 	<tr>
-		<th width="20%">Name</th>
+		<th width="20%">Type</th>
 		<th width="31%">Price</th>
 		<th width="14%">Speed / Reload</th>
 		<th width="9%">Damage</th>
@@ -13,7 +13,6 @@
 	{% for w in data %}
 		<tr>
 			<td>{{ w.name }}</td>
-			<td>{{ w.costs|qualities }}</td>
 			<td>
 				{% if w.range %}
 					{{ w.speed }} / {{ w.reload }}
@@ -33,6 +32,7 @@
 				{% else %}
 					Melee
 				{% endif %}</td>
+			<td>{{ w.costs|qualities }}</td>
 		</tr>
 		{% if w.description %}
 		<tr>
