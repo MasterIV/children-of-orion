@@ -34,6 +34,12 @@
 					Melee
 				{% endif %}</td>
 		</tr>
+		{% if w.description %}
+		<tr>
+			<td>&nbsp;</td>
+			<td colspan="5"><i>{{ w.description }}</i></td>
+		</tr>
+		{% endif %}
 	{% endfor %}
 	</tbody>
 </table>
