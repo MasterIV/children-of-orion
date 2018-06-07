@@ -30,8 +30,8 @@ also it is not the characters turn. They always count as immediate.
 | Reaction | Duration | Description |
 | --- | --- | --- |
 | Defend  | 4 | If the character is target of an attack he might choose to dodge, parry or block |
-| Fallen lassen | 3 | The character drops prone |
-| Gelegenheitsschlag | Depending on weapon | An attack with increased difficulty |
+| Drop prone | 3 | The character drops prone |
+| Attack of opportunity | Depending on weapon | An attack suffering a disadvantage but it can't be evaded |
 
 ### Free actions
 
