@@ -13,16 +13,15 @@ or talents. The critical injury only applies when at least one damage penetrates
 If a character is suffering a critical injury he notes it
 and rolls on the crit & botch table.
 
-Applying the armor works similar. The defender rolls a number of d6
-equal to his armor rating. The result of this roll is handled the 
-same way the damage is determined. 
+Applying the armor works a little simpler.
+You just subtract the protection value of your armor from the damage points.
 The remaining damage is then subtracted from the targets health.
 Of course negative damage is not possible.
 
 Each player has the following life pools:
 
-* **Physical damage:** ( Con + 3 ) * 5
-* **Mental damage:** ( Wil + 3 ) * 5
+* **Physical damage:** ( Con + 2 ) * 4
+* **Mental damage:** ( Wil + 2 ) * 4
 
 These are noted in bars of ten points. 
 For each completely lost bar and any critical injury 
@@ -41,19 +40,11 @@ not be interrupted. The difficulty is 15 plus the amount of damage inflicted.
 ### Offensive Effects
 
 * **Deadly:** The effect can be used to inflict two damage
-* **Piercing:** Reduces the targets armor by one
+* **Piercing:** Reduces the targets armor by two
 * **Stunning:** The target looses a tick
 * **Irritating:** The target suffers a penalty of one on its next check 
 * **Explosive:** Increase the area of effect by one 
 * **Interrupting:** Increase the difficulty of checks to resist interruption by 3 
-
-### Defensive Effects
-
-* **Reflecting:** Absorb two damage from beam weapons
-* **Ballistic:** Absorb two damage from projectile or archaic weapons
-* **Padded:** Absorb two close combat damage
-* **Hard:** Convert two damage into stun damage
-* **Retaliate:** Grants a bonus of one to the next action
 
 ### Conditions
 

@@ -14,5 +14,5 @@ foreach ($data['skills'] as $skills)
 		$attributes[$s['attributes'][1]]++;
 	}
 
-
+printf("Skills in total: %d\n", count($data['skills']));
 print_r($attributes);
