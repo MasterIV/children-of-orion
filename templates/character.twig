@@ -1,0 +1,180 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <table><tr>
+            <td width="50%">
+
+
+                <div class="lines">
+                    <div>Name:</div>
+                    <div>Gender:</div>
+                    <div>Race:</div>
+                </div>
+
+
+    <table class="tbl">
+            <tr>
+                <th>Attribute</th>
+                <th>Base</th>
+                <th>Race</th>
+                <th>Total</th>
+                <th>Mod.</th>
+            </tr>
+
+        {% for e in data.attributes %}
+            <tr>
+                <td>{{ e.name }} ({{ e.id }})</td>
+                <td class="boxes"><div></div></td>
+                <td class="boxes"><div></div></td>
+                <td class="boxes"><div></div></td>
+                <td class="boxes"><div></div></td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <table class="tbl">
+        <tr>
+            <th>Talents / Specializations</th>
+        </tr>
+        <tr>
+            <td class="lines">
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+            </td>
+        </tr>
+    </table>
+
+                <table class="tbl">
+                    <tr>
+                        <th>Equipment</th>
+                    </tr>
+                    <tr>
+                        <td class="lines">
+                            <div>&nbsp;</div>
+                            <div>&nbsp;</div>
+                            <div>&nbsp;</div>
+                            <div>&nbsp;</div>
+                            <div>&nbsp;</div>
+                            <div>&nbsp;</div>
+                            <div>&nbsp;</div>
+                            <div>&nbsp;</div>
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+            <td width="50%">
+    <table class="tbl">
+    {%  for category, skills in data.skills %}
+        <tr id="skill_{{ category }}">
+            <th colspan="6">{{ category|capitalize }}</th>
+        </tr>
+
+        <tr>
+            <th>Skill</th>
+            <th colspan="2">Attributes</th>
+            <th>Value</th>
+            <th>Total</th>
+            <th>Mod.</th>
+        </tr>
+
+            {% for e in skills %}
+                <tr>
+                    <td>{{ e.name }}</td>
+                    <td class="boxes">{{ e.attributes[0] }} / {{ e.attributes[1] }}</td>
+                    <td class="boxes"><div></div></td>
+                    <td class="boxes"><div></div></td>
+                    <td class="boxes"><div></div></td>
+                    <td class="boxes"><div></div></td>
+                </tr>
+            {% endfor %}
+    {% endfor %}
+    </table>
+
+
+            </td>
+        </tr></table>
+
+    <style type="text/css">
+        table { width: 100% }
+        #controls > * {margin-right: 5px; margin-bottom: 10px }
+        .talent > div {margin-bottom: 10px}
+        .requirement {margin-bottom: 5px}
+        .talent > div > *, .requirement > * {margin-right: 5px}
+        .talent .description {width: 90%}
+        .talent label input[type=checkbox] { margin-bottom: 5px; }
+        option[disabled] {color: #AAA}
+        .summary td { line-height: 35px; }
+        .visible-print { visibility: hidden; }
+        .label { padding: 4px 8px; margin: 3px; }
+        .label > strong { color: #DDF; }
+        .tbl {
+            width: 100%;
+            border: 1px solid #555;
+            margin: 3px;
+        }
+        .tbl th {
+            text-align: left;
+            background: #EEE;
+        }
+
+         th, td {
+            padding: 2px 5px;
+            vertical-align: top;
+        }
+
+        .boxes {
+            width: 40px;
+        }
+
+        .boxes > div {
+            border: 1px solid black;
+            display: inline-block;
+            width: 35px;
+            height: 20px;
+            margin: 0;
+            vertical-align: bottom;
+        }
+
+        td {
+            white-space: nowrap;
+        }
+
+        .boxes > span {
+            display: inline-block;
+            width: 150px;
+            line-height: 20px;
+        }
+        .boxes.wide > span {
+            width: 170px;
+        }
+
+        .lines > div {
+            border-bottom: 1px solid black;
+            line-height: 30px;
+        }
+
+        div.lines {
+            margin: 5px;
+            padding: 0;
+        }
+
+        @media print {
+            .container { width: auto; }
+            .hidden-print { display: none; }
+            .visible-print { visibility: visible; }
+        }
+    </style>
+{% endblock %}

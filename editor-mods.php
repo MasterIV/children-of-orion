@@ -2,7 +2,7 @@
 
 require 'inc/common.php';
 
-if( $_SERVER['HTTP_HOST'] !== 'localhost' )
+if( substr( $_SERVER['HTTP_HOST'], 0 , 9 ) !== 'localhost' )
 	throw new Exception('This tool is only available locally');
 
 if (!empty($_POST['data'])) {

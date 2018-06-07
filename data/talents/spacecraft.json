@@ -33,7 +33,7 @@
 		"description": "Allows the sensor operator to perform a defence reaction using the sensors skill when the ship is being scanned. The check suffers a penalty of %d. When defended successful the scanning ship suffers %d system damage.",
 		"rank": 1,
 		"level": 3,
-		"formula": "( %d - 1 ) % 2"
+		"formula": "( %d - 1 ) %% 2"
 	},
 	{
 		"id": "sensor_echo",

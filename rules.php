@@ -23,6 +23,24 @@ foreach ($data['ships']['mods'] as &$mod) {
 	}, $mod['tags']);
 }
 
+$talents = [];
+foreach ($data['talents'] as $category => $tls) {
+    $talents[$category] = [];
+    foreach ($tls as $t) {
+        if($t['level']) {
+            for($i = 1; $i <= $t['level']; $i++) {
+                eval("\$value =(".sprintf($t['formula'], $i).");");
+                $talents[$category][] = [
+                    'id' => $t['id'].$i,
+                    'name' => $t['name'].' '.$i,
+                    'description' => sprintf($t['description'], $value, $value),
+                    'rank' => $t['rank']+$i-1
+                ];
+            }
+        } else $talents[$category][] = $t;
+    }
+}
+
 function section($l, $title, $file = null) {
 	$GLOBALS['content'] .= "<h$l id=\"$title-".uniqid()."\">$title</h$l>";
 
@@ -58,7 +76,7 @@ chapter('Basics'); {
 	paragraph('Checks', 'basics/checks');
 
 	paragraph('Talents', 'basics/talents');
-	data($data['talents'], 'talents');
+	data($talents, 'talents');
 
 
 	paragraph('Races', 'basics/races');
