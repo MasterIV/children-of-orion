@@ -5,7 +5,6 @@ require_once ROOT.'/vendor/autoload.php';
 require_once ROOT.'/inc/parsedown.php';
 require_once ROOT.'/inc/twig.php';
 
-
 $data = [];
 
 $path = str_replace('/', DIRECTORY_SEPARATOR, ROOT."/data/");
@@ -26,3 +25,21 @@ foreach($iterator as $file)
 		$target[$key[$i]] = $record;
 	}
 
+// Post processing talents
+$talents = [];
+foreach ($data['talents'] as $category => $tls) {
+    $talents[$category] = [];
+    foreach ($tls as $t) {
+        if($t['level']) {
+            for($i = 1; $i <= $t['level']; $i++) {
+                eval("\$value =(".sprintf($t['formula'], $i, $i).");");
+                $talents[$category][] = [
+                    'id' => $t['id'].$i,
+                    'name' => $t['name'].' '.$i,
+                    'description' => sprintf($t['description'], $value, $value),
+                    'rank' => $t['rank']+$i-1
+                ];
+            }
+        } else $talents[$category][] = $t;
+    }
+}

@@ -4,42 +4,16 @@ require 'inc/common.php';
 
 $content = '';
 
-$weapons = [];
+$items = ['armor' => 'Armor'];
 foreach($data['gear']['weapons'] as $w)
-	$weapons[$w['id']] = $w['name'];
+    $items[$w['id']] = $w['name'];
 foreach($data['ships']['weapons'] as $w)
-	$weapons[$w['id']] = $w['name'];
+    $items[$w['id']] = $w['name'];
 
-
-foreach ($data['gear']['mods'] as &$mod) {
-	$mod['tags'] = array_map(function($tag) use ($weapons) {
-		return isset($weapons[$tag]) ? $weapons[$tag] : 'Armor';
-	}, $mod['tags']);
-}
-
-foreach ($data['ships']['mods'] as &$mod) {
-	$mod['tags'] = array_map(function($tag) use ($weapons) {
-		return isset($weapons[$tag]) ? $weapons[$tag] : 'Armor';
-	}, $mod['tags']);
-}
-
-$talents = [];
-foreach ($data['talents'] as $category => $tls) {
-    $talents[$category] = [];
-    foreach ($tls as $t) {
-        if($t['level']) {
-            for($i = 1; $i <= $t['level']; $i++) {
-                eval("\$value =(".sprintf($t['formula'], $i).");");
-                $talents[$category][] = [
-                    'id' => $t['id'].$i,
-                    'name' => $t['name'].' '.$i,
-                    'description' => sprintf($t['description'], $value, $value),
-                    'rank' => $t['rank']+$i-1
-                ];
-            }
-        } else $talents[$category][] = $t;
-    }
-}
+foreach ($data['gear']['mods'] as &$mod)
+    $mod['tags'] = array_map(function($tag) use ($items) { return $items[$tag]; }, $mod['tags']);
+foreach ($data['ships']['mods'] as &$mod)
+    $mod['tags'] = array_map(function($tag) use ($items) { return $items[$tag]; }, $mod['tags']);
 
 function section($l, $title, $file = null) {
 	$GLOBALS['content'] .= "<h$l id=\"$title-".uniqid()."\">$title</h$l>";
