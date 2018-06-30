@@ -5,7 +5,10 @@
 	<link rel="stylesheet" href="css/treant.css">
 	<link rel="stylesheet" href="css/print.css">
 
-	<nav class="toc toc-right js-toc relative absolute is-position-fixed well"></nav>
+	<div class="hidden-phone">
+		<nav class="toc toc-right js-toc relative absolute is-position-fixed well"></nav>
+	</div>
+
 	<div class="container">{{ content|raw }}</div>
 
 	<script src="js/tocbot.min.js"></script>
