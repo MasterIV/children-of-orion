@@ -3,7 +3,7 @@
 	<tr>
 		<th width="20%">Type</th>
 		<th width="14%">Speed / Reload</th>
-		<th width="9%">Damage</th>
+		<th width="9%">Dmg / Crit</th>
 		<th width="7%">Mag.</th>
 		<th width="19%">Range</th>
 		<th width="31%">Price</th>
@@ -19,7 +19,7 @@
 				{% else %}
 					{{ w.speed }}
 				{% endif %}</td>
-			<td>{{ w.damage }}</td>
+			<td>{{ w.damage }} / {{ w.crit }}</td>
 			<td>
 				{% if w.range %}
 					{{ w.mag }}
