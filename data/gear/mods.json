@@ -352,7 +352,8 @@
 		"slots": 1,
 		"max": 1,
 		"tags": [
-			"projectile"
+			"projectile",
+			"energy"
 		]
 	},
 	{
@@ -423,5 +424,92 @@
 			"energy",
 			"heavy"
 		]
+	},
+	{
+		"id": "fitted",
+		"name": "Fitted",
+		"description": "Reduce penalty by one.",
+		"slots": 2,
+		"max": 1,
+		"tags": [
+			"armor"
+		]
+	},
+	{
+		"id": "camouflage",
+		"name": "Camouflage",
+		"description": "Enhanced adaptable surfaces allow this armor to mimic the environment. Grants you an advantage on stealth checks.",
+		"slots": 2,
+		"max": 1,
+		"tags": [
+			"armor"
+		]
+	},
+	{
+		"id": "reflecting",
+		"name": "Reflecting",
+		"description": "Increase protection value by one against beam weapons.",
+		"slots": 1,
+		"max": 1,
+		"tags": [
+			"armor"
+		]
+	},
+	{
+		"id": "ballistic",
+		"name": "Ballistic",
+		"description": "Increase protection value by one against projectile weapons.",
+		"slots": 1,
+		"max": 1,
+		"tags": [
+			"armor"
+		]
+	},
+	{
+		"id": "sealed",
+		"name": "Sealed",
+		"description": "The armor protects form environmental hazards and has an build in 15 min oxygen supply.",
+		"slots": 1,
+		"max": 1,
+		"tags": [
+			"armor"
+		]
+	},
+	{
+		"id": "oxigen_tank",
+		"name": "Oxigen tank",
+		"description": "Requires the sealed modification and allows to use the armor like a Vacc suite with 4 hours of oxygen supply.",
+		"slots": 1,
+		"max": 1,
+		"tags": [
+			"armor"
+		]
+	},
+	{
+		"id": "padded",
+		"name": "Padded",
+		"description": "Increase protection value by one against thrown and archaic ranged weapons.",
+		"slots": 1,
+		"max": 1,
+		"tags": [
+			"armor"
+		]
+	},
+	{
+		"id": "hardened",
+		"name": "Hardened",
+		"description": "Increase protection value by one against meele weapons.",
+		"slots": 1,
+		"max": 1,
+		"tags": [
+			"armor"
+		]
+	},
+	{
+		"id": "reinforced",
+		"name": "Reinforced",
+		"description": "Increase protection and penalty by one.",
+		"slots": 1,
+		"max": 1
 	}
 ]
